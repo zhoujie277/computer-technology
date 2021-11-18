@@ -1,0 +1,641 @@
+{
+    "root": {
+        "data": {
+            "id": "cfq0heu65y80",
+            "created": 1636944746071,
+            "text": "Java 日志技术"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfq0jufb1t40",
+                    "created": 1636944936729,
+                    "text": "问题"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfq0jviljyg0",
+                            "created": 1636944939105,
+                            "text": "控制日志输出的格式和内容"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfq0jzqz9fs0",
+                            "created": 1636944948319,
+                            "text": "控制日志输出的位置"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfq0k21h39k0",
+                            "created": 1636944953307,
+                            "text": "日志优化：异步日志，日志文件的归档和压缩"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfq0k9dodk80",
+                            "created": 1636944969282,
+                            "text": "日志系统的维护"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfq0kc2zmlk0",
+                            "created": 1636944975166,
+                            "text": "面向接口开发"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfq4tmwqbso0",
+                    "created": 1636956988450,
+                    "text": "日志实现",
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfq3f18652w0",
+                            "created": 1636953023044,
+                            "text": "log4j",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfq3zamq5hk0",
+                                    "created": 1636954610798,
+                                    "text": "log4j.properties"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq3zezaqwg0",
+                                            "created": 1636954620266,
+                                            "text": "log4j.rootLogger = trace, console"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfq3zoxcx5c0",
+                                            "created": 1636954641916,
+                                            "text": "log4j.appender.console = org.apache.log4j.ConsoleAppender"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfq3zyr2u8g0",
+                                            "created": 1636954663304,
+                                            "text": "log4j.appender.console.layout = org.apache.log4j.SimpleLayout"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq3mz90jq00",
+                                    "created": 1636953645655,
+                                    "text": "Loggers"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq3n0mxym80",
+                                            "created": 1636953648674,
+                                            "text": "日志记录器"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfq3nhb5g1c0",
+                                                    "created": 1636953684966,
+                                                    "text": "控制日志的输出级别以及是否输出日志"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq3n48pchk0",
+                                    "created": 1636953656520,
+                                    "text": "Appenders"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq3n5tu1a00",
+                                            "created": 1636953659974,
+                                            "text": "输出端"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfq3np9p3000",
+                                                    "created": 1636953702292,
+                                                    "text": "输出到控制台、文件等"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfq3omp092g0",
+                                                            "created": 1636953775052,
+                                                            "text": "ConsoleAppender"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfq3opjujrk0",
+                                                            "created": 1636953781270,
+                                                            "text": "FileAppender"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfq3os74uxs0",
+                                                            "created": 1636953787032,
+                                                            "text": "JDBCAppender"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq3n7nvs480",
+                                    "created": 1636953663968,
+                                    "text": "Layout"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq3nawvofk0",
+                                            "created": 1636953671042,
+                                            "text": "日志格式化器"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfq3nu2sodc0",
+                                                    "created": 1636953712759,
+                                                    "text": "控制日志信息的输出格式"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfq43q8tzw80",
+                                                            "created": 1636954958244,
+                                                            "text": "HTMLLayout"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfq43rmg6xs0",
+                                                            "created": 1636954961244,
+                                                            "text": "PatternLayout"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfq43y3vt3k0",
+                                                            "created": 1636954975359,
+                                                            "text": "SimpleLayout"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfq0lwg8sn40",
+                            "created": 1636945097868,
+                            "text": "Java Util Logging (JUL)"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfq23rro9cw0",
+                                    "created": 1636949319340,
+                                    "text": "配置文件"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq23wd2ezk0",
+                                            "created": 1636949329340,
+                                            "text": "默认路径：%JAVA_HOME%/jre/lib/logging.properties"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq0mgzckj40",
+                                    "created": 1636945142559,
+                                    "text": "Logger"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq0mp0mpp40",
+                                            "created": 1636945160050,
+                                            "text": "记录器。应用程序通过获取 logger 对象，调用其 API 来发布日志信息。\nlogger 通常是应用程序访问日志系统的入口程序"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq0minmvqo0",
+                                    "created": 1636945146204,
+                                    "text": "Handler"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq0nd61veo0",
+                                            "created": 1636945212621,
+                                            "text": "也称为Appenders。每个Logger 都会关联一组 handlers，Logger 会将日志交给关联 Handlers 处理。\n由 Handlers 负责将日志做记录，Handlers 在此是一个抽象，其具体的实现决定了日志记录的位置可以是\n控制台、文件、网络上的其他日志服务或操作系统日志等"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq0p3yem000",
+                                    "created": 1636945349296,
+                                    "text": "Layouts"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq0p6mjm8w0",
+                                            "created": 1636945355109,
+                                            "text": "也称为 Formatters，它负责对日志事件中的数据进行转换和格式化。\nLayouts 决定了数据在一条日志记录中的最终形式。"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq0ppzkzo00",
+                                    "created": 1636945397256,
+                                    "text": "Level"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq0psjsivk0",
+                                            "created": 1636945402832,
+                                            "text": "每条日志消息都有一个关联的日志级别。"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq0q2xl9r40",
+                                    "created": 1636945425434,
+                                    "text": "Filters"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq0q4m01200",
+                                            "created": 1636945429087,
+                                            "text": "过滤器。根据需要定制哪些信息会被记录，哪些信息会被放过"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq24czf8bk0",
+                                    "created": 1636949365521,
+                                    "text": "执行流程解析"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq24fmssd40",
+                                            "created": 1636949371288,
+                                            "text": "初始化 LogManager"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfq24iqhjjs0",
+                                                    "created": 1636949378041,
+                                                    "text": "LogManager 加载 logging.properties 配置"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfq24q0sezk0",
+                                                    "created": 1636949393902,
+                                                    "text": "添加 Logger 到 LogManager"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfq24x8ovrs0",
+                                            "created": 1636949409617,
+                                            "text": "从单例 LogManager 获取 Logger"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfq2530x0680",
+                                            "created": 1636949422207,
+                                            "text": "设置级别 Level，并指定日志记录 LogRecord"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfq25960vq80",
+                                            "created": 1636949435577,
+                                            "text": "Filter 提供了日志级别之外耕细粒度的控制"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfq25ffz7x40",
+                                            "created": 1636949449240,
+                                            "text": "Handler 是用来处理日志输出位置"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfq25k5oxiw0",
+                                            "created": 1636949459502,
+                                            "text": "Formatter 格式化 logRecord"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfq4sxw20o80",
+                            "created": 1636956933989,
+                            "text": "logback"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfq5huolktc0",
+                                    "created": 1636958886112,
+                                    "text": "logback-core"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq5i7n5ey80",
+                                            "created": 1636958914323,
+                                            "text": "其他两个模块的基础模块"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq5hxogls00",
+                                    "created": 1636958892634,
+                                    "text": "logback-classic"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq5iblj5ug0",
+                                            "created": 1636958922932,
+                                            "text": "它是log4j 的一个改良版本，同时它完整实现了 slf4j API"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq5i2xq95s0",
+                                    "created": 1636958904080,
+                                    "text": "logback-access"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq5imt9t6o0",
+                                            "created": 1636958947345,
+                                            "text": "访问模块与 Servlet 容器集成提供通过 Http 来访问日志的功能"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq67j6azqo0",
+                                    "created": 1636960898530,
+                                    "text": "logback.xml"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq67mfstr40",
+                                            "created": 1636960905634,
+                                            "text": "默认配置文件"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfq4szrtvow0",
+                            "created": 1636956938087,
+                            "text": "log4j2"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfq4tidt1hk0",
+                    "created": 1636956978599,
+                    "text": "日志门面技术"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfq4he61si00",
+                            "created": 1636956029052,
+                            "text": "JCL"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfq4sholdtc0",
+                                    "created": 1636956898710,
+                                    "text": "老牌日志外观技术"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq4hncyq1c0",
+                                    "created": 1636956049061,
+                                    "text": "统一形色各异的日志框架而存在，提供统一的外观，以及各种日志框架的适配"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq4ijb82cw0",
+                                    "created": 1636956118613,
+                                    "text": "commons-logging"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq4qk1fchs0",
+                                    "created": 1636956747111,
+                                    "text": "不方便扩展，需要修改源码来扩展"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfq4qqd0bjs0",
+                            "created": 1636956760872,
+                            "text": "SLF4J"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfq4qydasbk0",
+                                    "created": 1636956778304,
+                                    "text": "主流日志外观技术"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfq5b3erjh40",
+                                    "created": 1636958356560,
+                                    "text": "需绑定日志实现"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfq5b7h19yw0",
+                                            "created": 1636958365404,
+                                            "text": "slf4j-nop"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfq5baj6rfs0",
+                                                    "created": 1636958372064,
+                                                    "text": "默认无输出"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfq5befk3t40",
+                                            "created": 1636958380552,
+                                            "text": "slf4j-simple"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfq5bh779cg0",
+                                                    "created": 1636958386577,
+                                                    "text": "默认简单的日志实现器"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfq5bmtpw8w0",
+                                            "created": 1636958398823,
+                                            "text": "logback-classic"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfq5bq1pqo80",
+                                                    "created": 1636958405836,
+                                                    "text": "主流搭配"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

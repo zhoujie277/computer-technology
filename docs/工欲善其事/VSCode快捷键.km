@@ -1,0 +1,1907 @@
+{
+    "root": {
+        "data": {
+            "id": "cfibofed9ko0",
+            "created": 1636163848397,
+            "text": "VSCode 快捷键"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfii80x44e80",
+                    "created": 1636182310822,
+                    "text": "基础编辑"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfii82q9leo0",
+                            "created": 1636182314761,
+                            "text": "向上向下移动行\nmove line up/down"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfii88aylb40",
+                                    "created": 1636182326896,
+                                    "text": "alt + down/up"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfii8zzl4yw0",
+                            "created": 1636182387159,
+                            "text": "向上/向下复制行\ncopy line updown"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfii9oackyw0",
+                                    "created": 1636182440052,
+                                    "text": "alt + shift + down/up"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfii9h67wg80",
+                            "created": 1636182424565,
+                            "text": "删除行\ndelete line"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfii9ja5ly00",
+                                    "created": 1636182429156,
+                                    "text": "ctril + shift + k"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiac83jcg0",
+                            "created": 1636182492159,
+                            "text": "在下面插入行 Insert line below"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiahol8000",
+                                    "created": 1636182504040,
+                                    "text": "Ctrl + Enter"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiianma0800",
+                            "created": 1636182516961,
+                            "text": "在上面插入行 Insert line above"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiar56d000",
+                                    "created": 1636182524634,
+                                    "text": "Ctrl+Shift+Enter"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiav9xiio0",
+                            "created": 1636182533628,
+                            "text": "跳到匹配的括号 Jump to matching bracket"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiib3c7pkg0",
+                                    "created": 1636182551181,
+                                    "text": "Ctrl + \\ + Shift"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiibln4wi00",
+                            "created": 1636182591023,
+                            "text": "缩进/缩进行 Indent/outdent line"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiibothplc0",
+                                    "created": 1636182597938,
+                                    "text": "Ctrl+] / ["
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiibspoiy00",
+                            "created": 1636182606415,
+                            "text": "转到行首 Go to beginning of line"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiibzfeq7c0",
+                                    "created": 1636182621031,
+                                    "text": "Home"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiic6p6r8g0",
+                            "created": 1636182636860,
+                            "text": "转到行尾 Go to end of line"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiic9qrpmw0",
+                                    "created": 1636182643486,
+                                    "text": "End"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiicg7uu0g0",
+                            "created": 1636182657580,
+                            "text": "转到文件开头 Go to beginning of file"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiicl06y280",
+                                    "created": 1636182668000,
+                                    "text": "Ctrl+Home"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiid9zcl7s0",
+                            "created": 1636182722369,
+                            "text": "转到文件末尾 Go to end of file"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiddqcr540",
+                                    "created": 1636182730532,
+                                    "text": "Ctrl+End"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiidhet0bk0",
+                            "created": 1636182738541,
+                            "text": "向上/向下滚动行 Scroll line up/down"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiidkdxz140",
+                                    "created": 1636182745019,
+                                    "text": "Ctrl+↑ / ↓"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiidnt2v4g0",
+                            "created": 1636182752464,
+                            "text": "向上/向下滚动页面 Scroll page up/down"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiidstghco0",
+                                    "created": 1636182763371,
+                                    "text": "Alt+PgUp / PgDown"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiie2ofkvk0",
+                            "created": 1636182784835,
+                            "text": "折叠（折叠）区域 Fold (collapse) region"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiie5yzujk0",
+                                    "created": 1636182792004,
+                                    "text": "Ctrl+Shift+["
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiie8g44sw0",
+                            "created": 1636182797393,
+                            "text": "展开（未折叠）区域 Unfold (uncollapse) region"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiieckscl40",
+                                    "created": 1636182806383,
+                                    "text": "Ctrl+Shift+]"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiegh2i2g0",
+                            "created": 1636182814865,
+                            "text": "折叠（未折叠）所有子区域 Fold (collapse) all subregions"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiejp68kw0",
+                                    "created": 1636182821885,
+                                    "text": "Ctrl+K Ctrl+["
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiemtbgiw0",
+                            "created": 1636182828666,
+                            "text": "展开（未折叠）所有子区域 Unfold (uncollapse) all subregions"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiierhoqmo0",
+                                    "created": 1636182838847,
+                                    "text": "Ctrl+K Ctrl+]"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiieyw343k0",
+                            "created": 1636182854955,
+                            "text": "折叠（折叠）所有区域 Fold (collapse) all regions"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiif6guxmw0",
+                                    "created": 1636182871449,
+                                    "text": "Ctrl+K Ctrl+0"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiifb9a0o00",
+                            "created": 1636182881874,
+                            "text": "展开（未折叠）所有区域 Unfold (uncollapse) all regions"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiifguqia80",
+                                    "created": 1636182894056,
+                                    "text": "Ctrl+K Ctrl+J"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiifky2gig0",
+                            "created": 1636182902964,
+                            "text": "添加行注释 Add line comment"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiifq7390g0",
+                                    "created": 1636182914394,
+                                    "text": "Ctrl+K Ctrl+C"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiifu3gy400",
+                            "created": 1636182922882,
+                            "text": "删除行注释 Remove line comment"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiifxnb8ao0",
+                                    "created": 1636182930612,
+                                    "text": "Ctrl+K Ctrl+U"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiig1kxo2w0",
+                            "created": 1636182939175,
+                            "text": "切换行注释 Toggle line comment"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiig5e9dyw0",
+                                    "created": 1636182947479,
+                                    "text": "Ctrl+/"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiigaatfyo0",
+                            "created": 1636182958155,
+                            "text": "切换块注释 Toggle block comment"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiigef7dr40",
+                                    "created": 1636182967127,
+                                    "text": "Shift+Alt+A"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiigho3c000",
+                            "created": 1636182974195,
+                            "text": "切换换行 Toggle word wrap"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiign6dnsg0",
+                                    "created": 1636182986184,
+                                    "text": "Alt+Z"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfiigr9irmo0",
+                    "created": 1636182995081,
+                    "text": "导航"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfiihhrxmmo0",
+                            "created": 1636183052791,
+                            "text": "显示所有符号 Show all Symbols"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiihlf8vqw0",
+                                    "created": 1636183060731,
+                                    "text": "Ctrl + T"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiihpfjaww0",
+                            "created": 1636183069456,
+                            "text": "转到行... Go to Line..."
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiihs7ifoo0",
+                                    "created": 1636183075501,
+                                    "text": "Ctrl + G"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiihuwflmg0",
+                            "created": 1636183081361,
+                            "text": "转到文件... Go to File..."
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiihxrfsm80",
+                                    "created": 1636183087590,
+                                    "text": "Ctrl + P"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiii15p1hc0",
+                            "created": 1636183094982,
+                            "text": "转到符号... Go to Symbol..."
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiii3u5ljc0",
+                                    "created": 1636183100815,
+                                    "text": "Ctrl + Shift + O"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiii7f9sio0",
+                            "created": 1636183108622,
+                            "text": "显示问题面板 Show Problems panel"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiiaremhk0",
+                                    "created": 1636183115886,
+                                    "text": "Ctrl + Shift + M"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiida8siw0",
+                            "created": 1636183121379,
+                            "text": "转到下一个错误或警告 Go to next error or warning"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiig9pk2o0",
+                                    "created": 1636183127877,
+                                    "text": "F8"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiijrh28o0",
+                            "created": 1636183135481,
+                            "text": "转到上一个错误或警告 Go to previous error or warning"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiikp9lg00",
+                                    "created": 1636183137524,
+                                    "text": "Shift + F8"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiirkknfs0",
+                            "created": 1636183152478,
+                            "text": "导航编辑器组历史记录 Navigate editor group history"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiiutz4lc0",
+                                    "created": 1636183159577,
+                                    "text": "Ctrl + Shift + Tab"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiiyamboo0",
+                            "created": 1636183167114,
+                            "text": "返回/前进 Go back / forward"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiij1tv40o0",
+                                    "created": 1636183174808,
+                                    "text": "Alt + ←/→"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiij5lywhc0",
+                            "created": 1636183183037,
+                            "text": "切换选项卡移动焦点 Toggle Tab moves focus"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiij8ifkrs0",
+                                    "created": 1636183189354,
+                                    "text": "Ctrl + M"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfiijf9o3ag0",
+                    "created": 1636183204062,
+                    "text": "搜索和替换 Search and replace",
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfiijjkgzhc0",
+                            "created": 1636183213422,
+                            "text": "查找 Find"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiijn5rqrs0",
+                                    "created": 1636183221240,
+                                    "text": "Ctrl + F"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiijq33oy80",
+                            "created": 1636183227609,
+                            "text": "替换 Replace"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiijswysb40",
+                                    "created": 1636183233768,
+                                    "text": "Ctrl + H"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiijxdv0io0",
+                            "created": 1636183243497,
+                            "text": "查找下一个/上一个 Find next/previous"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiik0tu0zk0",
+                                    "created": 1636183250993,
+                                    "text": "F3 / Shift + F3"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiik5veov40",
+                            "created": 1636183261972,
+                            "text": "选择查找匹配的所有出现 Select all occurences of Find match"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiik9xn4ls0",
+                                    "created": 1636183270815,
+                                    "text": "Alt + Enter"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiikcr2pww0",
+                            "created": 1636183276948,
+                            "text": "将选择添加到下一个查找匹配 Add selection to next Find match"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiikghtq1k0",
+                                    "created": 1636183285096,
+                                    "text": "Ctrl + D"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiikkmz7hs0",
+                            "created": 1636183294114,
+                            "text": "将最后一个选择移至下一个查找匹配项 Move last selection to next Find match"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiikn4nnfc0",
+                                    "created": 1636183299537,
+                                    "text": "Ctrl + K Ctrl + D"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiikq4z0ew0",
+                            "created": 1636183306086,
+                            "text": "切换区分大小写/正则表达式/整个词 Toggle case-sensitive / regex / whole word"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiikttxrg00",
+                                    "created": 1636183314126,
+                                    "text": "Alt + C / R / W"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfiimgdd0m80",
+                    "created": 1636183441554,
+                    "text": "丰富的语言编辑 Rich languages editing"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfiimjelv3k0",
+                            "created": 1636183448160,
+                            "text": "触发建议 Trigger suggestion"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiimm80heg0",
+                                    "created": 1636183454291,
+                                    "text": "Ctrl + 空格"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiimoi6weo0",
+                            "created": 1636183459260,
+                            "text": "触发器参数提示 Trigger parameter hints"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiimqyo0740",
+                                    "created": 1636183464610,
+                                    "text": "Ctrl + Shift + Space"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiimucnads0",
+                            "created": 1636183471986,
+                            "text": "Emmet 展开缩写 Emmet expand abbreviation"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiimwlyjuw0",
+                                    "created": 1636183476902,
+                                    "text": "Tab"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiimytb5m00",
+                            "created": 1636183481700,
+                            "text": "格式化文档 Format document"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiin1pd1wo0",
+                                    "created": 1636183487992,
+                                    "text": "Shift + Alt + F"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiin568q940",
+                            "created": 1636183495543,
+                            "text": "格式选定区域 Format selection"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiin82h0ls0",
+                                    "created": 1636183501846,
+                                    "text": "Ctrl + K Ctrl + F"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiinald2qw0",
+                            "created": 1636183507341,
+                            "text": "转到定义 Go to Definition"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiindk62vs0",
+                                    "created": 1636183513799,
+                                    "text": "F12"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiingei3e80",
+                            "created": 1636183519987,
+                            "text": "Peek定义 Peek Definition"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiinj1icps0",
+                                    "created": 1636183525732,
+                                    "text": "Alt + F12"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfl0n0c49nc0",
+                            "created": 1636437384906,
+                            "text": "转到函数实现"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfl0n3rr75s0",
+                                    "created": 1636437392382,
+                                    "text": "Ctrl + F12"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiinlneg400",
+                            "created": 1636183531409,
+                            "text": "打开定义到边 Open Definition to the side"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiinp8khk80",
+                                    "created": 1636183539219,
+                                    "text": "Ctrl + K F12"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiins3163k0",
+                            "created": 1636183545416,
+                            "text": "快速解决 Quick Fix"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiinw6nkl40",
+                                    "created": 1636183554341,
+                                    "text": "Ctrl + ."
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiinzysu0g0",
+                            "created": 1636183562573,
+                            "text": "显示引用 Show References"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiio2zmd600",
+                                    "created": 1636183569153,
+                                    "text": "Shift + F12"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiio6r7u5k0",
+                            "created": 1636183577352,
+                            "text": "重命名符号 Rename Symbol"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiobnkcns0",
+                                    "created": 1636183588015,
+                                    "text": "F2"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiofcsq600",
+                            "created": 1636183596072,
+                            "text": "替换为下一个/上一个值 Replace with next/previous value"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiioihs5140",
+                                    "created": 1636183602903,
+                                    "text": "Ctrl + Shift + . /，"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiomigwns0",
+                            "created": 1636183611652,
+                            "text": "修剪尾随空格 Trim trailing whitespace"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiops26c80",
+                                    "created": 1636183618762,
+                                    "text": "Ctrl + K Ctrl + X"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiioswayxc0",
+                            "created": 1636183625549,
+                            "text": "更改文件语言 Change file language"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiowfo9ao0",
+                                    "created": 1636183633251,
+                                    "text": "Ctrl + K M"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfiipmmdvq80",
+                    "created": 1636183690253,
+                    "text": "编辑器管理 Editor management"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfiipprhyko0",
+                            "created": 1636183697092,
+                            "text": "关闭编辑器 Close editor"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiipt0yxnc0",
+                                    "created": 1636183704195,
+                                    "text": "Ctrl+F4, Ctrl+W"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiipvjmkg80",
+                            "created": 1636183709677,
+                            "text": "关闭文件夹 Close folder"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiipxv84v40",
+                                    "created": 1636183714732,
+                                    "text": "Ctrl+K F"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiq0a7i880",
+                            "created": 1636183719992,
+                            "text": "拆分编辑器 Split editor"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiq2i2t9s0",
+                                    "created": 1636183724821,
+                                    "text": "Ctrl+\\"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiq6fhgoo0",
+                            "created": 1636183733371,
+                            "text": "聚焦到第1，第2或第3编辑器组 Focus into 1st, 2nd or 3rd editor group"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiq9ma9i80",
+                                    "created": 1636183740313,
+                                    "text": "Ctrl+ 1 / 2 / 3"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiqbznvco0",
+                            "created": 1636183745475,
+                            "text": "聚焦到上一个/下一个编辑器组 Focus into previous/next editor group"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiqeolpgo0",
+                                    "created": 1636183751337,
+                                    "text": "Ctrl+K Ctrl+ ←/→"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiqhcnv7k0",
+                            "created": 1636183757145,
+                            "text": "向左/向右移动编辑器 Move editor left/right"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiqk19dmw0",
+                                    "created": 1636183762986,
+                                    "text": "Ctrl+Shift+PgUp / PgDown"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiqmjp2140",
+                            "created": 1636183768454,
+                            "text": "移动活动编辑器组 Move active editor group"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiqpg9q7c0",
+                                    "created": 1636183774778,
+                                    "text": "Ctrl+K ← / →"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfiiqvned9k0",
+                    "created": 1636183788269,
+                    "text": "文件管理 File management"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfiiqzgc6p40",
+                            "created": 1636183796550,
+                            "text": "新文件 New File"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiir281vc00",
+                                    "created": 1636183802579,
+                                    "text": "Ctrl+N"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiir4d99tk0",
+                            "created": 1636183807247,
+                            "text": "打开文件... Open File..."
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiir729wns0",
+                                    "created": 1636183813113,
+                                    "text": "Ctrl+O"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiir9hgqm00",
+                            "created": 1636183818386,
+                            "text": "保存 Save"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiirbp174g0",
+                                    "created": 1636183823197,
+                                    "text": "Ctrl+S"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiire2t5j40",
+                            "created": 1636183828383,
+                            "text": "另存为... Save As..."
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiirg90dgg0",
+                                    "created": 1636183833112,
+                                    "text": "Ctrl+Shift+S"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiritnj7k0",
+                            "created": 1636183838714,
+                            "text": "全部保存 Save All"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiirl5rno80",
+                                    "created": 1636183843800,
+                                    "text": "Ctrl+K S"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiirnu83ts0",
+                            "created": 1636183849632,
+                            "text": "关闭 Close"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiirq0y1ps0",
+                                    "created": 1636183854392,
+                                    "text": "Ctrl+F4"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiirs8atao0",
+                            "created": 1636183859190,
+                            "text": "关闭所有 Close All"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiirunu3w00",
+                                    "created": 1636183864483,
+                                    "text": "Ctrl+K Ctrl+W"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiirxhp50w0",
+                            "created": 1636183870642,
+                            "text": "重新打开关闭的编辑器 Reopen closed editor"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiis0028hk0",
+                                    "created": 1636183876106,
+                                    "text": "Ctrl+Shift+T"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiis33ies80",
+                            "created": 1636183882845,
+                            "text": "输入保持打开 Enter Keep Open"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiis5nxgig0",
+                                    "created": 1636183888433,
+                                    "text": "Ctrl+K"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiisat37680",
+                            "created": 1636183899629,
+                            "text": "打开下一个 Open next"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiisdz2v680",
+                                    "created": 1636183906522,
+                                    "text": "Ctrl+Tab"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiish0vfrk0",
+                            "created": 1636183913161,
+                            "text": "打开上一个 Open previous"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiisk2wk080",
+                                    "created": 1636183919814,
+                                    "text": "Ctrl+Shift+Tab"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiisoaaedk0",
+                            "created": 1636183928968,
+                            "text": "复制活动文件的路径 Copy path of active file"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiisr5y7kw0",
+                                    "created": 1636183935236,
+                                    "text": "Ctrl+K P"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiisu926080",
+                            "created": 1636183941954,
+                            "text": "显示资源管理器中的活动文件 Reveal active file in Explorer"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiswz2r2o0",
+                                    "created": 1636183947881,
+                                    "text": "Ctrl+K R"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiit07i26w0",
+                            "created": 1636183954920,
+                            "text": "显示新窗口/实例中的活动文件 Show active file in new window/instance"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiit31f48g0",
+                                    "created": 1636183961083,
+                                    "text": "Ctrl+K O"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfiitpui6xs0",
+                    "created": 1636184010731,
+                    "text": "显示 Display"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfiitt4mi740",
+                            "created": 1636184017873,
+                            "text": "切换全屏 Toggle full screen"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiitw0cl1s0",
+                                    "created": 1636184024145,
+                                    "text": "F11"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiitzqa5iw0",
+                            "created": 1636184032243,
+                            "text": "切换编辑器布局 Toggle editor layout"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiu2kxpn40",
+                                    "created": 1636184038450,
+                                    "text": "Shift+Alt+1"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiug28ffc0",
+                            "created": 1636184067795,
+                            "text": "放大/缩小 Zoom in/out"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiuiuugrk0",
+                                    "created": 1636184073878,
+                                    "text": "Ctrl+ = / -"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiulmu64g0",
+                            "created": 1636184079924,
+                            "text": "切换侧栏可见性 Toggle Sidebar visibility"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiurzf1so0",
+                                    "created": 1636184093746,
+                                    "text": "Ctrl+B"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiuwb9k9k0",
+                            "created": 1636184103169,
+                            "text": "显示浏览器/切换焦点 Show Explorer / Toggle focus"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiuys3zyw0",
+                                    "created": 1636184108541,
+                                    "text": "Ctrl+Shift+E"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiv0v1ko00",
+                            "created": 1636184113072,
+                            "text": "显示搜索 Show Search"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiv3za7zs0",
+                                    "created": 1636184119859,
+                                    "text": "Ctrl+Shift+F"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiv622xs80",
+                            "created": 1636184124382,
+                            "text": "显示Git Show Git"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiv9bg0v40",
+                                    "created": 1636184131478,
+                                    "text": "Ctrl+Shift+G"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiivbkdec00",
+                            "created": 1636184136372,
+                            "text": "显示调试 Show Debug"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiivdwpci00",
+                                    "created": 1636184141471,
+                                    "text": "Ctrl+Shift+D"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiivg3gy7s0",
+                            "created": 1636184146233,
+                            "text": "显示扩展 Show Extensions"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiivk4ofbs0",
+                                    "created": 1636184155014,
+                                    "text": "Ctrl+Shift+X"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiivqtdisg0",
+                            "created": 1636184169568,
+                            "text": "替换文件 Replace in files"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiivtrcqw80",
+                                    "created": 1636184175976,
+                                    "text": "Ctrl+Shift+H"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiivw1vdzk0",
+                            "created": 1636184180965,
+                            "text": "切换搜索详细信息 Toggle Search details"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiivydu8ls0",
+                                    "created": 1636184186043,
+                                    "text": "Ctrl+Shift+J"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiw0njlio0",
+                            "created": 1636184190983,
+                            "text": "打开新命令提示符/终端 Open new command prompt/terminal"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiw3z6geg0",
+                                    "created": 1636184198217,
+                                    "text": "Ctrl+Shift+C"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiwf9wbtk0",
+                            "created": 1636184222809,
+                            "text": "显示输出面板 Show Output panel"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiwio5m0g0",
+                                    "created": 1636184230202,
+                                    "text": "Ctrl+Shift+U"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiwl8u2io0",
+                            "created": 1636184235806,
+                            "text": "切换Markdown预览 Toggle Markdown preview"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiwnu882o0",
+                                    "created": 1636184241453,
+                                    "text": "Ctrl+Shift+V"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiwq0c7pk0",
+                            "created": 1636184246176,
+                            "text": "从旁边打开Markdown预览 Open Markdown preview to the side"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiwrxlteo0",
+                                    "created": 1636184250364,
+                                    "text": "Ctrl+K V"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfiiwv6hkgw0",
+                    "created": 1636184257432,
+                    "text": "调试 Debug"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfiiwyhlz340",
+                            "created": 1636184264635,
+                            "text": "切换断点 Toggle breakpoint"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiix1lwpcw0",
+                                    "created": 1636184271425,
+                                    "text": "F9"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiix44epk00",
+                            "created": 1636184276897,
+                            "text": "开始/继续 Start/Continue"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiix62uizk0",
+                                    "created": 1636184281156,
+                                    "text": "F5"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiix8mubz40",
+                            "created": 1636184286719,
+                            "text": "停止 Stop"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiixb40bd40",
+                                    "created": 1636184292110,
+                                    "text": "Shift+F5"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiixda94yo0",
+                            "created": 1636184296842,
+                            "text": "下一步/上一步 Step into/out"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiixfg6zl40",
+                                    "created": 1636184301554,
+                                    "text": "F11 / Shift+F11"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiixi7n7i80",
+                            "created": 1636184307568,
+                            "text": "跳过 Step over"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiixkcomcw0",
+                                    "created": 1636184312226,
+                                    "text": "F10"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiixmah5zk0",
+                            "created": 1636184316446,
+                            "text": "显示悬停 Show hover"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiixou93a00",
+                                    "created": 1636184321995,
+                                    "text": "Ctrl+K Ctrl+I"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfiixusz29s0",
+                    "created": 1636184334979,
+                    "text": "集成终端 Integrated terminal"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfiiy0af6ug0",
+                            "created": 1636184346918,
+                            "text": "显示集成终端 Show integrated terminal"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiy3xazrs0",
+                                    "created": 1636184354832,
+                                    "text": "Ctrl+`"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiy9n6pwg0",
+                            "created": 1636184367281,
+                            "text": "创建新终端 Create new terminal"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiycqrc3s0",
+                                    "created": 1636184374027,
+                                    "text": "Ctrl+Shift+`"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiyenunfs0",
+                            "created": 1636184378205,
+                            "text": "复制选定 Copy selection"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiygwdw200",
+                                    "created": 1636184383074,
+                                    "text": "Ctrl+Shift+C"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiyj8hjao0",
+                            "created": 1636184388160,
+                            "text": "粘贴到活动端子 Paste into active terminal"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiylal4j40",
+                                    "created": 1636184392640,
+                                    "text": "Ctrl+Shift+V"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiyor7slk0",
+                            "created": 1636184400176,
+                            "text": "向上/向下滚动 Scroll up/down"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiyqu6h340",
+                                    "created": 1636184404709,
+                                    "text": "Ctrl+↑ / ↓"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiyt4kjo00",
+                            "created": 1636184409691,
+                            "text": "向上/向下滚动页面 Scroll page up/down"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiyw269jk0",
+                                    "created": 1636184416076,
+                                    "text": "Shift+PgUp / PgDown"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfiiyyso3pk0",
+                            "created": 1636184422032,
+                            "text": "滚动到顶部/底部 Scroll to top/bottom"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfiiz0vbsio0",
+                                    "created": 1636184426546,
+                                    "text": "Ctrl+Home / End"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfq6kmleuiw0",
+                    "created": 1636961924709,
+                    "text": "java 插件"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfq6ko5eizs0",
+                            "created": 1636961928093,
+                            "text": "搜索以源码方式打开 class 文件"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfq6kzpeo2o0",
+                                    "created": 1636961953247,
+                                    "text": "ctrl + p 文本框输入 # 开头"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

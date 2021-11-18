@@ -1,0 +1,12 @@
+12345write retno is 5hello world.......... src/%.c, obj/%.o, $(src))
+
+ALL:build/a.out
+
+build/a.out: $(obj)
+	gcc $^ -o $@
+
+$(obj):obj/%.o:src/%.c
+	gcc -c $< -o $@
+
+clean:				
+	-rm -rf $(obj) build/a.out

@@ -1,0 +1,794 @@
+{
+    "root": {
+        "data": {
+            "id": "cfko8xfnoqo0",
+            "created": 1636402428173,
+            "text": "Maven"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfko90n9z140",
+                    "created": 1636402435164,
+                    "text": "POM"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfko985u91k0",
+                            "created": 1636402451524,
+                            "text": "项目对象模型"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfko95xnqmw0",
+                            "created": 1636402446675,
+                            "text": "pom.xml"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfkpek3tb340",
+                                    "created": 1636405690453,
+                                    "text": "本项目坐标",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfkp3plaglc0",
+                                            "created": 1636404840388,
+                                            "text": "groupId"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfkp3xphm5k0",
+                                                    "created": 1636404858056,
+                                                    "text": "组ID，一般指定域名"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfkp3rgwti80",
+                                            "created": 1636404844477,
+                                            "text": "artifactId"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfkp4buntu00",
+                                                    "created": 1636404888844,
+                                                    "text": "项目名称"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfkp3txv9y80",
+                                            "created": 1636404849856,
+                                            "text": "version"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfkp4mor0jk0",
+                                                    "created": 1636404912431,
+                                                    "text": "1.1.0\n如果项目还在开发中，是不稳定版本，一般约定为 -SNAPSHOT 版本"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfkqzdit3nk0",
+                                    "created": 1636410142880,
+                                    "text": "packing"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfkqzgbzasg0",
+                                            "created": 1636410148997,
+                                            "text": "指定当前工程要编译的最终包类型，比如jar包或 war包"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfkpdqi812g0",
+                                    "created": 1636405626021,
+                                    "text": "properties",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfkpdzbw9a00",
+                                            "created": 1636405645230,
+                                            "text": "设置属性,比如设置默认编译的 jdk 版本"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfkqfziaf9s0",
+                                            "created": 1636408623454,
+                                            "text": "<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfkqul173nk0",
+                                                    "created": 1636409767408,
+                                                    "text": "指定编译的编码"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfkqg8f5vio0",
+                                            "created": 1636408642856,
+                                            "text": "<maven.compiler.source>1.8</maven.compiler.source>"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfkquobj3hc0",
+                                                    "created": 1636409774564,
+                                                    "text": "指定编译的版本"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfkqgfvtc5s0",
+                                            "created": 1636408659101,
+                                            "text": "<maven.compiler.target>1.8</maven.compiler.target>"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfkqur3ikzs0",
+                                                    "created": 1636409780609,
+                                                    "text": "指定运行的版本"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfkrlqnnoqo0",
+                                            "created": 1636411895483,
+                                            "text": "全局变量"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfkrlz5ina80",
+                                                    "created": 1636411913977,
+                                                    "text": "自定义属性"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfkrmlkhiwo0",
+                                                            "created": 1636411962771,
+                                                            "text": "在<properties>通过自定义标签声明变量，标签名就是变量名"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfkrmphjll40",
+                                                            "created": 1636411971301,
+                                                            "text": "在 pom.xml 文件中的其他位置，使用 ${标签名} 使用变量的值"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfkrmdnx9h40",
+                                                    "created": 1636411945565,
+                                                    "text": "自定义全局变量一般是定义依赖的版本号，当你的项目中要使用多个相同的版本号，先定义全局变量定义，再使用 ${变量}"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfkpbrk298w0",
+                                    "created": 1636405471581,
+                                    "text": "<dependencies>",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfkpbw13ok00",
+                                            "created": 1636405481318,
+                                            "text": "依赖包集合"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfkpc0mgiyg0",
+                                            "created": 1636405491317,
+                                            "text": "<dependency>"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfkpc4zew4g0",
+                                                    "created": 1636405500807,
+                                                    "text": "单个依赖包，指定坐标"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfkpjlni7jc0",
+                                                    "created": 1636406085642,
+                                                    "text": "依赖坐标"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfkr5ugbw340",
+                                                    "created": 1636410649920,
+                                                    "text": "<scope>"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfkr5x6d4r40",
+                                                            "created": 1636410655848,
+                                                            "text": "依赖范围"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfkr61lsuzc0",
+                                                            "created": 1636410665489,
+                                                            "text": "compile"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfkr6h6yqhs0",
+                                                                    "created": 1636410699420,
+                                                                    "text": "默认，编译至class 中，生效范围在编译、测试、打包、部署"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfkr636ezhk0",
+                                                            "created": 1636410668912,
+                                                            "text": "test"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfkr6lpq2bc0",
+                                                                    "created": 1636410709261,
+                                                                    "text": "仅仅在测试阶段中"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfkr64pzrw00",
+                                                            "created": 1636410672272,
+                                                            "text": "provided"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfkr66cnslk0",
+                                                                    "created": 1636410675820,
+                                                                    "text": "仅仅编译阶段，最终不打进class中"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfkpe2f0nls0",
+                                    "created": 1636405651949,
+                                    "text": "build"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfkq6ovsegg0",
+                                            "created": 1636407895049,
+                                            "text": "控制配置 maven 构件项目的参数设置，比如指定 maven 编译插件的版本,以及maven 插件中使用编译的 jdk 版本"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfkqay8aom00",
+                                            "created": 1636408228853,
+                                            "text": "plugins/plugin"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfkq7ap8vq00",
+                                                    "created": 1636407942542,
+                                                    "text": " <groupId>org.maven.plugins</groupId>\n\t    <artifactId>maven-compiler-plugin</artifactId>\n\t    <version>3.8.1</version>\n\t     <configuration>\n\t           <source>1.8</source>\n\t          <target>1.8</target>\n</configuration>"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfkrq3t55880",
+                                            "created": 1636412237569,
+                                            "text": "资源插件"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfkrs2lkmlc0",
+                                                    "created": 1636412391663,
+                                                    "text": "默认没有使用resources时，maven 会将 src/main?resources 目录的文件拷贝到 target/classes 中。"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfkrrxx268g0",
+                                                    "created": 1636412381474,
+                                                    "text": "自定义路径 \nresources/resource"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfkrtmotho00",
+                                                            "created": 1636412513759,
+                                                            "text": "directory"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfkrtq9j9140",
+                                                                    "created": 1636412521542,
+                                                                    "text": "资源所在的目录"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfkruif49i80",
+                                                            "created": 1636412582830,
+                                                            "text": "includes/include"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfkrusa2y8o0",
+                                                                    "created": 1636412604293,
+                                                                    "text": "扫描规则。比如 **/*.properties"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfkrv3hl8co0",
+                                                            "created": 1636412628692,
+                                                            "text": "<filtering>false</filtering>"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfkrv55o0gw0",
+                                                                    "created": 1636412632324,
+                                                                    "text": "是否启用过滤"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfko9fhj5aw0",
+                    "created": 1636402467468,
+                    "text": "约定的目录结构"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfkpfngn8fc0",
+                            "created": 1636405776124,
+                            "text": "mkdir -p src/{main, test}/{java, resource}"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfko9qgcunk0",
+                    "created": 1636402491342,
+                    "text": "依赖管理 "
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cfko9xxp4fs0",
+                    "created": 1636402507628,
+                    "text": "仓库管理"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfkp6bzquh40",
+                            "created": 1636405045880,
+                            "text": "maven_client"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfkp2ydvplk0",
+                                    "created": 1636404781167,
+                                    "text": "默认仓库路径：~/.m2/repositry"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfkp377jaog0",
+                                    "created": 1636404800374,
+                                    "text": "依赖插件，先在本地查找"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfkp5nerz9s0",
+                                    "created": 1636404992369,
+                                    "text": "本地没有，则尝试从私有服务器下载"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfkp5vhgkh40",
+                                    "created": 1636405009946,
+                                    "text": "私有服务器会从镜像服务器拉取依赖"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfkp6g51leg0",
+                            "created": 1636405054907,
+                            "text": "maven_server"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfkp9syzlnk0",
+                            "created": 1636405317932,
+                            "text": "上传 maven 插件"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfkrzjtvxtc0",
+                                    "created": 1636412977720,
+                                    "text": "pom.xml\ndistributionManagement"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfko9zuvue80",
+                    "created": 1636402511811,
+                    "text": "生命周期"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfkpgpgux4o0",
+                            "created": 1636405858854,
+                            "text": "插件"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfkpurjr1800",
+                                    "created": 1636406960481,
+                                    "text": "以下每个命令的执行背后都对应着一个插件"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfkpx2d8o800",
+                            "created": 1636407140760,
+                            "text": "pom.xml 所在目录"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfkpwxa9aso0",
+                                    "created": 1636407129696,
+                                    "text": "命令执行当前目录"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfkpge63loo0",
+                            "created": 1636405834259,
+                            "text": "mvn clean"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfkpu32m8ps0",
+                                    "created": 1636406907202,
+                                    "text": "清理（会删除原来编译和测试的目录，即 target 目录，但是已经 install 到仓库里包不会删除。）"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfkpkzxlik80",
+                            "created": 1636406195091,
+                            "text": "mvn compile"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfkpt7o2s540",
+                                    "created": 1636406838843,
+                                    "text": "编译主程序。（会在当期目录下生成一个 target，里边存放编译主程序之后生成的字节码文件"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfkpl4xc3h40",
+                            "created": 1636406205959,
+                            "text": "mvn test-compile"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfkptoyp7p40",
+                                    "created": 1636406876490,
+                                    "text": "编译测试程序（会在当前目录下生成一个 target，里边存放编译测试程序之后生成的字节码文件"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfkpqrwasd40",
+                            "created": 1636406647783,
+                            "text": "mvn test"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfkpqw47pk80",
+                                    "created": 1636406656969,
+                                    "text": "测试（会生成一个目录 surefire-ports,保存测试结果）"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfkpmspzq140",
+                            "created": 1636406336122,
+                            "text": "mvn package"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfkprgj6nl40",
+                                    "created": 1636406701410,
+                                    "text": "打包主程序（会编译、编译测试、测试，并且按照 pom.xml 配置把主程序打包生成 jar 包或者 war 包）"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfkpq5sf07s0",
+                            "created": 1636406599659,
+                            "text": "make install"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfkprycjpc00",
+                                    "created": 1636406740190,
+                                    "text": "安装主程序（会把本工程打包，按照本工程的坐标保存到本地库中"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfkpq7t8sps0",
+                            "created": 1636406604063,
+                            "text": "make deploy"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfkpsflc0140",
+                                    "created": 1636406777727,
+                                    "text": "部署主程序（会把本工程打包，按照本工程的坐标保存到本地库中，并且还会保存到私服仓库中，还会自动把项目部署到weib容器中）"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfkoa1jv9vc0",
+                    "created": 1636402515499,
+                    "text": "插件和目标"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cfkoa3eadu80",
+                    "created": 1636402519515,
+                    "text": "继承"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cfkoa5rp0p40",
+                    "created": 1636402524679,
+                    "text": "聚合"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cfkob9vj83s0",
+                    "created": 1636402611982,
+                    "text": "安装和配置"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfkobe1whuo0",
+                            "created": 1636402621075,
+                            "text": "官网下载mven安装包"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfkobk0i6eg0",
+                            "created": 1636402634051,
+                            "text": "配置M2_HOME 配置"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfkoboz1woo0",
+                            "created": 1636402644847,
+                            "text": "配置环境变量 $M2_HOME/bin"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfkov6rsiv40",
+                            "created": 1636404172509,
+                            "text": "测试环境 mvn -v"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfkovri52kg0",
+                            "created": 1636404217638,
+                            "text": "默认仓库路径\n~/.m2/repository"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfkow5chie00",
+                            "created": 1636404247771,
+                            "text": "默认配置文件\n$M2_HOME/conf/settings.sml"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

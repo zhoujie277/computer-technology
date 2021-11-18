@@ -1,0 +1,555 @@
+{
+    "root": {
+        "data": {
+            "id": "cfl734324nc0",
+            "created": 1636455573552,
+            "text": "网络编程"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfly5ofpfts0",
+                    "created": 1636531944548,
+                    "text": "常见 I/O 模型",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfly5yt2y680",
+                            "created": 1636531967124,
+                            "text": "阻塞 I/O 模型",
+                            "expandState": "expand",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfm05tunfmo0",
+                                    "created": 1636537598556,
+                                    "text": "同时在线连接数很多，但活跃连接很少，会浪费地址空间和 CPU 时间",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfm06hhnasw0",
+                                    "created": 1636537650012,
+                                    "text": "最大并发数受系统资源限制",
+                                    "layout": null
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfm06rqgmhs0",
+                                            "created": 1636537672313,
+                                            "text": "每个线程都要占用一定大小的栈空间，内存空间是有限的，\n使得同时在线连接数受到这个限制，\n又因为同时在线连接的不一定都活跃，浪费了系统资源",
+                                            "layout": null
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfm0f40j7qg0",
+                            "created": 1636538325956,
+                            "text": "非阻塞 I/O 模型",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfm0g7be5k80",
+                                    "created": 1636538411507,
+                                    "text": "相较于阻塞 I/O 模型，支持更大客户端连接数\n(在业务层一个线程轮询多个连接)",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfm0ghcn1pc0",
+                                    "created": 1636538433351,
+                                    "text": "但对于不活跃连接，仍然需要无效轮询，浪费 CPU 时间",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfly6457ebk0",
+                            "created": 1636531978741,
+                            "text": "多路复用 I/O 模型",
+                            "expandState": "expand",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfm0a70rrk00",
+                                    "created": 1636537940680,
+                                    "text": "在操作系统内核，处理了真实产生 I/O 事件的连接，\n并将事件分发到应用层，多个连接复用了一个阻塞",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfm08xbkg8g0",
+                                    "created": 1636537841201,
+                                    "text": "可以支持更大同时在线连接数，只有活跃连接才需要加入工作线程池去处理",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfly6948ou80",
+                            "created": 1636531989567,
+                            "text": "异步 I/O 模型",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cflwppen0jk0",
+                    "created": 1636527871724,
+                    "text": "Java IO",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cflwq0mef140",
+                            "created": 1636527896137,
+                            "text": "Java OIO",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cflzh57cteo0",
+                                    "created": 1636535664164,
+                                    "text": "面向流",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cflwwqzl0pk0",
+                                    "created": 1636528423716,
+                                    "text": "ServerSocket",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cflwwt2x0y00",
+                                    "created": 1636528428271,
+                                    "text": "Socket",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cflwpxcntig0",
+                            "created": 1636527889018,
+                            "text": "Java NIO",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cflzh9i7h7k0",
+                                    "created": 1636535673527,
+                                    "text": "面向缓冲区",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cflwwke8zn40",
+                                    "created": 1636528409365,
+                                    "text": "Channel",
+                                    "layout": null
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfly6zubxc00",
+                                            "created": 1636532047741,
+                                            "text": "ServerSocketChannel",
+                                            "layout": null
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfly737f1i00",
+                                            "created": 1636532055063,
+                                            "text": "SocketChannel",
+                                            "layout": null
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfly76xh7cg0",
+                                            "created": 1636532063169,
+                                            "text": "FIleChannel",
+                                            "layout": null
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cflwwlvlru80",
+                                    "created": 1636528412591,
+                                    "text": "Buffer",
+                                    "layout": null
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cflx0f4e9i80",
+                                            "created": 1636528711342,
+                                            "text": "allcate",
+                                            "layout": null
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cflx0hhg53k0",
+                                            "created": 1636528716485,
+                                            "text": "allocatedirect",
+                                            "layout": null
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm0k9uqtt40",
+                                            "created": 1636538730488,
+                                            "text": "写模式"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm0kc8lkk00",
+                                                    "created": 1636538735679,
+                                                    "text": "创建缓冲区，默认写模式"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfm0khxrduw0",
+                                                    "created": 1636538748084,
+                                                    "text": "clear 缓冲区，切换写模式"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm0k7cifvs0",
+                                            "created": 1636538725032,
+                                            "text": "读模式"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm0kqtboxs0",
+                                                    "created": 1636538767407,
+                                                    "text": "flip 操作，切换读模式"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cflwwn1yz4w0",
+                                    "created": 1636528415153,
+                                    "text": "Selector",
+                                    "layout": null
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfly7ay3r2w0",
+                                            "created": 1636532071914,
+                                            "text": "select()",
+                                            "layout": null
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfly7cyxma80",
+                                            "created": 1636532076317,
+                                            "text": "selectionKeys()",
+                                            "layout": null
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfly7h78y200",
+                                            "created": 1636532085527,
+                                            "text": "keys()",
+                                            "layout": null
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfly5en7yog0",
+                            "created": 1636531923234,
+                            "text": "Java AIO",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cflww5zm5kw0",
+                    "created": 1636528378005,
+                    "text": "Linux IO",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cflwxfylv9s0",
+                            "created": 1636528478076,
+                            "text": "socket",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cflwxhx00ao0",
+                                    "created": 1636528482333,
+                                    "text": "bind",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cflwxqlpfc00",
+                                    "created": 1636528501241,
+                                    "text": "listen",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cflwxu09cio0",
+                                    "created": 1636528508651,
+                                    "text": "accept",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cflwxv9t31c0",
+                                    "created": 1636528511405,
+                                    "text": "read",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cflwxwh9p1s0",
+                                    "created": 1636528514033,
+                                    "text": "write",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cflwxzvwtpc0",
+                            "created": 1636528521449,
+                            "text": "select",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cflwytopqh40",
+                                    "created": 1636528586317,
+                                    "text": "FD_SET",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cflwy1166g80",
+                            "created": 1636528523944,
+                            "text": "poll",
+                            "layout": null
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cflwy1w6fc00",
+                            "created": 1636528525819,
+                            "text": "epoll",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cflwylxvc7k0",
+                                    "created": 1636528569457,
+                                    "text": "epoll_event",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cflwyacb27c0",
+                                    "created": 1636528544208,
+                                    "text": "epoll_create",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cflwycj0kzc0",
+                                    "created": 1636528548968,
+                                    "text": "epoll_ctl",
+                                    "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cflwyed3wx40",
+                                    "created": 1636528552964,
+                                    "text": "epoll_wait",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cflwwch2wls0",
+                    "created": 1636528392122,
+                    "text": "其他问题",
+                    "expandState": "expand",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfl7f0ziego0",
+                            "created": 1636456507177,
+                            "text": "查看内核两个缓冲区和TCP 三次握手，四次挥手的实现",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfl7fckcgf40",
+                                    "created": 1636456532381,
+                                    "text": "对比自己的FTP服务器实现，状态机的缓缓",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cflwpk6u2p40",
+                            "created": 1636527860368,
+                            "text": "topic",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfl737842v40",
+                                    "created": 1636455580388,
+                                    "text": "SocketChannel",
+                                    "layout": null
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfl73eh968g0",
+                                            "created": 1636455596178,
+                                            "text": "shutdownInput",
+                                            "layout": null
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfl73h59v5s0",
+                                            "created": 1636455601984,
+                                            "text": "shutdownOuput",
+                                            "layout": null
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "filetree",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

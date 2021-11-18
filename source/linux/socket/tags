@@ -1,0 +1,77 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BUFLEN	src/epoll_reactor.c	18;"	d	file:
+ClientInfo	src/server.c	/^struct ClientInfo$/;"	s	file:
+MAXLINE	src/epoll_nonblocking.c	8;"	d	file:
+MAXLINE	src/epoll_pipe.c	7;"	d	file:
+MAXLINE	src/poll_pipe.c	11;"	d	file:
+MAX_EVENTS	src/epoll.c	27;"	d	file:
+MAX_EVENTS	src/epoll_reactor.c	17;"	d	file:
+PORT	src/epoll.c	26;"	d	file:
+PORT	src/poll.c	11;"	d	file:
+PORT	src/poll_pipe.c	13;"	d	file:
+PORT	src/select.c	9;"	d	file:
+PORT	src/select_primary.c	9;"	d	file:
+SERV_IP	src/client.c	7;"	d	file:
+SERV_PORT	src/client.c	8;"	d	file:
+SERV_PORT	src/epoll_nonblocking.c	9;"	d	file:
+SERV_PORT	src/epoll_reactor.c	19;"	d	file:
+SERV_PORT	src/server.c	13;"	d	file:
+SERV_PORT	src/server_fork.c	12;"	d	file:
+SERV_PORT	src/server_simple.c	9;"	d	file:
+acceptconn	src/epoll_reactor.c	/^void acceptconn(int lfd, int events, void *arg)$/;"	f
+arg	src/epoll_reactor.c	/^    void *arg;$/;"	m	struct:myevent_s	file:
+buf	src/epoll_reactor.c	/^    char buf[BUFLEN];$/;"	m	struct:myevent_s	file:
+call_back	src/epoll_reactor.c	/^    void (*call_back)(int fd, int events, void *arg);$/;"	m	struct:myevent_s	file:
+checkError	src/client.c	/^void checkError(int ret, const char *str)$/;"	f
+checkError	src/epoll.c	/^void checkError(int ret, const char *str)$/;"	f
+checkError	src/epoll_pipe.c	/^void checkError(int ret, const char *str)$/;"	f
+checkError	src/poll.c	/^void checkError(int ret, const char *str)$/;"	f
+checkError	src/poll_pipe.c	/^void checkError(int ret, const char *str)$/;"	f
+checkError	src/select.c	/^void checkError(int ret, const char *str)$/;"	f
+checkError	src/select_primary.c	/^void checkError(int ret, const char *str)$/;"	f
+checkError	src/server.c	/^void checkError(int ret, const char *str)$/;"	f
+checkError	src/server_fork.c	/^void checkError(int ret, const char *str)$/;"	f
+checkError	src/server_simple.c	/^void checkError(int ret, const char *str)$/;"	f
+clientFd	src/server.c	/^    int clientFd;$/;"	m	struct:ClientInfo	file:
+client_addr	src/server.c	/^    struct sockaddr_in client_addr;$/;"	m	struct:ClientInfo	typeref:struct:ClientInfo::sockaddr_in	file:
+doWork	src/server.c	/^void *doWork(void *arg)$/;"	f
+doWork	src/server_fork.c	/^void doWork(int clientFd, struct sockaddr_in *client_addr)$/;"	f
+eventadd	src/epoll_reactor.c	/^void eventadd(int efd, int events, struct myevent_s *myev)$/;"	f
+eventdel	src/epoll_reactor.c	/^void eventdel(int efd, struct myevent_s *myev)$/;"	f
+events	src/epoll_reactor.c	/^    int events;$/;"	m	struct:myevent_s	file:
+eventset	src/epoll_reactor.c	/^void eventset(struct myevent_s *myev, int fd, void (*callback)(int, int, void *), void *arg)$/;"	f
+g_efd	src/epoll_reactor.c	/^int g_efd;$/;"	v
+g_events	src/epoll_reactor.c	/^struct myevent_s g_events[MAX_EVENTS + 1];$/;"	v	typeref:struct:myevent_s
+initlistensocket	src/epoll_reactor.c	/^void initlistensocket(int efd, short port)$/;"	f
+last_active	src/epoll_reactor.c	/^    long last_active;$/;"	m	struct:myevent_s	file:
+len	src/epoll_reactor.c	/^    int len;$/;"	m	struct:myevent_s	file:
+main	src/client.c	/^int main(int argc, char *argv[])$/;"	f
+main	src/epoll.c	/^int main()$/;"	f
+main	src/epoll_nonblocking.c	/^int main()$/;"	f
+main	src/epoll_pipe.c	/^int main()$/;"	f
+main	src/epoll_reactor.c	/^int main(int argc, char *argv[])$/;"	f
+main	src/poll.c	/^int main()$/;"	f
+main	src/poll_pipe.c	/^int main()$/;"	f
+main	src/select.c	/^int main()$/;"	f
+main	src/select_primary.c	/^int main()$/;"	f
+main	src/server.c	/^int main()$/;"	f
+main	src/server_fork.c	/^int main()$/;"	f
+main	src/server_simple.c	/^int main()$/;"	f
+myevent_s	src/epoll_reactor.c	/^struct myevent_s$/;"	s	file:
+onSignal	src/server.c	/^void onSignal(int signo)$/;"	f
+onSignal	src/server_fork.c	/^void onSignal(int signo)$/;"	f
+recvdata	src/epoll_reactor.c	/^void recvdata(int fd, int events, void *arg)$/;"	f
+senddata	src/epoll_reactor.c	/^void senddata(int fd, int events, void *arg)$/;"	f
+sfd	src/epoll_reactor.c	/^    int sfd;$/;"	m	struct:myevent_s	file:
+src	makefile	/^src = ${wildcard src\/*.c}$/;"	m
+status	src/epoll_reactor.c	/^    int status;$/;"	m	struct:myevent_s	file:
+target	makefile	/^target = $(patsubst src\/%.c, build\/%, $(src))$/;"	m
+writeback	src/epoll.c	/^void writeback(int fd, char *buf, size_t nbyte)$/;"	f
+writeback	src/poll.c	/^void writeback(int fd, char *buf, size_t nbyte)$/;"	f
+writeback	src/select.c	/^void writeback(int fd, char *buf, size_t nbyte)$/;"	f
+writeback	src/select_primary.c	/^void writeback(int fd, char *buf, size_t nbyte)$/;"	f

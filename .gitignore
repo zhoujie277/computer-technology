@@ -1,0 +1,11 @@
+.history
+.vscode/
+.pdf
+tmp/
+docs/**/booktool/**
+source/java/target/
+**/*/build/*
+**/*/a.out
+source/linux/libevent/**/*
+source/java/.**
+source/java/.**/*

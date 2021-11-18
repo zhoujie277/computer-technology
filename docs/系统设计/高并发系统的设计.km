@@ -1,0 +1,1648 @@
+{
+    "root": {
+        "data": {
+            "id": "cfh8bh1elig0",
+            "created": 1636052809946,
+            "text": "高并发系统的设计"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cflrhitysnk0",
+                    "created": 1636513124950,
+                    "text": "理论基础"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfh8blfbt2w0",
+                            "created": 1636052819495,
+                            "text": "多进程模型"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfh8djxtyko0",
+                                    "created": 1636052972989,
+                                    "text": "上下文开销"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfh8gl34ls80",
+                                    "created": 1636053210578,
+                                    "text": "进程状态"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfh8bowlops0",
+                            "created": 1636052827070,
+                            "text": "多线程模型"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfh8c26m5hc0",
+                                    "created": 1636052855974,
+                                    "text": "栈大小"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfh8c580uo80",
+                                    "created": 1636052862589,
+                                    "text": "一个进程所能分配线程的上限"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfh8cj4xleo0",
+                                            "created": 1636052892877,
+                                            "text": "地址空间的耗尽？"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfh8do7lcvs0",
+                                    "created": 1636052982286,
+                                    "text": "上下文开销"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfh8c10prgw0",
+                            "created": 1636052853440,
+                            "text": "I/O 模型"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfh8cvn6gao0",
+                                    "created": 1636052920102,
+                                    "text": "阻塞 I/O"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfh8czwdap40",
+                                    "created": 1636052929365,
+                                    "text": "非阻塞 I/O"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfh8d77qw880",
+                                    "created": 1636052945290,
+                                    "text": "I/O 多路复用"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfh8damo3280",
+                                    "created": 1636052952723,
+                                    "text": "分散/聚集 I/O"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfh9nbflmxs0",
+                            "created": 1636056559224,
+                            "text": "上下文切换技术"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfh9eg79ig00",
+                            "created": 1636055864326,
+                            "text": "异步模型"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfh9ejxvhc80",
+                                    "created": 1636055872466,
+                                    "text": "用户级线程"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfh9elshiwo0",
+                                    "created": 1636055876493,
+                                    "text": "协程"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfh8dx5ov940",
+                            "created": 1636053001762,
+                            "text": "性能"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfmhq6zhf0o0",
+                                    "created": 1636587153297,
+                                    "text": "系统资源"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfmhqatzm880",
+                                            "created": 1636587161672,
+                                            "text": "CPU 时间片"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmhqd0qoco0",
+                                            "created": 1636587166434,
+                                            "text": "线性内存地址空间"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmhqhwzkdc0",
+                                            "created": 1636587177091,
+                                            "text": "物理内存大小"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmhqwx3o280",
+                                            "created": 1636587209750,
+                                            "text": "CPU 和 I/O 速率的匹配"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfh8fhpl46w0",
+                                    "created": 1636053124865,
+                                    "text": "性能开销"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfh8edmisls0",
+                                            "created": 1636053037609,
+                                            "text": "系统调用"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfh8e1evga00",
+                                                    "created": 1636053011025,
+                                                    "text": "陷入内核的开销"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmhr9yf3d40",
+                                            "created": 1636587238127,
+                                            "text": "上下文切换"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfh8f3pj9gw0",
+                                    "created": 1636053094387,
+                                    "text": "性能监控"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfh8fd5zwqg0",
+                                    "created": 1636053114974,
+                                    "text": "性能调优"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfh8gx3at800",
+                            "created": 1636053236710,
+                            "text": "网络编程模型"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfh8h0nh9880",
+                                    "created": 1636053244461,
+                                    "text": "阻塞模型"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfh8hngi44o0",
+                                    "created": 1636053294105,
+                                    "text": "多进程模型"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfh8h23cvvs0",
+                                    "created": 1636053247598,
+                                    "text": "多线程模型"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfh8h3w5jkw0",
+                                    "created": 1636053251516,
+                                    "text": "单 Reactor 多进程/多线程模型"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfh8hy4rpmo0",
+                                    "created": 1636053317340,
+                                    "text": "多 Reactor 多进程/多线程模型"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfm2hbvgz2w0",
+                    "created": 1636544142013,
+                    "text": "可弹性伸缩 I/O"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfmeqy9fhm80",
+                            "created": 1636578749342,
+                            "text": "概述"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfmerbbxk540",
+                                    "created": 1636578777792,
+                                    "text": "可伸缩的网络服务"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfmere0y79s0",
+                                    "created": 1636578783658,
+                                    "text": "基于事件驱动的过程处理"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfmeruzra7k0",
+                                    "created": 1636578820591,
+                                    "text": "Reactor 模式"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfmeryn0rkw0",
+                                            "created": 1636578828528,
+                                            "text": "基础版本"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmes1f6gjk0",
+                                            "created": 1636578834584,
+                                            "text": "多线程版本"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmes45b9b40",
+                                            "created": 1636578840518,
+                                            "text": "其他变种"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfmethd8u000",
+                            "created": 1636578947660,
+                            "text": "网络服务"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfmetj02tfs0",
+                                    "created": 1636578951217,
+                                    "text": "we 服务、分布式服务等等"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfmett3bvts0",
+                                    "created": 1636578973182,
+                                    "text": "基本都含有相同的基础结构"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfmety0pj740",
+                                            "created": 1636578983907,
+                                            "text": "接收请求"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmeu3d32t40",
+                                            "created": 1636578995540,
+                                            "text": "解码请求"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmeu5eercg0",
+                                            "created": 1636578999973,
+                                            "text": "处理服务"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmeuarnpog0",
+                                            "created": 1636579011658,
+                                            "text": "编码应答"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmeui2trow0",
+                                            "created": 1636579027571,
+                                            "text": "发送应答"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfmeupfquuo0",
+                                    "created": 1636579043590,
+                                    "text": "但是在每一个阶段的成本和特征都不同"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfmeuxhkb480",
+                                            "created": 1636579061114,
+                                            "text": "XML parsing"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmev1u03hk0",
+                                            "created": 1636579070573,
+                                            "text": "文件传输"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmev5u95nk0",
+                                            "created": 1636579079295,
+                                            "text": "生成网页"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmevbf30rk0",
+                                            "created": 1636579091439,
+                                            "text": "计算服务等等"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfm2hmcb20w0",
+                            "created": 1636544164798,
+                            "text": "可伸缩性的目标",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfmevtf4lw80",
+                                    "created": 1636579130624,
+                                    "text": "在持续负载的优雅降级"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfmewdojzs00",
+                                    "created": 1636579174729,
+                                    "text": "硬件资源增加时能持续提高性能( CPU、memory、disk、bandwidth)"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfmezgrwdqw0",
+                                    "created": 1636579416554,
+                                    "text": "同时满足可用性和性能目标",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfm2hyzmfag0",
+                                            "created": 1636544192330,
+                                            "text": "低延迟"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm2i0by6dk0",
+                                            "created": 1636544195252,
+                                            "text": "满足高峰需求"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm2i2hjg280",
+                                            "created": 1636544199943,
+                                            "text": "可调节的服务质量"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfm2iprzbe80",
+                                    "created": 1636544250641,
+                                    "text": "分而治之通常是实现可伸缩目标的最有效方式",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfm2inc3f2w0",
+                            "created": 1636544245326,
+                            "text": "分而治之"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfm2l6k7jg00",
+                                    "created": 1636544443904,
+                                    "text": "将处理过程分成一个个小任务"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfm2m4k4keo0",
+                                            "created": 1636544517910,
+                                            "text": "每个任务以非阻塞的方式运行"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfm2ludr11c0",
+                                    "created": 1636544495757,
+                                    "text": "在任务能用的时候执行每个任务"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfm2mj0z9co0",
+                                            "created": 1636544549404,
+                                            "text": "I/O 事件通常用作触发器"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfm2n1uovyg0",
+                                    "created": 1636544590383,
+                                    "text": "java nio 中支持的基本机制"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfm2n713k200",
+                                            "created": 1636544601654,
+                                            "text": "非阻塞的读写方式"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm2nvah6wg0",
+                                            "created": 1636544654464,
+                                            "text": "分发与 I/O 事件关联的任务"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfm2n5s7xnk0",
+                                    "created": 1636544598940,
+                                    "text": "无尽的变化可能"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfm2oicrod40",
+                                            "created": 1636544704668,
+                                            "text": "一系列的事件驱动设计"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfm2ou090y00",
+                            "created": 1636544730033,
+                            "text": "事件驱动设计"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfm2plg9gs00",
+                                    "created": 1636544789774,
+                                    "text": "通常比其他可选择的设计更有效"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfm2pxef70g0",
+                                            "created": 1636544815784,
+                                            "text": "更少的资源"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm2q9t62dc0",
+                                                    "created": 1636544842797,
+                                                    "text": "不需要为每个客户端分配一个线程"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm2qo15kg80",
+                                            "created": 1636544873755,
+                                            "text": "更少的开销"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm2r0wpe740",
+                                                    "created": 1636544901784,
+                                                    "text": "更小的上下文切换，通常更小的同步操作"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm2rl6miug0",
+                                            "created": 1636544945920,
+                                            "text": "但是分发会更慢"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm2rttzkuw0",
+                                                    "created": 1636544964747,
+                                                    "text": "必须手动为每个事件和处理程序绑定"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfm2rjty85c0",
+                                    "created": 1636544942976,
+                                    "text": "通常编码更加复杂，具体体现在"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfm2t47nvug0",
+                                            "created": 1636545065705,
+                                            "text": "必须将处理过程分解为简单的非阻塞操作"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm2uyah7v40",
+                                                    "created": 1636545209543,
+                                                    "text": "类似于GUI事件驱动操作"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfm2v9iceg00",
+                                                    "created": 1636545233964,
+                                                    "text": "无法消除所有阻塞：GC、缺页异常等等"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm2vpys0kg0",
+                                            "created": 1636545269786,
+                                            "text": "必须持续跟踪服务的逻辑状态"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfm2yfistg00",
+                            "created": 1636545482144,
+                            "text": "Reactor 模式",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfm2z7hye0g0",
+                                    "created": 1636545543043,
+                                    "text": "Reactor 通过调度相应的处理程序来响应 I/O 事件"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfm30e86mjc0",
+                                    "created": 1636545636054,
+                                    "text": "处理程序执行非阻塞操作"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfm30x88qtk0",
+                                    "created": 1636545677416,
+                                    "text": "将事件绑定到处理程序"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfm34eknolk0",
+                                    "created": 1636545950265,
+                                    "text": "Java nio 的支持"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfm34hzijxc0",
+                                            "created": 1636545957694,
+                                            "text": "Channels"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm34lhqj5c0",
+                                                    "created": 1636545965326,
+                                                    "text": "连接文件、socket等等支持非阻塞操作"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm34tmmb4w0",
+                                            "created": 1636545983035,
+                                            "text": "Buffers"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm34vwycjc0",
+                                                    "created": 1636545988014,
+                                                    "text": "类似数组的对象，可被通道直接读写"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm35sr6q600",
+                                            "created": 1636546059499,
+                                            "text": "Selectors"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm35v7ccc80",
+                                                    "created": 1636546064829,
+                                                    "text": "检测一组通道中有哪些产生了 I/O 事件并通知"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm36zb4u2o0",
+                                            "created": 1636546152130,
+                                            "text": "SelectionKeys"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm373tztxs0",
+                                                    "created": 1636546161977,
+                                                    "text": "维护 I/O 事件的状态和绑定"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfm3imr4srk0",
+                                    "created": 1636547065169,
+                                    "text": "多线程设计"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfm3ipdbtwg0",
+                                            "created": 1636547070865,
+                                            "text": "战略上增加线程以实现可扩展性"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm3izllars0",
+                                                    "created": 1636547093132,
+                                                    "text": "主要适用于多处理器"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm3j7mvcc00",
+                                            "created": 1636547110624,
+                                            "text": "工作者线程"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm3jfrhfv40",
+                                                    "created": 1636547128317,
+                                                    "text": "Reactors 应该要快速触发处理程序"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfm3kg4y0f40",
+                                                            "created": 1636547207495,
+                                                            "text": "处理程序处理过程减慢了 Reactor 的速度"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfm3lbmbjdk0",
+                                                    "created": 1636547276026,
+                                                    "text": "将非 I/O 操作放到其他线程中"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm3lmqlamo0",
+                                            "created": 1636547300229,
+                                            "text": "多个 Reactor 线程"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm3mq7t7400",
+                                                    "created": 1636547386164,
+                                                    "text": "Reactor 线程能让 I/O 操作饱和"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfm3nuwme5c0",
+                                                    "created": 1636547474736,
+                                                    "text": "将负载分给其他 Reactors"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfm3o8xkt080",
+                                                            "created": 1636547505269,
+                                                            "text": "采用负载平衡使得 CPU 和 I/O 速率匹配"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfm3s6011b40",
+                                    "created": 1636547812343,
+                                    "text": "工作者线程"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfm3s8hcok80",
+                                            "created": 1636547817744,
+                                            "text": "卸载了非 I/O 操作以加速 Reactor 线程"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm3si6ksf40",
+                                                    "created": 1636547838860,
+                                                    "text": "类似于 POSA2 Proactor 设计"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm3ut3pgz40",
+                                            "created": 1636548019360,
+                                            "text": "比将计算绑定处理重写为事件驱动更简单"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm3vm469dc0",
+                                                    "created": 1636548082515,
+                                                    "text": "仍然应该是纯的非阻塞计算"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfm3vt5kkyo0",
+                                                            "created": 1636548097837,
+                                                            "text": "足够的计算处理过程来冲抵开销"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm3w96v1js0",
+                                            "created": 1636548132743,
+                                            "text": "但是与 I/O 同时发生会更难"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm3wor53g00",
+                                                    "created": 1636548166621,
+                                                    "text": "最好是能够第一次就将所有输入数据全部读入缓冲区"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfm3xmlcciw0",
+                                            "created": 1636548240281,
+                                            "text": "使用线程池以便可以调整和控制"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfm3y4ss14w0",
+                                                    "created": 1636548279913,
+                                                    "text": "通常来说需要的线程数量比客户端少得多"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfmfaqnyri80",
+                                    "created": 1636580300090,
+                                    "text": "任务的协调"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfmfbf7pcy00",
+                                            "created": 1636580353526,
+                                            "text": "任务接力"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfmfbi01wjc0",
+                                                    "created": 1636580359594,
+                                                    "text": "每个任务之间的启用、触发，或者调用下一个任务，这种方式通常快速，但很脆弱"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmfdggytds0",
+                                                    "created": 1636580512992,
+                                                    "text": "对每个处理程序调度器的回调"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfmfdpjkg740",
+                                                            "created": 1636580532740,
+                                                            "text": "设置状态、附件等等"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmfe28a6540",
+                                                    "created": 1636580560356,
+                                                    "text": "队列"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfmfee8itrs0",
+                                                            "created": 1636580586492,
+                                                            "text": "例如，跨步骤的共享缓冲区"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmfetbbqsg0",
+                                                    "created": 1636580619313,
+                                                    "text": "Futures"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfmfg08fi4w0",
+                                                            "created": 1636580712739,
+                                                            "text": "当每个任务产生一个结果时，在 join/wait/notify/ 上分层协调"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfmfh8zeumg0",
+                                    "created": 1636580810149,
+                                    "text": "使用线程池技术"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfmfhd8omj40",
+                                            "created": 1636580819417,
+                                            "text": "可调节的工作线程池"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmfhq19hqw0",
+                                            "created": 1636580847268,
+                                            "text": "主要方法：execute(Runnable r)"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmfi4w0nfk0",
+                                            "created": 1636580879601,
+                                            "text": "用如下参数控制调节"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfmfia8mfio0",
+                                                    "created": 1636580891247,
+                                                    "text": "任务队列的类型"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmfiit9ipk0",
+                                                    "created": 1636580909910,
+                                                    "text": "线程池的最大支持线程数"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmfirtejwg0",
+                                                    "created": 1636580929509,
+                                                    "text": "线程池最小线程数"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmfiwpacso0",
+                                                    "created": 1636580940144,
+                                                    "text": "按需生成的热线程"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmfj73pmzk0",
+                                                    "created": 1636580962784,
+                                                    "text": "直到线程生命周期结束的空闲等待时间"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfmfjwds01c0",
+                                                            "created": 1636581017812,
+                                                            "text": "如有必要，将在以后替换位新的"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmfk9rdbns0",
+                                                    "created": 1636581046932,
+                                                    "text": "饱和策略"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfmfkc73yiw0",
+                                                            "created": 1636581052238,
+                                                            "text": "阻塞等待、丢弃、producer-runs 等等"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfmfllyh9w00",
+                                    "created": 1636581151848,
+                                    "text": "多个 Reactor 线程"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfmflyvfee00",
+                                            "created": 1636581179961,
+                                            "text": "使用 Reactor 池化技术"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfmfm5ohs540",
+                                                    "created": 1636581194780,
+                                                    "text": "用于匹配 CPU 和 I/O 速率"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmfn1hub4w0",
+                                                    "created": 1636581264034,
+                                                    "text": "静态或动态的构造方式"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfmfn59nppk0",
+                                                            "created": 1636581272247,
+                                                            "text": "每一个都有自己的 Selector，Thread、分发循环"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmfobjvu1k0",
+                                                    "created": 1636581364290,
+                                                    "text": "主 Acceptor 分发给其他的 Reactors"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfmfrvri9q80",
+                                    "created": 1636581643379,
+                                    "text": "使用 Java nio 的其他特性"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfmfs0ui1740",
+                                            "created": 1636581654444,
+                                            "text": "每个  Reactor 拥有多个 Selctor"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfmfsn1hqhk0",
+                                                    "created": 1636581702756,
+                                                    "text": "不同的 I/O 事件绑定到不同的处理器"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmftdy62hk0",
+                                                    "created": 1636581761328,
+                                                    "text": "需要更细心的同步多个selector 的协调"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmfu3ble880",
+                                            "created": 1636581816559,
+                                            "text": "文件传输"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfmfu5f9j4o0",
+                                                    "created": 1636581821135,
+                                                    "text": "文件到网络或者网络到文件的自动化复制技术"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmfufcp3yw0",
+                                            "created": 1636581842747,
+                                            "text": "内存映射文件"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfmfuokkdnk0",
+                                                    "created": 1636581862814,
+                                                    "text": "通过 buffers 访问文件"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmfw4mdciw0",
+                                            "created": 1636581976116,
+                                            "text": "直接缓冲区"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfmfwd50z3s0",
+                                                    "created": 1636581994658,
+                                                    "text": "有时可以实现零拷贝传输"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmfwqipj8w0",
+                                                    "created": 1636582023784,
+                                                    "text": "但是存在创建和终止的开销"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmfwwsxhts0",
+                                                    "created": 1636582037463,
+                                                    "text": "最好是应用在长连接的场景"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfmfxcwxl9k0",
+                                    "created": 1636582072533,
+                                    "text": "基于连接的扩展"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfmfxs22t5s0",
+                                            "created": 1636582105496,
+                                            "text": "非单个服务的请求"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfmfxv78qsg0",
+                                                    "created": 1636582112339,
+                                                    "text": "客户端连接"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmfxyshl280",
+                                                    "created": 1636582120154,
+                                                    "text": "客户端发送一系列消息或请求"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmfy3cben40",
+                                                    "created": 1636582130060,
+                                                    "text": "客户端断开连接"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmfyac60b40",
+                                            "created": 1636582145288,
+                                            "text": "示例"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfmfyc5xwl40",
+                                                    "created": 1636582149265,
+                                                    "text": "数据库和事务监控"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmfym3j43c0",
+                                                    "created": 1636582170887,
+                                                    "text": "多人在线的游戏、聊天室等等"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfmfz9jota00",
+                                            "created": 1636582221930,
+                                            "text": "可扩展的基本网络服务模式"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfmfzdclxmw0",
+                                                    "created": 1636582230209,
+                                                    "text": "处理许多长连接的客户端"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmg08d6jtk0",
+                                                    "created": 1636582297724,
+                                                    "text": "跟踪客户端的session状态，包括丢弃"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfmg0maiteo0",
+                                                    "created": 1636582328038,
+                                                    "text": "跨主机的分布式服务"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cflueb14oaw0",
+                    "created": 1636521336206,
+                    "text": "应用场景模型"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfluimuz95s0",
+                            "created": 1636521675412,
+                            "text": "消息协议"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfluiwaj71k0",
+                                    "created": 1636521695944,
+                                    "text": "HTTP"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfluj08zx4g0",
+                                    "created": 1636521704558,
+                                    "text": "FTP"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfluehk8iyw0",
+                            "created": 1636521350422,
+                            "text": "长连接模型"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfluesq550g0",
+                                    "created": 1636521374724,
+                                    "text": "实时通信服务器"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cflufclmwrk0",
+                                            "created": 1636521417987,
+                                            "text": "同一时间大量请求连接"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cflufipwn6w0",
+                                            "created": 1636521431307,
+                                            "text": "同一时间大量客户端传送数据"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfluf0y7qzc0",
+                                    "created": 1636521392626,
+                                    "text": "问题模型"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfluelfit1k0",
+                            "created": 1636521358844,
+                            "text": "短连接模型"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cflueobkiy00",
+                                    "created": 1636521365136,
+                                    "text": "Web 服务器"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfluf34jipc0",
+                                    "created": 1636521397362,
+                                    "text": "问题模型"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfluf4gsgio0",
+                                            "created": 1636521400280,
+                                            "text": "同一时间大量请求连接"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cflrhmg2fk00",
+                    "created": 1636513132817,
+                    "text": "模拟并发"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cflri8xelcw0",
+                            "created": 1636513181754,
+                            "text": "搭建测试环境"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cflrifsynfs0",
+                            "created": 1636513196723,
+                            "text": "模拟真实请求"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cflri5me17k0",
+                    "created": 1636513174558,
+                    "text": "性能观测"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cflrijr1qbc0",
+                            "created": 1636513205315,
+                            "text": "CPU 利用率"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cflrimrigq80",
+                            "created": 1636513211873,
+                            "text": "并发线程数"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cflrirptifs0",
+                            "created": 1636513222654,
+                            "text": "系统吞吐量"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cflrixhmb4g0",
+                            "created": 1636513235219,
+                            "text": "性能瓶颈"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "filetree",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

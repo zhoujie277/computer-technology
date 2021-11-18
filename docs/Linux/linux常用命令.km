@@ -1,0 +1,2787 @@
+{
+    "root": {
+        "data": {
+            "id": "cfj6n87us2g0",
+            "created": 1636251208809,
+            "text": "Linux 常用命令"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfj6pqruans0",
+                    "created": 1636251405928,
+                    "text": "文档编辑"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfj6nbu024o0",
+                            "created": 1636251216678,
+                            "text": "wc"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfj6nere4ns0",
+                                    "created": 1636251223051,
+                                    "text": "-c"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfj6o06kvt40",
+                                            "created": 1636251269682,
+                                            "text": "统计字节数，或--bytes或——chars：只显示Bytes数"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6nmsksjk0",
+                                    "created": 1636251240537,
+                                    "text": "-l"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfj6nozyeao0",
+                                            "created": 1636251245336,
+                                            "text": "统计行数，或——lines：只显示列数；"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6of69jkw0",
+                                    "created": 1636251302314,
+                                    "text": "-m"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfj6oi0ndls0",
+                                            "created": 1636251308505,
+                                            "text": "统计字符数。这个标志不能与 -c 标志一起使用。"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6okgcy3s0",
+                                    "created": 1636251313809,
+                                    "text": "-w"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfj6onag3340",
+                                            "created": 1636251319981,
+                                            "text": "统计字数，或——words：只显示字数。一个字被定义为由空白、跳格或换行字符分隔的字符串。"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6oqj59gg0",
+                                    "created": 1636251327038,
+                                    "text": "-L"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfj6ot31dls0",
+                                            "created": 1636251332594,
+                                            "text": "打印最长行的长度。"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfj6q5jjasg0",
+                            "created": 1636251438077,
+                            "text": "sort"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfj6qii1xaw0",
+                                    "created": 1636251466286,
+                                    "text": "sort 可针对文本文件的内容，以行为单位来排序。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6qmmhgiw0",
+                                    "created": 1636251475261,
+                                    "text": "-b 忽略每行前面开始出的空格字符。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6qpo60uw0",
+                                    "created": 1636251481893,
+                                    "text": "-c 检查文件是否已经按照顺序排序。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6qsek0jk0",
+                                    "created": 1636251487842,
+                                    "text": "-d 排序时，处理英文字母、数字及空格字符外，忽略其他的字符。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6qys1tt40",
+                                    "created": 1636251501719,
+                                    "text": "-f 排序时，将小写字母视为大写字母。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6r1oglm80",
+                                    "created": 1636251508032,
+                                    "text": "-i 排序时，除了040至176之间的ASCII字符外，忽略其他的字符。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6r4ebsao0",
+                                    "created": 1636251513950,
+                                    "text": "-m 将几个排序好的文件进行合并。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6r6pv8ww0",
+                                    "created": 1636251519001,
+                                    "text": "-M 将前面3个字母依照月份的缩写进行排序。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6r91fo1k0",
+                                    "created": 1636251524054,
+                                    "text": "-n 依照数值的大小排序。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6rbda3lk0",
+                                    "created": 1636251529124,
+                                    "text": "-u 意味着是唯一的(unique)，输出的结果是去完重了的。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6rdr1th40",
+                                    "created": 1636251534310,
+                                    "text": "-o<输出文件> 将排序后的结果存入指定的文件。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6rgcet2w0",
+                                    "created": 1636251539955,
+                                    "text": "-r 以相反的顺序来排序。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6riew0rs0",
+                                    "created": 1636251544459,
+                                    "text": "-t<分隔字符> 指定排序时所用的栏位分隔字符。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6rkuqcww0",
+                                    "created": 1636251549770,
+                                    "text": "+<起始栏位>-<结束栏位> 以指定的栏位来排序，范围由起始栏位到结束栏位的前一栏位。"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfj6sc42tjc0",
+                            "created": 1636251609108,
+                            "text": "grep"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfj6sdi77og0",
+                                    "created": 1636251612139,
+                                    "text": "Linux grep 命令用于查找文件里符合条件的字符串。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6sdi7qxc0",
+                                    "created": 1636251612140,
+                                    "text": "grep 指令用于查找内容包含指定的范本样式的文件，如果发现某文件的内容符合所指定的范本样式，预设 grep 指令会把含有范本样式的那一列显示出来。若不指定任何文件名称，或是所给予的文件名为 -，则 grep 指令会从标准输入设备读取数据。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6shhcgo80",
+                                    "created": 1636251620795,
+                                    "text": "-a 或 --text : 不要忽略二进制的数据。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6ssw0nko0",
+                                    "created": 1636251645626,
+                                    "text": "-A<显示行数> 或 --after-context=<显示行数> : 除了显示符合范本样式的那一列之外，并显示该行之后的内容。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6sv7u7h40",
+                                    "created": 1636251650695,
+                                    "text": "-b 或 --byte-offset : 在显示符合样式的那一行之前，标示出该行第一个字符的编号。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6syj4k400",
+                                    "created": 1636251657908,
+                                    "text": "-B<显示行数> 或 --before-context=<显示行数> : 除了显示符合样式的那一行之外，并显示该行之前的内容。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6t0phfvk0",
+                                    "created": 1636251662646,
+                                    "text": "-c 或 --count : 计算符合样式的列数。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6t3fxyhs0",
+                                    "created": 1636251668599,
+                                    "text": "-C<显示行数> 或 --context=<显示行数>或-<显示行数> : 除了显示符合样式的那一行之外，并显示该行之前后的内容。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6tb2xym80",
+                                    "created": 1636251685227,
+                                    "text": "-d <动作> 或 --directories=<动作> : 当指定要查找的是目录而非文件时，必须使用这项参数，否则grep指令将回报信息并停止动作。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6tdtj4yo0",
+                                    "created": 1636251691188,
+                                    "text": "-e<范本样式> 或 --regexp=<范本样式> : 指定字符串做为查找文件内容的样式。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6tg8px9s0",
+                                    "created": 1636251696460,
+                                    "text": "-E 或 --extended-regexp : 将样式为延伸的正则表达式来使用。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6tj2vn680",
+                                    "created": 1636251702637,
+                                    "text": "-f<规则文件> 或 --file=<规则文件> : 指定规则文件，其内容含有一个或多个规则样式，让grep查找符合规则条件的文件内容，格式为每行一个规则样式。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6tm3reg80",
+                                    "created": 1636251709221,
+                                    "text": "-F 或 --fixed-regexp : 将样式视为固定字符串的列表。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6tqm6jpc0",
+                                    "created": 1636251719042,
+                                    "text": "-G 或 --basic-regexp : 将样式视为普通的表示法来使用。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj6tv2idw80",
+                                    "created": 1636251728737,
+                                    "text": "-h 或 --no-filename : 在显示符合样式的那一行之前，不标示该行所属的文件名称。"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfkab3bqcps0",
+                            "created": 1636363102186,
+                            "text": "cut"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfkab696fco0",
+                                    "created": 1636363108562,
+                                    "text": "按指定分隔符切割文本"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfkabf9tv2o0",
+                                    "created": 1636363128192,
+                                    "text": "-d 后面接分割字符，常与 -f 一起使用"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfkabno1e400",
+                                    "created": 1636363146465,
+                                    "text": "-f 取出第几段"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfj6ukw07aw0",
+                    "created": 1636251784940,
+                    "text": "https://www.runoob.com/linux/linux-comm-grep.html"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cfjtg38nb1c0",
+                    "created": 1636315534952,
+                    "text": "文件管理"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfjtg5khejs0",
+                            "created": 1636315540021,
+                            "text": "nl"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfjtg7fifs00",
+                                    "created": 1636315544074,
+                                    "text": "在命令行显示文件内容并显示行号"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfjth4tg0200",
+                            "created": 1636315616750,
+                            "text": "nm"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfjth5xwmhk0",
+                                    "created": 1636315619197,
+                                    "text": "显示关于指定File 中符号的信息，文件可以是对象文件、可执行文件或对象文件库"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfjthvxqfao0",
+                                    "created": 1636315675782,
+                                    "text": "比如查看 gcc -c 生成的目标文件"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfjzbxudjs00",
+                            "created": 1636332136407,
+                            "text": "重定向和管道"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfjzc2qmywo0",
+                                    "created": 1636332147065,
+                                    "text": "追加重定向"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfjzc5ze6ao0",
+                                            "created": 1636332154125,
+                                            "text": ">>"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfjzca70qeg0",
+                                    "created": 1636332163293,
+                                    "text": "覆盖重定向"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfjzccb2lrc0",
+                                            "created": 1636332167892,
+                                            "text": ">"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfjzcen1ebk0",
+                                    "created": 1636332172969,
+                                    "text": "管道"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfjzcg2uyqo0",
+                                            "created": 1636332176103,
+                                            "text": "|"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfjzeqa8oqo0",
+                                    "created": 1636332355045,
+                                    "text": "标准输入重定向"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfjzest8tmg0",
+                                            "created": 1636332360548,
+                                            "text": "<"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfjzmbpyto80",
+                            "created": 1636332950257,
+                            "text": "输入到达文件末尾"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfjzmg6p9u80",
+                                    "created": 1636332959976,
+                                    "text": "ctrl + d"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk0b4yrleo0",
+                            "created": 1636334894656,
+                            "text": "文件权限"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk0d9o2r200",
+                                    "created": 1636335061622,
+                                    "text": "用户信息"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk0clpyw2o0",
+                                            "created": 1636335009494,
+                                            "text": "存放用户信息"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfk0b810e000",
+                                                    "created": 1636334901322,
+                                                    "text": "/etc/passwd"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk0cqxo6lk0",
+                                            "created": 1636335020843,
+                                            "text": "存放用户密码"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfk0fi824xk0",
+                                                    "created": 1636335236973,
+                                                    "text": "/etc/shadow"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk0djpdjg80",
+                                    "created": 1636335083468,
+                                    "text": "组信息"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk0dlc778g0",
+                                            "created": 1636335087025,
+                                            "text": "/etc/group"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk0dv0qk2w0",
+                                    "created": 1636335108100,
+                                    "text": "查看当前用户信息"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk0dyw272g0",
+                                            "created": 1636335116524,
+                                            "text": "id"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk0jtwohao0",
+                                    "created": 1636335575863,
+                                    "text": "文件权限组"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk0jnhyu9s0",
+                                            "created": 1636335561913,
+                                            "text": "user_group_other"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk0k3v2qyo0",
+                                    "created": 1636335597534,
+                                    "text": "修改文件权限"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk0k6d1q940",
+                                            "created": 1636335602974,
+                                            "text": "chmod"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfk0lgg1teg0",
+                                                    "created": 1636335703287,
+                                                    "text": "chmod a+x 给所有人加上执行"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfk0lmn7jj40",
+                                                    "created": 1636335716781,
+                                                    "text": "chmod u+rw 给当前用户增加读写权限"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfk0lt63amw0",
+                                                    "created": 1636335730983,
+                                                    "text": "chmod g+r 给组用户增加读权限"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfk0m9nsp4w0",
+                                                    "created": 1636335766883,
+                                                    "text": "chmod 755 给用户rwx权限，组和其他用户 rx 权限"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk0mtfzlqg0",
+                                            "created": 1636335809946,
+                                            "text": "chown"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfk0n79f2cg0",
+                                                    "created": 1636335840024,
+                                                    "text": "chown user:group file 给文件设置用户和组"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk0mwqlq4o0",
+                                            "created": 1636335817118,
+                                            "text": "chgrp"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk0tqmw6zs0",
+                                    "created": 1636336352382,
+                                    "text": "默认权限"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk0txevt5c0",
+                                            "created": 1636336367136,
+                                            "text": "file: 666 - umask"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk0u23v1q80",
+                                            "created": 1636336377353,
+                                            "text": "dir: 777 - umask"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk0ulb0qko0",
+                                            "created": 1636336419145,
+                                            "text": "显示当前 umask 数值"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfk0upszd880",
+                                                    "created": 1636336428938,
+                                                    "text": "umask"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfk0vb9gdts0",
+                                                    "created": 1636336475646,
+                                                    "text": "umask -S 可读方式展示"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk0uyyivcg0",
+                                            "created": 1636336448864,
+                                            "text": "修改 umask"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfk0v0v9tb40",
+                                                    "created": 1636336453021,
+                                                    "text": "umask 022"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk161i5vts0",
+                                    "created": 1636337316411,
+                                    "text": "运行时权限"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk105ujk8g0",
+                                            "created": 1636336855682,
+                                            "text": "set uid"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfk10e0tqqw0",
+                                                    "created": 1636336873476,
+                                                    "text": "原来有可执行文件 755"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfk107qwn6o0",
+                                                            "created": 1636336859815,
+                                                            "text": "rwsr-xr-x"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfk10tb5fz40",
+                                                    "created": 1636336906752,
+                                                    "text": "设置方法"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfk10z5646g0",
+                                                            "created": 1636336919451,
+                                                            "text": "chmod 4700 file"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfk11c89pq80",
+                                                    "created": 1636336947937,
+                                                    "text": "程序被加载运行时，拥有加载程序的权限"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfk12384e340",
+                                                    "created": 1636337006701,
+                                                    "text": "仅对二进制文件有效"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfk1291vbl40",
+                                                    "created": 1636337019383,
+                                                    "text": "该权限仅在运行中有效"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk165gmc680",
+                                            "created": 1636337325025,
+                                            "text": "set gid"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfk167lr2740",
+                                                    "created": 1636337329689,
+                                                    "text": "仅对二进制有效"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfk16afzwj40",
+                                                    "created": 1636337335871,
+                                                    "text": "执行时需要x权限"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfk16cfwc7c0",
+                                                    "created": 1636337340219,
+                                                    "text": "chmod 2700 file"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfk16na5ohc0",
+                                                    "created": 1636337363816,
+                                                    "text": "执行过程中，获取该用户组权限"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk190yzmz40",
+                                            "created": 1636337550344,
+                                            "text": "set oid"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfk192n5apk0",
+                                                    "created": 1636337553982,
+                                                    "text": "/tmp 默认权限 776，为了隔离不同用户之间操作的权限问题"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfk19m0z2uw0",
+                                                    "created": 1636337596177,
+                                                    "text": "目前仅对目录有效，典型 /tmp"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfk19z1lixc0",
+                                                    "created": 1636337624512,
+                                                    "text": "用户在此目录下创建的文件，仅有目录拥有者、自己以及root才有权利删除该文件"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfk1aiyayzk0",
+                                                    "created": 1636337667849,
+                                                    "text": "chmod 1777 filename"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk1c5fycf40",
+                                            "created": 1636337795169,
+                                            "text": "文件隐藏属性"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfk1ck1pjn40",
+                                                    "created": 1636337826960,
+                                                    "text": "chattr"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfk1h8qn7ko0",
+                                                            "created": 1636338194167,
+                                                            "text": "-A 设置时，存取时间 atime 将不会被修改，避免 I/O 开销"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfk1htrl6cw0",
+                                                            "created": 1636338239937,
+                                                            "text": "-S 使得文件变动会”同步“写入磁盘中"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfk1i3zn6lk0",
+                                                            "created": 1636338262191,
+                                                            "text": "c 读写时自动压缩和解压缩"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfk1ikjfngo0",
+                                                            "created": 1636338298217,
+                                                            "text": "i 文件不能被修改、删除、盖面、设置链接也无法写入或新增数据"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfk1iygji0w0",
+                                                            "created": 1636338328517,
+                                                            "text": "mac 下 xattr"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk0hea1om80",
+                            "created": 1636335385114,
+                            "text": "文件类型"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk0hguv7g00",
+                                    "created": 1636335390727,
+                                    "text": "普通文件"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk0ibgwxgg0",
+                                            "created": 1636335457364,
+                                            "text": "-"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk0hjq8vfc0",
+                                    "created": 1636335396978,
+                                    "text": "块设备文件"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk0iaevzr40",
+                                            "created": 1636335455064,
+                                            "text": "b"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk0ho0tl280",
+                                    "created": 1636335406324,
+                                    "text": "字符设备文件"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk0i8s34t40",
+                                            "created": 1636335451509,
+                                            "text": "c"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk0hqnl2zk0",
+                                    "created": 1636335412054,
+                                    "text": "链接文件"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk0i6ie4600",
+                                            "created": 1636335446569,
+                                            "text": "l"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk0inmbsbk0",
+                                            "created": 1636335483812,
+                                            "text": "ln -s 软链接"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk0it536w00",
+                                            "created": 1636335495830,
+                                            "text": "ln 硬链接"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk0htsl74g0",
+                                    "created": 1636335418887,
+                                    "text": "管道文件"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk0i4qom080",
+                                            "created": 1636335442717,
+                                            "text": "p"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk0iectvhc0",
+                                            "created": 1636335463647,
+                                            "text": "创建命名管道 mkfifo"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk0hw39eyw0",
+                                    "created": 1636335423886,
+                                    "text": "socket文件"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk0i3995yw0",
+                                            "created": 1636335439486,
+                                            "text": "s"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk0hzvi7bk0",
+                                    "created": 1636335432124,
+                                    "text": "目录文件"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk0i1jk6ww0",
+                                            "created": 1636335435756,
+                                            "text": "d"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk0x9xjagw0",
+                            "created": 1636336629477,
+                            "text": "文件操作"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk0xeas2eg0",
+                                    "created": 1636336638985,
+                                    "text": "定位文件"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk0xgavcyg0",
+                                            "created": 1636336643344,
+                                            "text": "which"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk1u7k9y9k0",
+                                    "created": 1636339210339,
+                                    "text": "创建目录"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk1uaz42lc0",
+                                            "created": 1636339217767,
+                                            "text": "mkdir -p java/{src,test,build}"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk29nmbj6o0",
+                                    "created": 1636340420754,
+                                    "text": "dirname"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk29qaqgyo0",
+                                            "created": 1636340426584,
+                                            "text": "获取目录名"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk29v19ijk0",
+                                    "created": 1636340436895,
+                                    "text": "basename"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk29wjjcgo0",
+                                            "created": 1636340440177,
+                                            "text": "获取文件名"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk2a9sh6ko0",
+                                    "created": 1636340469015,
+                                    "text": "cat"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk2abask6g0",
+                                            "created": 1636340472300,
+                                            "text": "cat -n 以行号显示文件内容"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk2bcfyvbc0",
+                                    "created": 1636340553154,
+                                    "text": "tac"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk2bf2ujyw0",
+                                            "created": 1636340558891,
+                                            "text": "反向显示文件内容"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk2bd93muo0",
+                                    "created": 1636340554915,
+                                    "text": "nl"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk2bmp5jig0",
+                                            "created": 1636340575477,
+                                            "text": "以行号显示文件内容"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk2c80uu080",
+                                    "created": 1636340621897,
+                                    "text": "more"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk2c9som000",
+                                            "created": 1636340625756,
+                                            "text": "n 重复前一个动作"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk2ccceke80",
+                                            "created": 1636340631302,
+                                            "text": "N 反向重复前一个动作"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk2ciau6ww0",
+                                            "created": 1636340644268,
+                                            "text": "b 向前翻页"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk2coiv2jk0",
+                                            "created": 1636340657814,
+                                            "text": "空格 翻页"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk2d3r28c80",
+                                    "created": 1636340690962,
+                                    "text": "less"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk2d7k04so0",
+                                            "created": 1636340699242,
+                                            "text": "和more不一样的是，到文件末尾不会退出"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk2egxvaao0",
+                                            "created": 1636340798036,
+                                            "text": "p 页顶部"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk2erbn95k0",
+                                    "created": 1636340820636,
+                                    "text": "head"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk2etr42r40",
+                                            "created": 1636340825925,
+                                            "text": "显示文件前几行"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfk2f7kvf7k0",
+                                                    "created": 1636340856023,
+                                                    "text": "head -5 filename"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk2esj6l7k0",
+                                    "created": 1636340823269,
+                                    "text": "tail"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk2f264xlk0",
+                                            "created": 1636340844248,
+                                            "text": "显示文件后面几行"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk2fl9k0080",
+                                            "created": 1636340885814,
+                                            "text": "tail -f 监控文件有没有新增数据"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk2fywnpa80",
+                                    "created": 1636340915509,
+                                    "text": "od"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk2g2tey9c0",
+                                            "created": 1636340924020,
+                                            "text": "od -t Type file"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk2gelbpf40",
+                                            "created": 1636340949652,
+                                            "text": "-t 后面可以接各种类型的输出"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk2hs46se00",
+                                            "created": 1636341057455,
+                                            "text": "c 使用 ASCII 字符来输出"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk2gpo6swo0",
+                                            "created": 1636340973770,
+                                            "text": "d 十进制输出"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk2gttycko0",
+                                            "created": 1636340982825,
+                                            "text": "f 浮点数值输出"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk2gxkn92g0",
+                                            "created": 1636340990970,
+                                            "text": "o 八进制输出"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk2gzc1i7s0",
+                                            "created": 1636340994803,
+                                            "text": "x 十六进制输出"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk2h673lwg0",
+                                            "created": 1636341009742,
+                                            "text": "od - t xCc /etc/issue 十六进制、ASCII 字符方式显示"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk2iu1rbt40",
+                                    "created": 1636341140026,
+                                    "text": "查看文件或文件系统状态"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk2iy36arc0",
+                                            "created": 1636341148818,
+                                            "text": "stat"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk2ix89w940",
+                                    "created": 1636341146950,
+                                    "text": "file"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk2kbtc1q00",
+                                            "created": 1636341257062,
+                                            "text": "查看文件类型"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk2mmjlwg00",
+                                    "created": 1636341437147,
+                                    "text": "which"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk2mo5nurs0",
+                                            "created": 1636341440658,
+                                            "text": "查看文件所在位置"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk2mvq2drk0",
+                                    "created": 1636341457129,
+                                    "text": "whereis"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk2n2ewx2w0",
+                                            "created": 1636341471692,
+                                            "text": "给出文件目录和手册页"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk2nh0z3d40",
+                                    "created": 1636341503501,
+                                    "text": "locate/updatedb"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk2njqsgrs0",
+                                            "created": 1636341509415,
+                                            "text": "基于数据块进行文件查找"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk2npxcw3s0",
+                                            "created": 1636341522873,
+                                            "text": "locate 关键字"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk2obprhuo0",
+                                    "created": 1636341570303,
+                                    "text": "find"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk2ocnds2g0",
+                                            "created": 1636341572336,
+                                            "text": "按照各种规则查找指定文件所在并在其上执行所需操作"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk2ookhd400",
+                                            "created": 1636341598282,
+                                            "text": "file [PATH] [option] [option]"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk2p7emhq80",
+                                            "created": 1636341639287,
+                                            "text": "find /etc -newer /etc/passwd 搜索比 /etc 还要新的文件"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk3e289rbc0",
+                                    "created": 1636343587123,
+                                    "text": "diff"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk3ednhmcw0",
+                                            "created": 1636343611988,
+                                            "text": "diff 标准文件，被比较文件"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfk3ey1ahyo0",
+                                            "created": 1636343656358,
+                                            "text": "diff -u 显示与git diff 类似的信息"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk3gdd8y1s0",
+                                    "created": 1636343768097,
+                                    "text": "wc"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk3gegs40w0",
+                                            "created": 1636343770487,
+                                            "text": "统计行数、单词数、字符数、字节数"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk3gs61s4o0",
+                                    "created": 1636343800313,
+                                    "text": "size"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfk3gtk4yk80",
+                                            "created": 1636343803342,
+                                            "text": "查看可执行文件段的分布"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk0xcp1jww0",
+                            "created": 1636336635494,
+                            "text": "topic"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfjz2p1ku7s0",
+                    "created": 1636331411974,
+                    "text": "操作系统"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfjz2tqjrgw0",
+                            "created": 1636331422191,
+                            "text": "ps aux"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfjz347joww0",
+                                    "created": 1636331444987,
+                                    "text": "查看进程信息"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfjz2y0g4t40",
+                            "created": 1636331431497,
+                            "text": "command &"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfjz31c2a1s0",
+                                    "created": 1636331438730,
+                                    "text": "后台运行任务"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfjz4entbtc0",
+                                    "created": 1636331546103,
+                                    "text": "nohup command &"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfjz4oo7jxc0",
+                                            "created": 1636331567894,
+                                            "text": "忽略 hup 信号"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfjz6jbgxdc0",
+                            "created": 1636331712969,
+                            "text": "信号"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfjz53n7lu00",
+                                    "created": 1636331600486,
+                                    "text": "查看信号"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfjz56gdkww0",
+                                            "created": 1636331606603,
+                                            "text": "kill -l"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfjz5avhaj40",
+                                            "created": 1636331616223,
+                                            "text": "trap -L"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfjz6lphz940",
+                                    "created": 1636331718170,
+                                    "text": "发送信号"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfjz6nwqsj40",
+                                            "created": 1636331722962,
+                                            "text": "kill -9 pid"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfjz84x5kyw0",
+                                            "created": 1636331838356,
+                                            "text": "killall 进程名字"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfjz89u47a00",
+                                                    "created": 1636331849057,
+                                                    "text": "killall httpd"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfjz8olc8wg0",
+                            "created": 1636331881178,
+                            "text": "任务管理"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfjz8snbza00",
+                                    "created": 1636331890005,
+                                    "text": "查看后台任务"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfjz93saxig0",
+                                            "created": 1636331914250,
+                                            "text": "jobs"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfjza9xdmls0",
+                                    "created": 1636332005982,
+                                    "text": "将 n 号作业放到前台来执行"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfjzagy6u4g0",
+                                            "created": 1636332021269,
+                                            "text": "fg %任务id"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfjzb3xuhpk0",
+                                    "created": 1636332071314,
+                                    "text": "将 n 号作业放到后台来执行"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfjzb7ypszc0",
+                                            "created": 1636332080074,
+                                            "text": "bg  %任务id"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfjzjsoiz480",
+                            "created": 1636332752083,
+                            "text": "日期时间管理"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfjzjx5ed400",
+                                    "created": 1636332761811,
+                                    "text": "查看日期"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfjzjz6q0ig0",
+                                            "created": 1636332766244,
+                                            "text": "date"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfjzk176swg0",
+                                    "created": 1636332770626,
+                                    "text": "查看日历"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfjzk2uxt5s0",
+                                            "created": 1636332774239,
+                                            "text": "cal"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfjzold56g00",
+                            "created": 1636333127978,
+                            "text": "计算器"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfjzon754w00",
+                                    "created": 1636333131969,
+                                    "text": "calc"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfjzop24tug0",
+                                    "created": 1636333136020,
+                                    "text": "bc"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfjzy4ky31s0",
+                            "created": 1636333875086,
+                            "text": "开关机"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfjzyazysfk0",
+                                    "created": 1636333889055,
+                                    "text": "马上关机"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfjzy7jwcog0",
+                                            "created": 1636333881553,
+                                            "text": "shutdown -h now"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk0xs0xd2o0",
+                            "created": 1636336668864,
+                            "text": "修改密码"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk0xt8svi00",
+                                    "created": 1636336671517,
+                                    "text": "passwd"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3kodlcc80",
+                            "created": 1636344105519,
+                            "text": "nice"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3kpb722w0",
+                                    "created": 1636344107551,
+                                    "text": "设置进程优先级"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3l5wxm9s0",
+                            "created": 1636344143693,
+                            "text": "uname"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3l6quhkg0",
+                                    "created": 1636344145502,
+                                    "text": "显示系统信息"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfk3p1907ns0",
+                    "created": 1636344446996,
+                    "text": "网络设置"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfk3p8fdbj40",
+                            "created": 1636344462618,
+                            "text": "ip"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3pdu92mw0",
+                                    "created": 1636344474402,
+                                    "text": "显示/处理路由、设备、路由策略及隧道等相关信息"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3p9klv1c0",
+                            "created": 1636344465112,
+                            "text": "ifconfig"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3pm22odk0",
+                                    "created": 1636344492289,
+                                    "text": "显示/设置网络接口配置"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3pslyghs0",
+                            "created": 1636344506552,
+                            "text": "dig"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3ptjdutk0",
+                                    "created": 1636344508574,
+                                    "text": "DNS 查询工具"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3pwig77c0",
+                            "created": 1636344515047,
+                            "text": "netstat"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3pyfoo0o0",
+                                    "created": 1636344519234,
+                                    "text": "输出网络连接、路由表、网口统计信息、伪装连接和多播成员信息"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3qbbubag0",
+                            "created": 1636344547300,
+                            "text": "nicstat"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3qcwtis80",
+                                    "created": 1636344550745,
+                                    "text": "输出网络流量统计信息"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3qikjsoo0",
+                            "created": 1636344563064,
+                            "text": "ifstat"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3qjvaivs0",
+                                    "created": 1636344565890,
+                                    "text": "输出网口统计信息"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3qpwq1y80",
+                            "created": 1636344579037,
+                            "text": "tcpdump"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3qraggco0",
+                                    "created": 1636344582044,
+                                    "text": "dump出指定网络接口上的通信数据"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3r4jqmeg0",
+                            "created": 1636344610904,
+                            "text": "nethogs"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3r6wgl8g0",
+                                    "created": 1636344616027,
+                                    "text": "一个网络top类工具，以进程为依据统计网络流量"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3rjlc6ag0",
+                            "created": 1636344643652,
+                            "text": "实时网络负载监测工具"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3rp6l5w80",
+                                    "created": 1636344655821,
+                                    "text": "slrum"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3rwja7c00",
+                            "created": 1636344671826,
+                            "text": "ping"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3rxkcb0w0",
+                                    "created": 1636344674067,
+                                    "text": "向指定的主机发送 ICMP 协议的 ECHO_REQUEST 数据报并测试其响应时间"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3t69tfiw0",
+                            "created": 1636344771386,
+                            "text": "curl"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3t7qn1280",
+                                    "created": 1636344774580,
+                                    "text": "下载指定的URL 到本地"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3tc2sso00",
+                            "created": 1636344784022,
+                            "text": "wget"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3tdpm9ls0",
+                                    "created": 1636344787579,
+                                    "text": "非交互式 URL 下载工具，通常用于镜像整个网站到本地"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3tpt091c0",
+                            "created": 1636344813905,
+                            "text": "wireshark"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3tvhcytk0",
+                                    "created": 1636344826261,
+                                    "text": "功能强大的、图形模式的网络分析仪。甚至扩展到了蓝牙和 USB 接口上"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3u73lp5c0",
+                            "created": 1636344851551,
+                            "text": "tshark"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3u92p2jk0",
+                                    "created": 1636344855850,
+                                    "text": "网络协议分析器，其功能大致位 wireshark 的子集"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3ujgionc0",
+                            "created": 1636344878453,
+                            "text": "mtr"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3ukrjx8o0",
+                                    "created": 1636344881297,
+                                    "text": "网络诊断工具，整合了 traceroute 和 ping"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3urad4wg0",
+                            "created": 1636344895496,
+                            "text": "lynx"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3uuvmdk00",
+                                    "created": 1636344903311,
+                                    "text": "文本模式 WWW 浏览器"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3v2t7us00",
+                            "created": 1636344920580,
+                            "text": "w3m"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3v56byxk0",
+                                    "created": 1636344925727,
+                                    "text": "文本模式www浏览器，支持 html 页面中的 Table 和frame 特性，同时还可作为 pager 使用"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3vjz9gdc0",
+                            "created": 1636344957951,
+                            "text": "lftp"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3vl0r8m80",
+                                    "created": 1636344960218,
+                                    "text": "文本模式FTP客户端，支持多种传输协议，甚至包括 BitTorrent"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3vu84xs00",
+                            "created": 1636344980255,
+                            "text": "FTP 图形客户端"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3vwznn9k0",
+                                    "created": 1636344986273,
+                                    "text": "gftp"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfk3wvuqrbs0",
+                    "created": 1636345062163,
+                    "text": "Just For fun"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfk3wyxzczc0",
+                            "created": 1636345068889,
+                            "text": "cowsay"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3x1qae9s0",
+                            "created": 1636345074955,
+                            "text": "cowthing"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3xd22s680",
+                            "created": 1636345099612,
+                            "text": "figlex"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3xfjuoi80",
+                                    "created": 1636345105040,
+                                    "text": "figlex linux"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3xkh0vow0",
+                            "created": 1636345115753,
+                            "text": "fortune-zh"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk3xw52l5s0",
+                                    "created": 1636345141152,
+                                    "text": "诗句"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3yunkk4o0",
+                            "created": 1636345216281,
+                            "text": "sl"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3yz5prts0",
+                            "created": 1636345226085,
+                            "text": "linuxlogo"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfk3zgeel2g0",
+                            "created": 1636345263616,
+                            "text": "hack"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfk40b39jig0",
+                            "created": 1636345330423,
+                            "text": "screenfetch"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfk40epu5r40",
+                            "created": 1636345338318,
+                            "text": "toilet"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfk4k6thgsg0",
+                    "created": 1636346888407,
+                    "text": "命令行操作"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfk4ka6kot40",
+                            "created": 1636346895729,
+                            "text": "history"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk4lbbl7j40",
+                                    "created": 1636346976573,
+                                    "text": "!数字 执行history行号的命令"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk4kcautpc0",
+                            "created": 1636346900342,
+                            "text": "ctrl+A"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk4litc3w00",
+                                    "created": 1636346992884,
+                                    "text": "移到行首"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk4mc5vmyo0",
+                            "created": 1636347056769,
+                            "text": "ctrl + d"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk4mdr2ss00",
+                                    "created": 1636347060228,
+                                    "text": "回删字符"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk4nisnd9c0",
+                            "created": 1636347149571,
+                            "text": "ctrl + e"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk4nlr2i9c0",
+                                    "created": 1636347156006,
+                                    "text": "移到行尾"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk4o6ep87c0",
+                            "created": 1636347200970,
+                            "text": "Ctril + b"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk4obfzifs0",
+                                    "created": 1636347211932,
+                                    "text": "左移一个字符"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk4oegmyg80",
+                            "created": 1636347218502,
+                            "text": "ctrl + f"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk4ohf434w0",
+                                    "created": 1636347224940,
+                                    "text": "右移一个字符"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk4qs1zaz40",
+                            "created": 1636347404819,
+                            "text": "ctrl + _"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk4quiml400",
+                                    "created": 1636347410179,
+                                    "text": "撤销"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfk4w8b4dc00",
+                    "created": 1636347832021,
+                    "text": "磁盘设备管理"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfk4wfjl8c80",
+                            "created": 1636347847770,
+                            "text": "/dev/full"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk4whirmdk0",
+                                    "created": 1636347852074,
+                                    "text": "永远被填满的设备"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk4wp8fb8g0",
+                            "created": 1636347868863,
+                            "text": "/dev/null"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk4wx8ucjs0",
+                                    "created": 1636347886302,
+                                    "text": "黑洞"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk4wro84600",
+                            "created": 1636347874172,
+                            "text": "/dev/zero"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk4wt2xjkg0",
+                                    "created": 1636347877238,
+                                    "text": "永远被0填充的设备"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk4y3w3i5c0",
+                            "created": 1636347979133,
+                            "text": "/dev/loop"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk4y7d76nk0",
+                                    "created": 1636347986698,
+                                    "text": "使得文件可以如同块设备一样访问"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk4ytyfilk0",
+                            "created": 1636348035871,
+                            "text": "/dev/random /dev/urandom "
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk4yzakcyo0",
+                                    "created": 1636348047488,
+                                    "text": "产生任意长度的随机序列"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfk6u6beexs0",
+                    "created": 1636353313175,
+                    "text": "文件压缩"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfk6uani3vk0",
+                            "created": 1636353322614,
+                            "text": "tar"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk6xyw9su00",
+                                    "created": 1636353610480,
+                                    "text": "-c 建立打包文件"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk6y4t9vcg0",
+                                    "created": 1636353623359,
+                                    "text": "-t 查看打包文件的内容"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk6ydeisw00",
+                                    "created": 1636353642058,
+                                    "text": "-x 解打包/解压缩"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk6ym4sqxk0",
+                                    "created": 1636353661061,
+                                    "text": "-v 解包过程中，显示文件名"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk6z1vckpc0",
+                                    "created": 1636353695319,
+                                    "text": "-f  filename 不能缺少"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk6usv7a6o0",
+                            "created": 1636353362262,
+                            "text": "gzip"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk6vnntse00",
+                                    "created": 1636353429296,
+                                    "text": "默认压缩。无参数"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk6uwii80w0",
+                                    "created": 1636353370201,
+                                    "text": "d 解压缩"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk6uyyfcr40",
+                                    "created": 1636353375518,
+                                    "text": "c 打印信息到屏幕"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk6ue90awo0",
+                            "created": 1636353330445,
+                            "text": "bzip2"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfk6wm9mu9c0",
+                                    "created": 1636353504625,
+                                    "text": "压缩率高，压缩时间稍慢"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfk6x27lqj40",
+                                    "created": 1636353539331,
+                                    "text": "参数和gzip差不多"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfk6xbr3p280",
+                            "created": 1636353560101,
+                            "text": "xz"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

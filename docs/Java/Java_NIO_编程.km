@@ -1,0 +1,727 @@
+{
+    "root": {
+        "data": {
+            "id": "cfp18wlvsk00",
+            "created": 1636845340628,
+            "text": "Java NIO 编程"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfp38063du80",
+                    "created": 1636850912236,
+                    "text": "阻塞和非阻塞"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfp3875smk80",
+                            "created": 1636850927455,
+                            "text": "阻塞"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfp38aw12680",
+                                    "created": 1636850935572,
+                                    "text": "阻塞模式下，相关方法都会导致线程暂停"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfp38jwxwk80",
+                                            "created": 1636850955218,
+                                            "text": "ServerSocketChannel.accept"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfp38yxaxy00",
+                                                    "created": 1636850987892,
+                                                    "text": "没有连接时阻塞"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfp38pgrfaw0",
+                                            "created": 1636850967300,
+                                            "text": "SocketChannel.read"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfp38sw2k2w0",
+                                                    "created": 1636850974757,
+                                                    "text": "没有数据可读时阻塞"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp3931blu80",
+                                    "created": 1636850996842,
+                                    "text": "单线程下，阻塞方法之间相互影响，几乎不能正常工作，需要多线程支持"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp39jh1ug00",
+                                    "created": 1636851032621,
+                                    "text": "多线程下，能支持正常工作，但仍存在两个主要问题"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfp39w0ht800",
+                                            "created": 1636851059919,
+                                            "text": "一个线程独占一个栈空间，比如：32位 jvm 一个线程 320K，64位 jvm 一个线程 1024k，\n如果连接数过多，必然导致 OOM，并且线程太多，上下文切换更加频繁，导致性能降低"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfp3b77jo0g0",
+                                            "created": 1636851162654,
+                                            "text": "可以采用线程池技术来控制线程数量，从而减少上下文切换代价。但治标不治本，\n如果有很多连接建立，但长时间inactive，会阻塞线程池中所有线程，因此不适合长连接，只适合短连接。"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfp388yu2u80",
+                            "created": 1636850931388,
+                            "text": "非阻塞"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfp3n283q8w0",
+                                    "created": 1636852092173,
+                                    "text": "非阻塞模式下，相关方法不会让线程暂停"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfp3n8kduj40",
+                                            "created": 1636852105977,
+                                            "text": "ServerSocketChannel.accept"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfp3ng951b40",
+                                                    "created": 1636852122711,
+                                                    "text": "没有连接时，返回null，继续运行"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfp3nmdp7g80",
+                                            "created": 1636852136047,
+                                            "text": "SocketChannel.read"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfp3nq6dq3s0",
+                                                    "created": 1636852144312,
+                                                    "text": "没有数据可读时，会返回 0， 但线程不会阻塞，可以执行其他操作"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp3o3w5k4o0",
+                                    "created": 1636852174169,
+                                    "text": "没有连接建立时，线程仍然在不断运行，浪费了 CPU 时间片"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfp4t5khs0w0",
+                    "created": 1636855390748,
+                    "text": "Strean 和 channel 的区别"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfp4tc5telk0",
+                            "created": 1636855405098,
+                            "text": "stream 不会自动缓冲数据，而 buffer 会利用系统底层提供的发送缓冲区和接收缓冲区"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfp4ub5z3kg0",
+                            "created": 1636855481295,
+                            "text": "stream 仅支持阻塞 API，channel 同时支持阻塞、非阻塞 API"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfp4uxb64xk0",
+                            "created": 1636855529498,
+                            "text": "网络 channle 可配合 selector 实现多路复用技术"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfp4v7hyn1c0",
+                            "created": 1636855551677,
+                            "text": "二者均为全双工，读写可同时进行"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfp1926a7hc0",
+                    "created": 1636845352745,
+                    "text": "Seletor"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfp3v0tfj2w0",
+                            "created": 1636852716023,
+                            "text": "多路复用"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfp3v7wzwdc0",
+                                    "created": 1636852731476,
+                                    "text": "一个阻塞复用多个连接，一次阻塞能处理多个连接上的 I/O 事件请求"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfp3rt2bi480",
+                            "created": 1636852464053,
+                            "text": "默认阻塞"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfp3rxxmwgo0",
+                            "created": 1636852474654,
+                            "text": "何时不阻塞？"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfp3s00ccko0",
+                                    "created": 1636852479171,
+                                    "text": "事件发生时"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfp3s3v3xuo0",
+                                            "created": 1636852487562,
+                                            "text": "客户端发起连接请求，会触发 accept 事件"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfp3saaxxls0",
+                                            "created": 1636852501580,
+                                            "text": "客户端发起数据过来，客户端正常、异常关闭时，都会触发read事件。\n另外如果发送的数据大于buffer缓冲区，会触发多次 read 事件"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfp3t2j6va80",
+                                            "created": 1636852563029,
+                                            "text": "channel 可写时，会触发 write 事件"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfp3t90bo5c0",
+                                            "created": 1636852577125,
+                                            "text": "linux下 nio bug 发生时"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp3tf931js0",
+                                    "created": 1636852590716,
+                                    "text": "调用 selector.wakeup"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp3thyneu80",
+                                    "created": 1636852596615,
+                                    "text": "调用 selector.close"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp3tqy8rio0",
+                                    "created": 1636852616182,
+                                    "text": "selector 所在线程 interrupt"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp3uhduyyw0",
+                                    "created": 1636852673722,
+                                    "text": "seletor.selectnow()"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp3ukgy74w0",
+                                    "created": 1636852680440,
+                                    "text": "selector.select(long timeoutmills)"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfp199a9ycg0",
+                    "created": 1636845368224,
+                    "text": "Channel"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfp19fwji0w0",
+                            "created": 1636845382631,
+                            "text": "ServerSocketChannel"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfp19n8c2pk0",
+                            "created": 1636845398582,
+                            "text": "SocketChannel"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfp19spmlz40",
+                    "created": 1636845410512,
+                    "text": "Buffer"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfp1a3pghyw0",
+                            "created": 1636845434446,
+                            "text": "ByteBuffer"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfp5hi38dio0",
+                    "created": 1636857298742,
+                    "text": "零拷贝技术"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfp5kdzkarc0",
+                            "created": 1636857524906,
+                            "text": "文件传输的零拷贝"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfp5hn0mz7k0",
+                                    "created": 1636857309469,
+                                    "text": "Java 的 transformTo，对应 linux 的 sendFile"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfp5iqjf6c80",
+                                            "created": 1636857395500,
+                                            "text": "将内核文件缓冲区直接拷贝至socket发送缓冲区，发生在内核层"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfp5jbzx6xc0",
+                                            "created": 1636857442210,
+                                            "text": "用户层 零拷贝"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp5i0kbzqg0",
+                                    "created": 1636857338958,
+                                    "text": "更少的用户态和内核态的切换"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp5i4q9uaw0",
+                                    "created": 1636857348025,
+                                    "text": "不利用 CPU 计算，减少 CPU 缓存伪共享"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp5iehrqi00",
+                                    "created": 1636857369278,
+                                    "text": "零拷贝适合小文件传输"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfp5jzp80s00",
+                                            "created": 1636857493806,
+                                            "text": "受缓冲区大小限制"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfp19w28x740",
+                    "created": 1636845417805,
+                    "text": "常见问题"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfp1mkuhjqg0",
+                            "created": 1636846412125,
+                            "text": "遍历 getSelectionKeys的问题"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfp1n1l1txk0",
+                                    "created": 1636846448560,
+                                    "text": "每处理完 selectionKeys 集合中的key 相关事件之后，应当要手动 remove，java 默认不处理。\n否则，下次select方法返回后，该key还在集合当中，由于实际并不存在该key的IO事件，可能会导致空指针异常"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfp1acxycxk0",
+                            "created": 1636845454550,
+                            "text": "连接关闭问题"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfp1bwgi18o0",
+                                    "created": 1636845575395,
+                                    "text": "客户端的I/O 事件发生之后，要么cancel，要么处理（accept、read等操作），\n否则会一直在事件列表中残留"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp1akyfe6w0",
+                                    "created": 1636845471993,
+                                    "text": "客户端主动关闭，channel.read(buffer) 方法返回 -1，\n服务端需要调用 key.cancel。防止退出的客户端仍然在事件集合内监听。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp1cobrvcw0",
+                                    "created": 1636845636059,
+                                    "text": "客户端异常退出，会抛出 connection reset 的 IOException，服务端需要 key.cancel，原因同上"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfp1a98ny5c0",
+                            "created": 1636845446491,
+                            "text": "消息边界问题"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfp1da146w00",
+                                    "created": 1636845683304,
+                                    "text": "网络编程中，普遍存在粘包半包的消息边界问题"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp1dw6nfts0",
+                                    "created": 1636845731528,
+                                    "text": "三种解决思路"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfp1ei62g7c0",
+                                            "created": 1636845779382,
+                                            "text": "定长消息，一般不采用"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfp1fjnuu740",
+                                            "created": 1636845860998,
+                                            "text": "约定分隔符。使用有限制，一般不采用"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfp1epxx5cg0",
+                                            "created": 1636845796303,
+                                            "text": "Head-content 消息，一般采用方式。比如 Http protobuf等"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp1fwroy6g0",
+                                    "created": 1636845889528,
+                                    "text": "ByteBuffer 大小分配"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfp1gddc4cg0",
+                                            "created": 1636845925665,
+                                            "text": "每个 Channel 都需要记录可能被切分的消息，因为 ByteBuffer不能被多个Channel 共同使用，\n因此需要为每个 Channel维护一个独立的buffer"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfp1h88es5k0",
+                                            "created": 1636845992848,
+                                            "text": "ByteBuffer 不能太大，比如一个 ByteBuffer 1MB，要支持百万连接就要 1TB 内存，\n因此需要设计大小可变的buffer"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfp1ibrblso0",
+                                            "created": 1636846078886,
+                                            "text": "一种思路是先分配一个小的buffer，例如 4K，如果发现数据不够，\n再分配 8 k 的buffer，将 4k 的buffer内容拷贝至 8k buffer"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfp1jcu746o0",
+                                                    "created": 1636846159601,
+                                                    "text": "优点：消息容易连续处理"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfp1js5pz1c0",
+                                                    "created": 1636846192949,
+                                                    "text": "缺点：数据拷贝耗费性能"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfp1jykhpt40",
+                                            "created": 1636846206903,
+                                            "text": "另一种思路是用多个数组组成 buffer，一个数组不够，\n把多出来的内容写入新的数组"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfp1ljjmp0w0",
+                                                    "created": 1636846330928,
+                                                    "text": "优点：避免了拷贝引起的性能损耗"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfp1lrtxig00",
+                                                    "created": 1636846348965,
+                                                    "text": "缺点：消息存储不连续解析复杂"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfp2142d7u00",
+                            "created": 1636847551059,
+                            "text": "发送缓冲区大小问题"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfp216lsp8w0",
+                                    "created": 1636847556587,
+                                    "text": "在非阻塞模式下，为什么推荐使用 OP_WRITE 事件向对端写数据，而不是收到数据之后直接写数据？"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp21zhjssg0",
+                                    "created": 1636847619457,
+                                    "text": "因为操作系统发送缓冲区有容量限制，当缓冲区满了，当前是不可写状态，写数据只能等待，要么阻塞等待，要么忙轮询等待。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp22y0r8mw0",
+                                    "created": 1636847694629,
+                                    "text": "当缓冲区可写的时候，selecotr 编程模型下，会返回可写事件，此时处理对对端的发送数据请求"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp23n4emgg0",
+                                    "created": 1636847749269,
+                                    "text": "缓冲区大小受socket_option 参数设置，在 TCP协议中位滑动窗口大小"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfp60q8khqw0",
+                    "created": 1636858805398,
+                    "text": "NIO 编程需要解决的问题"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfp60t7bals0",
+                            "created": 1636858811853,
+                            "text": "自定义协议"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfp60x9b1g00",
+                                    "created": 1636858820680,
+                                    "text": "如 HTTP"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfp613p41g80",
+                            "created": 1636858834697,
+                            "text": "解决 TCP 传输问题"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfp616lkhyw0",
+                                    "created": 1636858841013,
+                                    "text": "如粘包、半包问题"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfp61e453u80",
+                            "created": 1636858857373,
+                            "text": "epoll 空轮询导致 CPU 100%的问题"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

@@ -1,0 +1,935 @@
+{
+    "root": {
+        "data": {
+            "id": "cfq9486y3g80",
+            "created": 1636969102861,
+            "text": "Java 函数式编程"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfq95h9km4w0",
+                    "created": 1636969200975,
+                    "text": "为什么要用函数式编程"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfq95t2v6aw0",
+                            "created": 1636969226691,
+                            "text": "大数量下处理集合效率高"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfq95znazkw0",
+                            "created": 1636969240988,
+                            "text": "代码可读性高"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfq961l87800",
+                            "created": 1636969245216,
+                            "text": "远离嵌套"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfq98jzc65c0",
+                            "created": 1636969441979,
+                            "text": "代码简洁、开发快速"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfq97h6kewg0",
+                    "created": 1636969357522,
+                    "text": "函数式编程思想特点"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfqidlr5apk0",
+                            "created": 1636995227647,
+                            "text": "只关心：输入和输出，对数据做处理"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfq94g2w7ig0",
+                    "created": 1636969120030,
+                    "text": "lambda 表达式"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfq99s0h52w0",
+                            "created": 1636969537826,
+                            "text": "原则: 可推导可省略"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfq95fb6oyw0",
+                            "created": 1636969196719,
+                            "text": "例：某些匿名内部类的写法优化"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfqdvt7osc80",
+                            "created": 1636982548890,
+                            "text": "省略规则"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqdwc8vjts0",
+                                    "created": 1636982590321,
+                                    "text": "参数类型可省略"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqdwf6zpi80",
+                                    "created": 1636982596738,
+                                    "text": "方法体只有一句代码时大括号return和唯一一句代码的分号可以省略"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqdwuy9t8g0",
+                                    "created": 1636982631039,
+                                    "text": "方法只有一个参数时小括号可以省略"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfqe3ede5k80",
+                    "created": 1636983143497,
+                    "text": "Stream 流"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfqe3i7nwjc0",
+                            "created": 1636983151858,
+                            "text": "用来对集合或数组进行链状流式的操作"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfqx9fc3f600",
+                            "created": 1637037216869,
+                            "text": "惰性求值"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqx9js8e8g0",
+                                    "created": 1637037226551,
+                                    "text": "如果没有终结操作，中间操作是不会得到执行的"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqx9t30ods0",
+                            "created": 1637037246795,
+                            "text": "一个流只能响应一个终结操作"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqxah0vyhs0",
+                                    "created": 1637037298909,
+                                    "text": "终结操作之后，流就被关闭"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqh2p5kx9s0",
+                            "created": 1636991551935,
+                            "text": "创建流"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqgx14dwvk0",
+                                    "created": 1636991107799,
+                                    "text": "单列集合"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqgz5kj97k0",
+                                            "created": 1636991274211,
+                                            "text": "List list/ Set set"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfqh05m4mk80",
+                                                    "created": 1636991352671,
+                                                    "text": "集合对象.stream()"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfqgzdjusmw0",
+                                            "created": 1636991291584,
+                                            "text": "数组"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfqgzffzchs0",
+                                                    "created": 1636991295703,
+                                                    "text": "Arrays.stream 或者 Stream.of"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqgx3h2r140",
+                                    "created": 1636991112920,
+                                    "text": "双列集合"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqgzp6w35s0",
+                                            "created": 1636991316922,
+                                            "text": "HashMap map"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfqgzsri04w0",
+                                                    "created": 1636991324698,
+                                                    "text": "map.entrySet().stream();"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqh2sjncgw0",
+                            "created": 1636991559316,
+                            "text": "中间操作"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqh3j75yy00",
+                                    "created": 1636991617334,
+                                    "text": "可以对流中的元素进行条件过滤，符合过滤条件的才能继续留在流中"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqh45vimg00",
+                                    "created": 1636991666696,
+                                    "text": "filter"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqh478bfsg0",
+                                            "created": 1636991669647,
+                                            "text": "对流中的元素进行条件过滤，符合过滤条件的才能继续留在流中"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqh4h7qdi80",
+                                    "created": 1636991691379,
+                                    "text": "map"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqh4i7fr5c0",
+                                            "created": 1636991693538,
+                                            "text": "对流中的元素进行计算或转换"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqhasl3mtk0",
+                                    "created": 1636992186317,
+                                    "text": "distinct"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqhau3tqcg0",
+                                            "created": 1636992189626,
+                                            "text": "去除流中的重复元素"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfqhhcvd2jc0",
+                                                    "created": 1636992700658,
+                                                    "text": "Java 中通过 equals 方法来去重"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqhjwcix680",
+                                    "created": 1636992899783,
+                                    "text": "sorted"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqhjz0m0o00",
+                                            "created": 1636992905593,
+                                            "text": "对流中元素进行排序"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqhpwnzosg0",
+                                    "created": 1636993370661,
+                                    "text": "limit"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqhpymu7940",
+                                            "created": 1636993374945,
+                                            "text": "设置流中元素的最大长度，超出的部分将被抛弃"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqhqafvfsg0",
+                                    "created": 1636993400645,
+                                    "text": "skip"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqhqbil0g00",
+                                            "created": 1636993402986,
+                                            "text": "跳过流中的前 n 个元素，返回剩下的元素"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqhujbb8kg0",
+                                    "created": 1636993733417,
+                                    "text": "flatMap"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqhulu1yd40",
+                                            "created": 1636993738904,
+                                            "text": "map 只能对一个对象转换成另一个对象来作为流中的元素。\n而 flatMap 可以把一个对象转换成多个对象作为流中的元素"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqu1s2igo00",
+                            "created": 1637028154344,
+                            "text": "终结操作"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqu98w5pf40",
+                                    "created": 1637028739514,
+                                    "text": "终结操作用完之后，流就被关闭了，不可再操作"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqu25pmze80",
+                                    "created": 1637028184041,
+                                    "text": "forEach"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqu28zgjfk0",
+                                            "created": 1637028191165,
+                                            "text": "对流中的元素进行遍历操作"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqu2v4y3go0",
+                                    "created": 1637028239386,
+                                    "text": "count"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqu2x4f8tc0",
+                                            "created": 1637028243708,
+                                            "text": "获取当前流中元素的个数"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqu341mvts0",
+                                    "created": 1637028258777,
+                                    "text": "max & min"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqu37746vk0",
+                                            "created": 1637028265639,
+                                            "text": "获取流中的最值"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqu3v0ngbc0",
+                                    "created": 1637028317490,
+                                    "text": "collect"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqudpheusg0",
+                                            "created": 1637029089085,
+                                            "text": "将当前流转换为一个集合"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfquvvc86nk0",
+                                    "created": 1637030512387,
+                                    "text": "查找与匹配"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqun3i6ruw0",
+                                            "created": 1637029824884,
+                                            "text": "anyMatch"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfqunpg5kso0",
+                                                    "created": 1637029872650,
+                                                    "text": "判断流中元素是否有任意符合匹配某条件的元素，返回 boolean 类型"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfqun8cn61s0",
+                                            "created": 1637029835433,
+                                            "text": "allMatch"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfquoamuiow0",
+                                                    "created": 1637029918768,
+                                                    "text": "判断流中所有元素是否都匹配某条件，返回 boolean 类型"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfqup0h6bc80",
+                                            "created": 1637029975021,
+                                            "text": "noneMatch"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfqup2wtb2g0",
+                                                    "created": 1637029980320,
+                                                    "text": "判断流中的元素是否都不符合匹配条件，都不匹配返回 true"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfquncc9db40",
+                                            "created": 1637029844117,
+                                            "text": "findAny"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfquuzjo4kg0",
+                                                    "created": 1637030443180,
+                                                    "text": "获取流中任意一个满足条件的元素并返回"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfquutk4dug0",
+                                            "created": 1637030430147,
+                                            "text": "findFirst"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfquvdj9l8o0",
+                                                    "created": 1637030473630,
+                                                    "text": "获取流中的第一个元素"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfquw3zveo80",
+                                    "created": 1637030531231,
+                                    "text": "reduce"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfquw5fnuxc0",
+                                            "created": 1637030534362,
+                                            "text": "对流中的数据按照你指定的计算方式计算出一个结果"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfqv1716byg0",
+                                            "created": 1637030929661,
+                                            "text": "归并，把 stream 的元素组合起来。传入一个初始值，按照指定的计算方式"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfqxbuwuvgw0",
+                    "created": 1637037407504,
+                    "text": "Optional"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfqxeeorf8g0",
+                            "created": 1637037607278,
+                            "text": "概述"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqxl4uyrm00",
+                                    "created": 1637038134435,
+                                    "text": "主要用于替换 obj == null 等不适合面向对象的代码"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqxlrnlr9c0",
+                                    "created": 1637038184056,
+                                    "text": "为流式编程提供了便利"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqxek48kdc0",
+                            "created": 1637037619098,
+                            "text": "创建对象"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqxesvw40w0",
+                                    "created": 1637037638185,
+                                    "text": "Optional<Author> objOpt = Optional.ofNullable(obj)"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqxemf54m00",
+                            "created": 1637037624111,
+                            "text": "安全消费值"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqxkuk47o80",
+                                    "created": 1637038112011,
+                                    "text": "objOpt.ifPresent(...)"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqxkywk8io0",
+                            "created": 1637038121471,
+                            "text": "获取值"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqxl1nspkg0",
+                                    "created": 1637038127471,
+                                    "text": "objOpt.get() 不存在则抛出 NoSuchElementException"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqxmqetkw00",
+                                    "created": 1637038259712,
+                                    "text": "orElseGet 如果不存在返回默认值"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqxnzoghcw0",
+                                    "created": 1637038358250,
+                                    "text": "orElseThrow 如果不存在则抛出异常"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqxp8o6le80",
+                            "created": 1637038456189,
+                            "text": "过滤"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqxpfm1zg00",
+                                    "created": 1637038471297,
+                                    "text": "objOpt.filter(obj -> obj.age > 18).ifPresent(...)"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqxs6ywi0g0",
+                            "created": 1637038687576,
+                            "text": "数据转换"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqxs9ggbdk0",
+                                    "created": 1637038692990,
+                                    "text": "objOpt.map(obj -> obj.x).ifPresent(...)"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfqxz27rnio0",
+                    "created": 1637039225777,
+                    "text": "函数式接口"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfqxz6h1ozs0",
+                            "created": 1637039235045,
+                            "text": "只有一个抽象方法的接口称之为函数式接口"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfqxzynmgns0",
+                            "created": 1637039296393,
+                            "text": "@FunctionalInterface 约定该接口只有一个抽象函数。\nJDK 的函数式接口都加上了 @FunctionalInterface 注解进行标识。"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfqy18r98gg0",
+                            "created": 1637039396744,
+                            "text": "Consumer"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfqy1et2ryo0",
+                            "created": 1637039409915,
+                            "text": "Function"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfqy27exqsg0",
+                            "created": 1637039472187,
+                            "text": "Predicate"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfqy2bqmcvc0",
+                            "created": 1637039481600,
+                            "text": "Suppier"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfqyf3sn4lk0",
+                    "created": 1637040483043,
+                    "text": "方法引用"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfqydbd2n6o0",
+                            "created": 1637040342787,
+                            "text": "引用类的静态方法",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqykzd5l880",
+                                    "created": 1637040943584,
+                                    "text": "class::method"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqydk1kp3k0",
+                                    "created": 1637040361683,
+                                    "text": "在重写函数式接口时，方法体中若只有一行代码，且这行代码是调用某个类的静态方法，\n并且将函数接口的参数全部依次传给了这个静态方法。则可使用该语法进行简化"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqyf69p3lk0",
+                            "created": 1637040488427,
+                            "text": "引用类的实例方法"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqykspjap40",
+                                    "created": 1637040929095,
+                                    "text": "obj::method"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqydk1kp3k0",
+                                    "created": 1637040361683,
+                                    "text": "在重写函数式接口时，方法体中若只有一行代码，且这行代码是调用某个对象的实例方法，\n并且将函数接口的参数全部依次传给了这个实例方法。则可使用该语法进行简化"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqyhes8kdc0",
+                                    "created": 1637040663691,
+                                    "text": "在重写函数式接口时，方法体中若只有一行代码，且这行代码是调用第一个参数的成员方法。\n并且函数式接口后面的参数都用于该成员方法的接收参数。则可使用该语法进行简化。"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqyj6mtfw00",
+                            "created": 1637040802677,
+                            "text": "构造器引用"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqykitdcx40",
+                                    "created": 1637040907559,
+                                    "text": "class::new"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqydk1kp3k0",
+                                    "created": 1637040361683,
+                                    "text": "在重写函数式接口时，方法体中若只有一行代码，且这行代码是调用某个类的构造方法，\n并且将函数接口的参数全部依次传给了这个构造方法。则可使用该语法进行简化"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfqyo96sbi00",
+                    "created": 1637041200059,
+                    "text": "并行流"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfqypxwrqd40",
+                            "created": 1637041332237,
+                            "text": "流水线思想体现"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfqypphflk80",
+                            "created": 1637041313896,
+                            "text": "stream.parallel()  或者 集合对象.parallelStream"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfqyqctjnwo0",
+                            "created": 1637041364694,
+                            "text": "stream.peek"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqyqgm0jeg0",
+                                    "created": 1637041372946,
+                                    "text": "中间操作，可用于调试流过程信息"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

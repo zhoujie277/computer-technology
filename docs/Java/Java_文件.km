@@ -1,0 +1,117 @@
+{
+    "root": {
+        "data": {
+            "id": "cfm1cf66hso0",
+            "created": 1636540936260,
+            "text": "Java 文件操作"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfm1cj2mkyo0",
+                    "created": 1636540944752,
+                    "text": "new File(path)"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfm1cos4w080",
+                            "created": 1636540957178,
+                            "text": "相对路径"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfm1csrog140",
+                                    "created": 1636540965858,
+                                    "text": "相对于 JVM 的运行路径"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfm1d3x4z6g0",
+                            "created": 1636540990132,
+                            "text": "绝对路径"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfm1d5zs7rs0",
+                                    "created": 1636540994646,
+                                    "text": "本机的绝对路径"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfm1e2n7jkw0",
+                    "created": 1636541065720,
+                    "text": "getResource(path)"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfm1edxlo6g0",
+                            "created": 1636541090293,
+                            "text": "classloader"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfm1efp5ju00",
+                                    "created": 1636541094135,
+                                    "text": "相对于 classpath 路径"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfm1eofvrz40",
+                            "created": 1636541113166,
+                            "text": "getclass()"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfm1eqxu80g0",
+                                    "created": 1636541118605,
+                                    "text": "相对于本文件路径"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfm1evetbcg0",
+                            "created": 1636541128339,
+                            "text": "Thread.currentThread().getclassloader"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfm1f2p8rrs0",
+                                    "created": 1636541144207,
+                                    "text": "相对于classpath路径"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

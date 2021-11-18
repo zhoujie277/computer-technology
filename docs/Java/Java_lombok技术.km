@@ -1,0 +1,367 @@
+{
+    "root": {
+        "data": {
+            "id": "cfqa2am3f1k0",
+            "created": 1636971772512,
+            "text": "Lombok 技术"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfqa2gf71ns0",
+                    "created": 1636971785156,
+                    "text": "Lombok 是什么"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfqdgda5l1s0",
+                            "created": 1636981338749,
+                            "text": "插件生成代码技术"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfqa2mubmzs0",
+                    "created": 1636971799131,
+                    "text": "Lombok 原理"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfqdfw4xoo00",
+                            "created": 1636981301428,
+                            "text": "编译期间修改抽象语法树结构，在最终的class 中生成相关代码"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfqa2tfgnjs0",
+                    "created": 1636971813470,
+                    "text": "Lombok 安装"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfqai24fx7k0",
+                            "created": 1636973007857,
+                            "text": "javac -cp lombok.jar"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfqahdtd6e80",
+                            "created": 1636972954945,
+                            "text": "maven pom.xml 引入"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfqahlknosg0",
+                            "created": 1636972971832,
+                            "text": "IDE 引入 lombok 插件，使之能提示和编译不报错"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfqa2w6t89s0",
+                    "created": 1636971819477,
+                    "text": "Lombok 常用注解"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfqaiaex6dk0",
+                            "created": 1636973025905,
+                            "text": "@Getter/@Setter"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqbcuimwsg0",
+                                    "created": 1636975420590,
+                                    "text": "生成 get/set 方法，可用于字段，也可用于类上所有成员"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqbd0qemf40",
+                                    "created": 1636975434121,
+                                    "text": "可通过 AccessLevel.PROTECT/NONE 单独设置"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqaifwukmw0",
+                            "created": 1636973037873,
+                            "text": "@ToString"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqcp09obq00",
+                                    "created": 1636979194589,
+                                    "text": "可用 exclude 排除字段"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqaiid9pg00",
+                            "created": 1636973043220,
+                            "text": "@EqualsAndHashCode"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqcqyd3kmg0",
+                                    "created": 1636979347171,
+                                    "text": "canEquals"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqcr5h6umg0",
+                                    "created": 1636979362656,
+                                    "text": "equals"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqcr8toj2w0",
+                                    "created": 1636979369941,
+                                    "text": "hashcode"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqcv4j7qko0",
+                                    "created": 1636979674058,
+                                    "text": "exclude"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqcvh2b8yw0",
+                                            "created": 1636979701334,
+                                            "text": "不包含某些字段的比较"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqcv8ccd2o0",
+                                    "created": 1636979682350,
+                                    "text": "of"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqcv9w05u00",
+                                            "created": 1636979685715,
+                                            "text": "只指定某些字段的比较"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqaim0klw00",
+                            "created": 1636973051159,
+                            "text": "@NonNull"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqd09frv8o0",
+                                    "created": 1636980076555,
+                                    "text": "可加在函数参数上"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqd0e2uaxc0",
+                                            "created": 1636980086657,
+                                            "text": "会生成非空校验代码，并在运行时进行校验"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqd0ntklc00",
+                                    "created": 1636980107864,
+                                    "text": "可用于属性上"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfqd0rbqaew0",
+                                            "created": 1636980115492,
+                                            "text": "配合有参构造函数使用"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqaioqhyaw0",
+                            "created": 1636973057080,
+                            "text": "@NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqd0vqtgn40",
+                                    "created": 1636980125112,
+                                    "text": "生成无参、有参函数构造函数"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqd1bs8g4o0",
+                                    "created": 1636980160026,
+                                    "text": "of 可指定参数"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqd1e7abs00",
+                                    "created": 1636980165290,
+                                    "text": "如果指定有参构造，并且final没有赋值，也可以生成构造函数"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfqd1uovr1c0",
+                                    "created": 1636980201182,
+                                    "text": "@AllArgs 所有参数的构造函数"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqd240i6d40",
+                            "created": 1636980221476,
+                            "text": "@Data"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqd25n8g7s0",
+                                    "created": 1636980225027,
+                                    "text": "结合了 @Getter、@Setter、@NoArgsConstructor或者@RequiredArgsConstructor、@EqualsAndHashCode、@ToString"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqd3p7wpy80",
+                            "created": 1636980346000,
+                            "text": "@Builder"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqd4eo50tc0",
+                                    "created": 1636980401401,
+                                    "text": "构造者生成模式"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqd3sa2zfs0",
+                            "created": 1636980352662,
+                            "text": "@Log"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfqd3ux048o0",
+                            "created": 1636980358401,
+                            "text": "val"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqd9wtpqaw0",
+                                    "created": 1636980832741,
+                                    "text": "可推导类型的表达式中，可用于省略类型的声明"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfqd3ypj2qo0",
+                            "created": 1636980366657,
+                            "text": "@cleanup"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfqdf9u4c6w0",
+                                    "created": 1636981252885,
+                                    "text": "可用于省略关闭流的关闭清理操作"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfqa304c31s0",
+                    "created": 1636971828035,
+                    "text": "总结"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

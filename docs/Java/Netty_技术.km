@@ -1,0 +1,1299 @@
+{
+    "root": {
+        "data": {
+            "id": "cfp84dcf09c0",
+            "created": 1636864733009,
+            "text": "Netty 技术"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfp84hxbafc0",
+                    "created": 1636864742980,
+                    "text": "技术原理"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfp84st6jo00",
+                            "created": 1636864766675,
+                            "text": "是一种多路复用技术，基于 Java NIO 封装实现，"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfp8595pgjs0",
+                            "created": 1636864802261,
+                            "text": "运用 Reactor 反应器模式，基于事件驱动机制"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfp85h20fvk0",
+                    "created": 1636864819451,
+                    "text": "技术组件"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfp85ls1tpc0",
+                            "created": 1636864829733,
+                            "text": "EventLoop"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfp85o8iaeo0",
+                                    "created": 1636864835082,
+                                    "text": "本质上是一个单线程执行器，维护一个Selector，监听多路 IO 的相关 I/O 事件"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp87d5oai80",
+                                    "created": 1636864967694,
+                                    "text": "继承关系"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfp87f4qs8w0",
+                                            "created": 1636864971991,
+                                            "text": "一条线继承了 j.u.c.ScheduledExcutorService 因此包含了此线程池中所有的方法"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfp87u3w1a80",
+                                            "created": 1636865004591,
+                                            "text": "另一条线继承 netty 自己的 OrderedEventExecutor"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfp88z71mfc0",
+                                                    "created": 1636865094030,
+                                                    "text": "提供了 inEventLoop(Thread thread) 方法判断一个线程是否属于此 EventLoop"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfp89b4lklc0",
+                                                    "created": 1636865120004,
+                                                    "text": "提供了 parent 方法来看看自己属于哪个 EventLoopGroup"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp8df46tco0",
+                                    "created": 1636865442143,
+                                    "text": "默认线程数量"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfp8djhuqbc0",
+                                            "created": 1636865451676,
+                                            "text": "指定数量则用指定线程数"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfp8dvl95540",
+                                            "created": 1636865478003,
+                                            "text": "默认线程数为配置属性指定：io.netty.eventLoopThreads. 没有配置则是本机CPU 核数 * 2"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp8h6s7l540",
+                                    "created": 1636865737461,
+                                    "text": "执行普通任务"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfp8h8wh2e80",
+                                            "created": 1636865742072,
+                                            "text": "execute 或者 submit。 和线程池一样"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp8i07hw6o0",
+                                    "created": 1636865801512,
+                                    "text": "定时执行任务"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfp8i6lrtdk0",
+                                            "created": 1636865815436,
+                                            "text": "scheduleAtFixedRate"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfp88kaarsg0",
+                            "created": 1636865061575,
+                            "text": "EventLoopGroup"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfp89uss3ww0",
+                                    "created": 1636865162825,
+                                    "text": "是一组 EventLoop，channel 一般会调用 EventLoopGroup 的 register 方法来绑定其中一个 EventLoop，\n后续这个Channel 上的 io 事件都由此 EventLoop 来处理（保证IO事件处理时的线程安全）"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfp8fu4oxio0",
+                                    "created": 1636865631553,
+                                    "text": "group.next"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfp8fxatm340",
+                                            "created": 1636865638454,
+                                            "text": "获取下一个事件循环对象"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfp8g0tq5l40",
+                                            "created": 1636865646128,
+                                            "text": "轮播方式获取，即指针到达末尾，再调用 next 会返回第一个"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpa6g0n9o00",
+                                    "created": 1636870537776,
+                                    "text": "分工细化"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfpa6hqxvxk0",
+                                            "created": 1636870541543,
+                                            "text": "bossEventLoopGroup"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpa6zzo6f40",
+                                            "created": 1636870581253,
+                                            "text": "WorkerEventLoopGroup[2]"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpa7ngcouo0",
+                                            "created": 1636870632327,
+                                            "text": "长时间任务Handler  DefaultEventLoopGroup"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfpa9r4bl0g0",
+                                                    "created": 1636870797035,
+                                                    "text": "在管道添加handler 时可通过 addlast(group, handler) 处理"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfpaaggxqcw0",
+                                                    "created": 1636870852218,
+                                                    "text": "为了避免影响 I/O 事件"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpabmji1oo0",
+                                            "created": 1636870943798,
+                                            "text": "handler 如何执行换线程？"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfpabun4pr40",
+                                                    "created": 1636870961431,
+                                                    "text": "通过 context 获取下一个执行器 executror，再通过 executor.isEventLoop 判断是否处于当前EventLoop执行，\n如果是，直接调用，如果不是，则提交到对应的 executor"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfpb3zjjgdc0",
+                            "created": 1636873166295,
+                            "text": "channel 和 channelFuture"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfpbalphfeg0",
+                            "created": 1636873684728,
+                            "text": "Future & Promise"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfpbayk8wmo0",
+                                    "created": 1636873712710,
+                                    "text": "JDK 的 Future 只能同步等待结果"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpbb3orlg80",
+                                    "created": 1636873723867,
+                                    "text": "netty Future 可以同步等待任务结束，也可以异步方式得到结果"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpbbijs2mg0",
+                                    "created": 1636873756217,
+                                    "text": "netty Promise 不仅有 netty Future 的功能更，而且脱离了任务独立存在，只作为两个线程间传递结果的容器"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfpc2pomsgw0",
+                            "created": 1636875887581,
+                            "text": "Handler & Pipeline"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfpc2ub4xuw0",
+                                    "created": 1636875897648,
+                                    "text": "ChannelHandler 用来处理Channel上的各种事件，分为入站、出站两种。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpc3vc3uvs0",
+                                    "created": 1636875978248,
+                                    "text": "ChannelInboundHandlerAdapter"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpc3zqyazs0",
+                                    "created": 1636875987853,
+                                    "text": "ChannelOutboundHandlerAdapter"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfpch8m4ypk0",
+                            "created": 1636877025887,
+                            "text": "ByteBuf"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfpchlrcoq00",
+                                    "created": 1636877054500,
+                                    "text": "采用自动扩容设计"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpcsnow1uw0",
+                                    "created": 1636877920711,
+                                    "text": "堆内存和直接内存"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpcsjo0sso0",
+                                    "created": 1636877911951,
+                                    "text": "池化 & 非池化"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfpcu0zvrao0",
+                                            "created": 1636878028038,
+                                            "text": "没有池化，则每次都得创建爱你新的 ByteBuf 实例，这个操作对直接内存代价昂贵，就算是堆内存，也会增加 GC 压力"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpcuhe9rcw0",
+                                            "created": 1636878063736,
+                                            "text": "有了池化，则可以重用池中 Bytebuf 实例，并且采用了与 jemalloc 类似的内存分配算法提升分配效率"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpcuwdhhg80",
+                                            "created": 1636878096341,
+                                            "text": "高并发时，池化功能更节约内存，减少内存溢出的问题"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpcv6xh4zs0",
+                                            "created": 1636878119317,
+                                            "text": "池化功能是否开启，通过系统环境变量来设置"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfpcvfecd5s0",
+                                                    "created": 1636878137751,
+                                                    "text": "-Dio.netty.allocator.type={unpolled|pooled}"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpcypr21n40",
+                                    "created": 1636878395380,
+                                    "text": "组成"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfpcyshpqi00",
+                                            "created": 1636878401346,
+                                            "text": "已读字节区"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpcyv7qbfk0",
+                                            "created": 1636878407273,
+                                            "text": "可读字节区"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpcyz7dgi00",
+                                            "created": 1636878415958,
+                                            "text": "可写字节区"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpcz4anoxk0",
+                                            "created": 1636878427041,
+                                            "text": "扩容区"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpd4ld3s4o0",
+                                    "created": 1636878856015,
+                                    "text": "retain & release"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfpd4p6hvj40",
+                                            "created": 1636878864322,
+                                            "text": "Netty 采用了引用计数法来控制回收内存，每个 ByteBuf 都实现了 ReferenceCounted 接口"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpd9iftnf40",
+                                    "created": 1636879241470,
+                                    "text": "slice"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfpd9kqxqg80",
+                                            "created": 1636879246495,
+                                            "text": "“零拷贝”的体现之一"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpd9ol7l5c0",
+                                            "created": 1636879254856,
+                                            "text": "对原始 ByteBuf 进行切片成多个 ByteBuf，切片后的 ByteBuf 并没有发生内存复制，\n还是使用原始 ByteBuf 数据的内存，切片后的 ByteBuf 可以独立拥有 readerIndex、writerIndex 指针"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpdq8ey1ps0",
+                                    "created": 1636880551839,
+                                    "text": "duplicate"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfpdq9w1xe80",
+                                            "created": 1636880555051,
+                                            "text": "\"零拷贝\"体现之一"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpdqgvmnyg0",
+                                            "created": 1636880570262,
+                                            "text": "截取了原始 ByteBuf 的所有内容，并且没有 maxCapacity 的限制"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpdqwhl7ow0",
+                                            "created": 1636880604242,
+                                            "text": "底层 byte 数组的数据和原始 ByteBuf 是同一块内存，指示读写指针是独立的"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpdrjt2pgo0",
+                                    "created": 1636880655003,
+                                    "text": "copy"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfpdrl2wqi00",
+                                            "created": 1636880657774,
+                                            "text": "对原始数据进行深度拷贝"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpds1kn7680",
+                                    "created": 1636880693675,
+                                    "text": "composite"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfpe6evs9m80",
+                                            "created": 1636881819745,
+                                            "text": "组合两个ByteBuf的可读数据"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpe6ot0tz40",
+                                    "created": 1636881841346,
+                                    "text": "特点"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfpe6pvui2g0",
+                                            "created": 1636881843693,
+                                            "text": "池化，更节约内存，减少内存移除的可能"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpe6wyo8xs0",
+                                            "created": 1636881859102,
+                                            "text": "读写指针分离，不需要像 JDK ByteBuffer 切换读写模式"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpe76gsx7s0",
+                                            "created": 1636881879789,
+                                            "text": "可以自动扩容"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpe78yfhpk0",
+                                            "created": 1636881885208,
+                                            "text": "支持链式调用"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpe7e4dmzk0",
+                                            "created": 1636881896452,
+                                            "text": "很多地方体现零拷贝技术，例如 slice、duplicate、CompositeByteBuf"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfpe8rafs4g0",
+                    "created": 1636882003481,
+                    "text": "进阶"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfpea0j5n140",
+                            "created": 1636882101963,
+                            "text": "粘包与半包"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfpeijwpbyg0",
+                                    "created": 1636882771054,
+                                    "text": "粘包"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfpeim5f4xs0",
+                                            "created": 1636882775935,
+                                            "text": "现象：发送方两个包 abc  def，接收一个大包：abcdef"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpej4ob4k00",
+                                            "created": 1636882816259,
+                                            "text": "原因"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfpej7kjv5c0",
+                                                    "created": 1636882822562,
+                                                    "text": "应用层：接收方 bytebuf 设置太大，netty 默认 1024"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfpejgz7hwo0",
+                                                    "created": 1636882843040,
+                                                    "text": "滑动窗口：假设发送方 256 bytes 表示一个完整报文，\n但由于接收方处理不及时且窗口大小足够大，这 \n256 bytes 字节就会缓冲在接收方的滑动窗口中，\n当滑动窗口中缓冲了多个数据包就会粘包"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfpekopygqo0",
+                                                    "created": 1636882938259,
+                                                    "text": "Nagle 算法，会造成粘包"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfpelbvvg480",
+                                                            "created": 1636882988682,
+                                                            "text": "Nagle 算法的目的是为了节省带宽，太小的数据包发送过去，浪费网络"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpelvf9slc0",
+                                    "created": 1636883031214,
+                                    "text": "半包"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfpelwztskw0",
+                                            "created": 1636883034634,
+                                            "text": "现象：发送一个数据包 abcdef， 接收到多个包 abc  def"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpem6re3tk0",
+                                            "created": 1636883055892,
+                                            "text": "原因"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfpem81z0eo0",
+                                                    "created": 1636883058708,
+                                                    "text": "应用层：接收方 ByteBuf 小于实际发送的数据量"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfpemje915s0",
+                                                    "created": 1636883083395,
+                                                    "text": "滑动窗口：假设接收方的窗口只剩下 128 bytes，发送\n方的报文大小是 256 bytes，这时，只能先发送前 128 bytes，\n等待 ack 后才能发送剩余部分，这就造成了半包"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfpenko2bmg0",
+                                                    "created": 1636883164530,
+                                                    "text": "mss 限制：当发送的数据超过 MSS 限制后，会将数据切分发送，就会造成半包"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpepol6a3k0",
+                                    "created": 1636883329790,
+                                    "text": "解决方案"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfpeu3g9cj40",
+                                            "created": 1636883675601,
+                                            "text": "定长数据包",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfpeu6pg3t40",
+                                                    "created": 1636883682687,
+                                                    "text": "FixLengthFrameDecoder"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfpg7bdfmxc0",
+                                                    "created": 1636887532689,
+                                                    "text": "优点：解析简单"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfpg5lae1fs0",
+                                                    "created": 1636887397544,
+                                                    "text": "缺点：可能浪费空间"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpg5c7n6s00",
+                                            "created": 1636887377787,
+                                            "text": "分隔符"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfpg5wq39sw0",
+                                                    "created": 1636887422438,
+                                                    "text": "LineBasedFrameDecoder"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfpg6f853gg0",
+                                                            "created": 1636887462712,
+                                                            "text": "行分隔符"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfpg64en1kw0",
+                                                    "created": 1636887439160,
+                                                    "text": "DelimiterBasedDecoder"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfpg6ifd93k0",
+                                                            "created": 1636887469679,
+                                                            "text": "自定义分隔符"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfpg8dr59ao0",
+                                                    "created": 1636887616236,
+                                                    "text": "需要一个字节一个字节查找，效率较低"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfpg8wpryuw0",
+                                            "created": 1636887657512,
+                                            "text": "LengthFieldBasedFrameDecoder"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfpg9tyau8g0",
+                                                    "created": 1636887729861,
+                                                    "text": "lengthFieldOffset"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfpg9xw6yko0",
+                                                            "created": 1636887738441,
+                                                            "text": "长度字段偏移量"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfpga17p3io0",
+                                                    "created": 1636887745667,
+                                                    "text": "lengthFieldLength"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfpga3wnhu00",
+                                                            "created": 1636887751529,
+                                                            "text": "长度字段长度"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfpga7at11s0",
+                                                    "created": 1636887758915,
+                                                    "text": "lengthAdjustment"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfpgaa75dl40",
+                                                            "created": 1636887765225,
+                                                            "text": "长度字段为基准，还有几个字节是内容"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfpgaghzxkg0",
+                                                    "created": 1636887778941,
+                                                    "text": "initialBytesToStrip"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfpgakvaiao0",
+                                                            "created": 1636887788452,
+                                                            "text": "从头剥离几个字节"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfr3yszmrf40",
+                    "created": 1637056132353,
+                    "text": "优化"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfr3z045y0w0",
+                            "created": 1637056147865,
+                            "text": "参数调优"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfr3z1x67m80",
+                                    "created": 1637056151796,
+                                    "text": "CONNECT_TIMEOUT_MILLIs"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfr3za6uheo0",
+                                            "created": 1637056169796,
+                                            "text": "用在客户端建立连接时，如果在指定毫秒内无法连接，会抛出 timeout 异常"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfr3znzlasw0",
+                                            "created": 1637056199831,
+                                            "text": "区别于 SO_TIMEOUT 主要用在阻塞 I/O，阻塞 I/O 中 accept、read 等都是无限等待的，\n如果不希望永远阻塞，使用它可调整超时时间"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfr4e6fsizk0",
+                                    "created": 1637057337091,
+                                    "text": "backlog"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfr4e7ut2u00",
+                                            "created": 1637057340176,
+                                            "text": "在 linux2.2 之前，backlog 大小包括了两个队列的大小。\nlinux2.2 之后，分别用下面两个参数来控制"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfr4eybbf080",
+                                                    "created": 1637057397771,
+                                                    "text": "sync queue 半连接队列"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfr4f5i7ths0",
+                                                            "created": 1637057413425,
+                                                            "text": "大小通过 /proc/sys/net/ipv4/tcp_max_syn_backlog 指定，\n在 syncookies 启用的情况下，逻辑上没有最大值限制，这个设置便被忽略"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfr4gcquanc0",
+                                                    "created": 1637057507548,
+                                                    "text": "accept queue 全连接队列"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfr4gisdh680",
+                                                            "created": 1637057520702,
+                                                            "text": "其大小通过 /proc/sys/net/core/somaxconn 指定，\n在使用 listen 函数时，内核会根据传入的 backlog 参数与系统参数，取二者的较小值"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfr4h67rw4o0",
+                                                            "created": 1637057571699,
+                                                            "text": "如果 accept_queue 队列满了，server 将发送一个拒绝连接的错误信息到 client"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfr4hy8ge680",
+                                            "created": 1637057632690,
+                                            "text": "netty 中通过 Channel.option(ChannelOption.SO_BACKLOG, param) 传递"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfr4i21u2zc0",
+                                            "created": 1637057640997,
+                                            "text": "nio 中通过 bind(port, backlog) 传递"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfr4p22v3ew0",
+                                            "created": 1637058189608,
+                                            "text": "ulimit -n "
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfr4p4wgyds0",
+                                                    "created": 1637058195752,
+                                                    "text": "操作系统一个进程最多打开的文件描述符个数"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfr4pn6dpns0",
+                                            "created": 1637058235533,
+                                            "text": "TCP_NODELAY"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfr4pq84vy80",
+                                                    "created": 1637058242170,
+                                                    "text": "Nagle 算法相关"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfr4q3vgk3s0",
+                                                    "created": 1637058271878,
+                                                    "text": "设为true，则不延迟"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfr4q9own340",
+                                            "created": 1637058284543,
+                                            "text": "SO_SYDBUF & SO_RCVBUF"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfr4qffpluo0",
+                                                    "created": 1637058297047,
+                                                    "text": "调整滑动窗口大小，也就是发送缓冲区和接收缓冲区大小，一般不设置。操作系统自动调节"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfr4r5649ps0",
+                                            "created": 1637058353064,
+                                            "text": "ALLOCATOR"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfr4r85jzwg0",
+                                                    "created": 1637058359560,
+                                                    "text": "用来分配 ByteBuf， ctx.alloc"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfr4rlcoi540",
+                                            "created": 1637058388289,
+                                            "text": "RCVBUF_ALLOCATOR"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfr4wraju140",
+                                                    "created": 1637058793042,
+                                                    "text": "控制 netty 接收缓冲区大小"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfr4wvkdcew0",
+                                                    "created": 1637058802343,
+                                                    "text": "负责入站数据的分配，决定入站缓冲区的大小（并可动态调整），\n统一采用 direct 直接内存，具体池化策略由 allocator 决定"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfpcaeeaxwg0",
+                    "created": 1636876489925,
+                    "text": "核心设计思想"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfpcagwxdyg0",
+                            "created": 1636876495404,
+                            "text": "流水线设计思想"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfpcajfrnkw0",
+                                    "created": 1636876500897,
+                                    "text": "工序颗粒化"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpcar5ujig0",
+                                    "created": 1636876517712,
+                                    "text": "不同的工序可以由不同线程执行"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfpcaylizr40",
+                            "created": 1636876533897,
+                            "text": "异步设计思想"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfpcb0e3r8g0",
+                            "created": 1636876537802,
+                            "text": "多Reactor 反应堆思想"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfpd3sjs1cg0",
+                            "created": 1636878793292,
+                            "text": "内存管理思想"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfpadh0i2u80",
+                    "created": 1636871088493,
+                    "text": "常见问题"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfpadlmjrm00",
+                            "created": 1636871098533,
+                            "text": "Handler 执行如何切换线程？"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfpai5n80f40",
+                                    "created": 1636871455566,
+                                    "text": "切换出去时，假设为线程 1，等到再切换回来的线程 2 是不是原来的线程 1"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfpadzljssg0",
+                            "created": 1636871128948,
+                            "text": "默认线程数？"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfpb79hudiw0",
+                            "created": 1636873423052,
+                            "text": "为什么要用异步"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfpb7cbmwl40",
+                                    "created": 1636873429207,
+                                    "text": "在程序中，单线程没法异步，必须配合多线程，多核 CPU 才能发挥异步的优势"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpb7ycnzbk0",
+                                    "created": 1636873477159,
+                                    "text": "异步没有缩短响应事件，反而有所增加"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpb84nn4g00",
+                                    "created": 1636873490883,
+                                    "text": "合理进行任务拆分，是利用异步的关键"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfpb8ao0zio0",
+                                    "created": 1636873503967,
+                                    "text": "异步提高的是系统吞吐量，单位时间内完成的任务数"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfrr3uhpeo80",
+                                    "created": 1637121412972,
+                                    "text": "异步如何实现？Promise 的实现方式是？"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfrrggq721c0",
+                                            "created": 1637122401744,
+                                            "text": "查看 Promise 的线程切换"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfr4y4fm59c0",
+                            "created": 1637058900010,
+                            "text": "入站的第一块 bytebuf 在哪里分配的，如何分配的，分配的大小是多少"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

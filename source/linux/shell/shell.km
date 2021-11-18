@@ -1,0 +1,438 @@
+{
+    "root": {
+        "data": {
+            "id": "cfgmdl9seqg0",
+            "created": 1635990911471,
+            "text": "Shell"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfgnbafhrrk0",
+                    "created": 1635993552253,
+                    "text": "基本语法"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfgn1zj5mo80",
+                            "created": 1635992823252,
+                            "text": "变量"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgn22dovts0",
+                                    "created": 1635992829452,
+                                    "text": "本地变量"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfgn284s4bk0",
+                                            "created": 1635992841974,
+                                            "text": "设置变量：key=value"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfgn2pqa4o00",
+                                            "created": 1635992880279,
+                                            "text": "查看变量：$echo key"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfgn2bqilb40",
+                                            "created": 1635992849818,
+                                            "text": "提升为环境变量 export key "
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfgn7ew16ag0",
+                                            "created": 1635993248503,
+                                            "text": "删除变量：unset key"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfgn23yzdqo0",
+                                    "created": 1635992832916,
+                                    "text": "环境变量"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfgn7po5uso0",
+                                            "created": 1635993271972,
+                                            "text": "env"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgn8207mzk0",
+                            "created": 1635993298822,
+                            "text": "文件名代换"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgn857a7a80",
+                                    "created": 1635993305780,
+                                    "text": "通配符：Wildcard"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfgn99065rc0",
+                                            "created": 1635993392421,
+                                            "text": "全部：*"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfgn9c2auhs0",
+                                            "created": 1635993399080,
+                                            "text": "一个：?, 示例：ls ??.sh"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfgn9dx4ve00",
+                                            "created": 1635993403121,
+                                            "text": "范围内取一个：ls t[1-3].sh"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgnc08j3iw0",
+                            "created": 1635993608428,
+                            "text": "命令代换"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgqjavhx0g0",
+                                    "created": 1636002643463,
+                                    "text": "反引号或小括号圈中命令"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfgncejsheo0",
+                                    "created": 1635993639584,
+                                    "text": "输出时间示例"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfgnc5i3rqg0",
+                                            "created": 1635993619891,
+                                            "text": "var=`date`\necho $var"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgncy4fpvc0",
+                            "created": 1635993682191,
+                            "text": "算数代换"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgqj0w94s00",
+                                    "created": 1636002621741,
+                                    "text": "中括号或者(())选中表达式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfgnd4wcee80",
+                                    "created": 1635993696939,
+                                    "text": "计算示例"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfgndo2ud540",
+                                            "created": 1635993738691,
+                                            "text": "var=40\necho $[var + 33]"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgnex8nn880",
+                            "created": 1635993836998,
+                            "text": "转义字符"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfgnmahuma00",
+                            "created": 1635994414401,
+                            "text": "双引号"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgnmdhek140",
+                                    "created": 1635994420904,
+                                    "text": "双引号括起来的值允许变量扩展"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfgnnj7hqu00",
+                    "created": 1635994511730,
+                    "text": "脚本语法"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfgnnpaszhc0",
+                            "created": 1635994524991,
+                            "text": "条件测试"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgnp8wtf7c0",
+                                    "created": 1635994646045,
+                                    "text": "test $var -gt 100\necho $? 获取值"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfgnsszequo0",
+                                    "created": 1635994924830,
+                                    "text": "测试是否管道文件："
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfgntp0b4q00",
+                                            "created": 1635994994541,
+                                            "text": "用test 语法：\ntest -p pipe"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfgntq00cyw0",
+                                            "created": 1635994996700,
+                                            "text": "用中括号语法：\n[ -p pipe ]"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfgntzzt2uo0",
+                                            "created": 1635995018456,
+                                            "text": "echo $? 获取判断结果"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfgqkxkj9i00",
+                                    "created": 1636002771231,
+                                    "text": "逻辑条件"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfgqkzy8lp40",
+                                            "created": 1636002776413,
+                                            "text": "逻辑与"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfgql2p55a80",
+                                                    "created": 1636002782393,
+                                                    "text": "-a"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfgql4m5jx40",
+                                            "created": 1636002786566,
+                                            "text": "逻辑或"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfgql61btuw0",
+                                                    "created": 1636002789660,
+                                                    "text": "-o"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgp90ugzts0",
+                            "created": 1635999016882,
+                            "text": "位置参数和特殊变量"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgp955utgg0",
+                                    "created": 1635999026278,
+                                    "text": "$0、$1、$2"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfgp975h6ao0",
+                                            "created": 1635999030608,
+                                            "text": "相当于C语言main函数的argv[0]、argv[1]、argv[2]"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfgp9jmxyz40",
+                                    "created": 1635999057786,
+                                    "text": "$#"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfgpa8qccf40",
+                                            "created": 1635999112411,
+                                            "text": "相当于C语言main函数的argc - 1， 例如可以用在for循环中的 in 后面"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfgpaoj3j8w0",
+                                    "created": 1635999146801,
+                                    "text": "$@"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfgpaw7xtbk0",
+                                            "created": 1635999163541,
+                                            "text": "表示参数列表\"$1\", \"$2\", .....例如可以用在 for 循环中的 in 后面"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfgparfqjrk0",
+                                    "created": 1635999153128,
+                                    "text": "$*"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfgpbg1lz4g0",
+                                            "created": 1635999206694,
+                                            "text": "同上，表示参数列表中的\"$1\", \"$2\""
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfgpastjxlk0",
+                                    "created": 1635999156141,
+                                    "text": "$?"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfgpbr4ixhk0",
+                                            "created": 1635999230815,
+                                            "text": "上一条命令的Exit Status"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfgpatzoqtk0",
+                                    "created": 1635999158688,
+                                    "text": "$$"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfgpbxj2cf40",
+                                            "created": 1635999244754,
+                                            "text": "当前进程号"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

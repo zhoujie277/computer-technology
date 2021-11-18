@@ -1,0 +1,851 @@
+{
+    "root": {
+        "data": {
+            "id": "cfnn1rujx8w0",
+            "created": 1636703726224,
+            "text": "Protobuffer"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfojgz9txls0",
+                    "created": 1636795193364,
+                    "text": "https://developers.google.com/protocol-buffers/docs/overview"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cfoiampiu000",
+                    "created": 1636791874720,
+                    "text": "proto 格式"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfoib0856mo0",
+                            "created": 1636791904144,
+                            "text": "版本定义"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfoibfvwedc0",
+                                    "created": 1636791938232,
+                                    "text": "syntax = \" proto 3\""
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfoibmzrns00",
+                            "created": 1636791953704,
+                            "text": "package"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfoibrkp31k0",
+                                    "created": 1636791963676,
+                                    "text": "定义默认包名，同名的Message可以通过package 进行区分"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfoid0ipwow0",
+                            "created": 1636792061512,
+                            "text": "option"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfoic4w27ao0",
+                                    "created": 1636791992662,
+                                    "text": "option java_package \"com.example.foo\""
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoie765dlc0",
+                                    "created": 1636792154354,
+                                    "text": "java_multiple_files"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoiec4qq3k0",
+                                    "created": 1636792165152,
+                                    "text": "java_outer_classname"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoiefou71c0",
+                                    "created": 1636792172898,
+                                    "text": "optimize_for"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoiej56f540",
+                                    "created": 1636792180416,
+                                    "text": "cc_enable_arenas"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoiemffxbk0",
+                                    "created": 1636792187567,
+                                    "text": "objc_class_prefix"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoiepvsh5k0",
+                                    "created": 1636792195086,
+                                    "text": "deprecated"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfoih3djqog0",
+                            "created": 1636792381186,
+                            "text": "普通字段"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfoih5edg5c0",
+                                    "created": 1636792385590,
+                                    "text": "field = [ \"repeated\" ] type fieldName \"=\" fieldNumber [ \"[\" fieldOptions \"]\" ] \";\""
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoiokf8iig0",
+                                    "created": 1636792966843,
+                                    "text": "repeated"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfoiona95140",
+                                            "created": 1636792973072,
+                                            "text": "允许字段重复"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoiijnb1680",
+                                    "created": 1636792494969,
+                                    "text": "数据类型"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfoiill5ps00",
+                                            "created": 1636792499193,
+                                            "text": "double、float、int32, int64, uint32, uint64, sint32, sint64.\n 存储长度可变的浮点数、整数、无符号整数和有符号整数"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoijslfp4g0",
+                                            "created": 1636792592811,
+                                            "text": "长度固定的数字类型：fixed32, fixed64, sfixed32, sfixed64"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoik7fdjhc0",
+                                            "created": 1636792625097,
+                                            "text": "bool"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfoikm4b9800",
+                                                    "created": 1636792657079,
+                                                    "text": "布尔类型"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoikbwaqrc0",
+                                            "created": 1636792634827,
+                                            "text": "string"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfoikkrzqkw0",
+                                                    "created": 1636792654158,
+                                                    "text": "字符串"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoikhe7xzs0",
+                                            "created": 1636792646794,
+                                            "text": "bytes"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfoikisnha00",
+                                                    "created": 1636792649844,
+                                                    "text": "字节数组"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoikoj67ew0",
+                                            "created": 1636792662331,
+                                            "text": "messageType"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfoikqjxohk0",
+                                                    "created": 1636792666731,
+                                                    "text": "消息类型"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoikssd7w00",
+                                            "created": 1636792671594,
+                                            "text": "enumType"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfoikufmils0",
+                                                    "created": 1636792675178,
+                                                    "text": "枚举类型"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoimx9jom80",
+                                    "created": 1636792838069,
+                                    "text": "Oneof"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfoimzu4gyo0",
+                                            "created": 1636792843667,
+                                            "text": "如果你有一组字段，同时最多允许这一组中的一个字段出现，\n就可以使用 oneof这一组字段"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoinr5wfvc0",
+                                            "created": 1636792903152,
+                                            "text": "Oneof 可以判断字段是否设置的功能"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoinzon1gg0",
+                                            "created": 1636792921699,
+                                            "text": "Oneof 不能使用 repeated"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoip0ryf880",
+                                    "created": 1636793002441,
+                                    "text": "map 类型"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfoip2kxu940",
+                                            "created": 1636793006370,
+                                            "text": "map 类型需要设置键和值的类型"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoipcept5s0",
+                                            "created": 1636793027761,
+                                            "text": "map<int64,string> values = 1;"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoipmidtew0",
+                                            "created": 1636793049751,
+                                            "text": "不能同时使用 repeated"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoipuaxcs00",
+                                    "created": 1636793066714,
+                                    "text": "Reserved"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfoipwop4140",
+                                            "created": 1636793071901,
+                                            "text": "可以用来指明此 message 不使用某些字段，也就是忽略这些字段"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoiqwsw90w0",
+                                    "created": 1636793150519,
+                                    "text": "enum"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfoir1axoh40",
+                                            "created": 1636793160316,
+                                            "text": "枚举类型用来限定字段的值只能取某个特定的值"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoiscu42mg0",
+                                            "created": 1636793263785,
+                                            "text": "allow_alias"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfoisfucsk00",
+                                                    "created": 1636793270330,
+                                                    "text": "允许枚举内部字段编号重复"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoispqglmg0",
+                                            "created": 1636793291862,
+                                            "text": "枚举的常量必须是一个32位的整数，从效率的角度考虑，不推荐采用负数"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoit7tz0mg0",
+                                            "created": 1636793331257,
+                                            "text": "第一个枚举值必须为0，且必须定义"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoiti3e42o0",
+                                            "created": 1636793353594,
+                                            "text": "可以定义在 message 中"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoiu061jhs0",
+                                    "created": 1636793392936,
+                                    "text": "其他消息类型"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoiu6m1xy80",
+                                    "created": 1636793406965,
+                                    "text": "嵌套类型"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfoiuahu7mo0",
+                                            "created": 1636793415417,
+                                            "text": "message SearchResponse {\n  message Result {\n\tstring url = 1;\n\tstring title = 2;\n\trepeated string snippets = 3;\n  }\n  repeated Result results = 1;\n}"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoivgzlq5k0",
+                                    "created": 1636793507916,
+                                    "text": "未知类型"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfoivlhqzkg0",
+                                            "created": 1636793517721,
+                                            "text": "未知类型是指数据的格式符号 Protobuf 的定义，但是数据中的某个/某些字段解析器无法识别的字段类型。\n一般发生在 proto 文件有变化，新旧数据不一致的情况导致"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfoiwnz3e4o0",
+                                    "created": 1636793601487,
+                                    "text": "Any"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfoiwv2qrjk0",
+                                            "created": 1636793616945,
+                                            "text": "Any 字段允许你处理嵌套数据，并不需要它的 proto 定义。"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoixcv9lr40",
+                                            "created": 1636793655675,
+                                            "text": "为了使用 Any 类型，你需要引入 google/protobuf/any.proto"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfoixpjx23k0",
+                                                    "created": 1636793683287,
+                                                    "text": "message SearchResponse {\n  message Result {\n\tstring url = 1;\n\tstring title = 2;\n\trepeated string snippets = 3;\n  }\n  repeated Result results = 1;\n}"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoixtx24so0",
+                                            "created": 1636793692789,
+                                            "text": "一个Any 以bytes呈现序列化的消息，并且包含一个 URL 作为这个类型的唯一标识和元数据"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfojg65hdxc0",
+                                    "created": 1636795129975,
+                                    "text": " "
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfoiyug3a4g0",
+                            "created": 1636793772304,
+                            "text": "更新消息类型"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfoiz2w1mzs0",
+                                    "created": 1636793790683,
+                                    "text": "有时候你不得不修改正在使用的 proto 文件，\n比如为类型增加一个字段，protobuf 支持\n这种修改而不影响已有的服务，不过你需要\n遵循一定的规则"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfoizka92jc0",
+                                            "created": 1636793828547,
+                                            "text": "不要改变已有字段的字段编号"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoizxe2uxc0",
+                                            "created": 1636793857077,
+                                            "text": "当你增加一个新的字段的时候，老系统序列化后的数据\n依然可以被你的新的格式所解析，只不过你需要处理新加字段的缺省值，\n老系统也能解析你信息的值，新加字段值只不过被丢弃了"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoj14ecdzk0",
+                                            "created": 1636793950695,
+                                            "text": "字段也可以被移除，但是建议你 Reserved 这个字段，\n避免将来会使用这个字段"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoj1ht5f4o0",
+                                            "created": 1636793979888,
+                                            "text": "int32、uint32，int64、uint64 和 bool 类型都是兼容的"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoj1xyo1bc0",
+                                            "created": 1636794015050,
+                                            "text": "sint32 和 sint64 兼容"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfoj23gmsew0",
+                                                    "created": 1636794027020,
+                                                    "text": "但是不和其他整数类型兼容"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoj2amtyyg0",
+                                            "created": 1636794042633,
+                                            "text": "string  和 bytes 兼容，如果bytes是合法的 UTF-8 bytes的话 "
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoj2ndtvig0",
+                                            "created": 1636794070386,
+                                            "text": "嵌入类型和bytes兼容，如果bytes包含一个消息的编码版本的话"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoj2uxskug0",
+                                            "created": 1636794086831,
+                                            "text": "fixed32 和 sixed32，fixed和sfixed64 兼容"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoj3d5afsw0",
+                                            "created": 1636794126466,
+                                            "text": "enum 和 int32，uint32，int64，uint64 兼容"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfoj3mzyjt40",
+                                            "created": 1636794147912,
+                                            "text": "把单一一个值改变成一个新的 oneof 类型的一个成员是安全和二进制兼容的。\n把一组字段变成一个新的 oneof 字段也是安全的，如果你确保这一组字段最多只会设置一个。\n把一个字段移动到一个已存在的oneof字段是不安全的。"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfoj58pbmd40",
+                            "created": 1636794273522,
+                            "text": "其他"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfoj59sop280",
+                                    "created": 1636794275902,
+                                    "text": "如果没有 Any 类型"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfoj5d1wmi80",
+                                            "created": 1636794282990,
+                                            "text": "序列化后的数据是没有类型的元数据信息的。\n这也意味着序列化的包和序列化后的包可以不一样，\n只要保证数据格式的定义兼容即可"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfojhkqm2ao0",
+                    "created": 1636795240092,
+                    "text": "编码"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfojlg578g00",
+                            "created": 1636795543546,
+                            "text": "protobuf 编码采用小端字节序：高字节在高字节，低地址子低字节"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfoji37fqsw0",
+                            "created": 1636795280291,
+                            "text": "varint 方法"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfojia3v0r40",
+                                    "created": 1636795295312,
+                                    "text": "varint 方法时一种使用变长方式表示整数的方法，可以使用一个或者多个字节\n来表示小整数和大整数，数越小，使用的字节数越少"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfojk8nemjs0",
+                                    "created": 1636795448869,
+                                    "text": "每个字节处理的时候，单个字节的高位为 1 表示还有需要处理的字节，\n高位为 0 表示这个字节是最后一个字节"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfojn06caqo0",
+                                    "created": 1636795665515,
+                                    "text": "protobuf 采用 head-content 的形式，第一个数据表示消息类型和消息序列号，紧接着是数据"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfojujdic7c0",
+                                    "created": 1636796255857,
+                                    "text": "消息类型和消息序列号表示为:  seq_number << 3 | wire_type "
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfojxl22nmw0",
+                            "created": 1636796494611,
+                            "text": "wire 类型"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfojxn8by9k0",
+                                    "created": 1636796499343,
+                                    "text": "0. varint"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfojxr9xcs80",
+                                            "created": 1636796508147,
+                                            "text": "int32, int64, uint32, uint64, sint32, sint64, bool, enum"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfojycidlv40",
+                                    "created": 1636796554370,
+                                    "text": "1. 64-bit"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfojyffvge00",
+                                            "created": 1636796560749,
+                                            "text": "fixed64, sfixed64, double"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfojyrjyrw80",
+                                    "created": 1636796587118,
+                                    "text": "2. Length-delimited"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfojyu7opo00",
+                                            "created": 1636796592906,
+                                            "text": "string, bytes, embeded messages, pack repeated fields"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfojzn7laqo0",
+                                    "created": 1636796656027,
+                                    "text": "5. 32 bit"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfojzrkjuwg0",
+                                            "created": 1636796665517,
+                                            "text": "fixed32, sfixed32,  float"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfok2ghf8wo0",
+                            "created": 1636796876476,
+                            "text": "ZigZag编码"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfok2kt9asg0",
+                                    "created": 1636796885899,
+                                    "text": "更有效的处理sint32和sint64"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfok4inwqao0",
+                                            "created": 1636797037950,
+                                            "text": "sint32  (n << 1) ^ (n >> 31)"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfok4ydodq00",
+                                            "created": 1636797072160,
+                                            "text": "sint64   (n << 1) ^ (n >> 63)"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfnni3i5p3k0",
+                    "created": 1636705005422,
+                    "text": "为什么体积小？"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfok8bn4r0g0",
+                            "created": 1636797336122,
+                            "text": "因为编码规则精简，除了代表内容本身的字节之外，只占用了head字节数，加上每个数据字节的第一位bit。"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfokao7yx400",
+                            "created": 1636797520232,
+                            "text": "数据本身也进行了编码优化，如用于有符号数的 sint32 和 sint64"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfogqjt1c800",
+                    "created": 1636787480009,
+                    "text": "为什么拆解快？"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfok9jzyk6w0",
+                            "created": 1636797432677,
+                            "text": "因为规则的简单，采用位运算编码和解码"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

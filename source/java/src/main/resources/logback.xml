@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 日志集中管理属性-->
+    <property name="pattern" value="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %c %M %L [%thread] %m%n"></property>
+    <!-- 日志输出格式
+        [%-5level]
+        %d{yyyy-MM-dd HH:mm:ss.SSS} 日期
+        %c 类的完整名称
+        %M method
+        %L 行号
+        [%thread] 线程名称
+        %m或者%msg 信息
+        %n 换行
+    -->
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- 控制流输出对象 默认 System.out-->
+        <target>System.out</target>
+        <!-- 日志消息格式配置-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${pattern}</pattern>
+        </encoder>
+        <filter>
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onDisMatch>DENY</onDisMatch>
+        </filter>
+    </appender>
+
+    <!-- <appender name="file" class="ch.qos.logback.core.FileAppender">
+        日志文件保存路径
+        <file>${log_dir}/logback.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${pattern}</pattern>
+        </encoder>
+    </appender> -->
+    <!-- <appender name="htmlFile" class="ch.qos.logback.core.FileAppender">
+        日志文件保存路径
+        <file>${log_dir}/logback.html</file>
+        <encoder class="ch.qos.logback.classic.encoder.LayoutWrappingEncoder">
+            <layout class="ch.qos.logback.classic.html.HTMLLayout">
+                <pattern>%-5level%dyyyy-MM-dd HH:mm:ss.SSS%c%M%L%thread%m%n</pattern>
+            </layout>
+        </encoder>
+    </appender> -->
+
+    <root level="DEBUG">
+        <appender-ref ref="console"></appender-ref>
+        <!-- <appender-ref ref="htmlFile"></appender-ref> -->
+    </root>
+</configuration>

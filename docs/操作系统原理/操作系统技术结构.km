@@ -1,0 +1,13 @@
+{
+    "root": {
+        "data": {
+            "id": "cfimad22aj40",
+            "created": 1636193778410,
+            "text": "操作系统技术结构"
+        },
+        "children": []
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

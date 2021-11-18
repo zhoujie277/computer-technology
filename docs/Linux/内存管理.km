@@ -1,0 +1,131 @@
+{
+    "root": {
+        "data": {
+            "id": "cfj8rvvs6uw0",
+            "created": 1636257215998,
+            "text": "内存管理"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfj8urbrz5s0",
+                    "created": 1636257441174,
+                    "text": "基本函数"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfj8utmypy00",
+                            "created": 1636257446204,
+                            "text": "malloc"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfj8w41m0f40",
+                                    "created": 1636257547221,
+                                    "text": "在内存的动态存储区中分配一块长度为size字节的连续区域，\n参数size为需要内存空间的长度，返回该区域的首地址"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj8wtf526g0",
+                                    "created": 1636257602459,
+                                    "text": "函数malloc不能初始化所分配的内存空间,而函数calloc能."
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfj8uuuudm80",
+                            "created": 1636257448857,
+                            "text": "calloc"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfj8wa7ik680",
+                                    "created": 1636257560639,
+                                    "text": "与malloc相似,参数sizeOfElement为申请地址的单位元素长度,\nnumElements为元素个数，即在内存中申请numElements*sizeOfElement字节大小的连续地址空间."
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj8wwurzg80",
+                                    "created": 1636257609935,
+                                    "text": "函数calloc() 会将所分配的内存空间中的每一位都初始化为零,"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfj8uwtq4nc0",
+                            "created": 1636257453143,
+                            "text": "realloc"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfj8whj0p8o0",
+                                    "created": 1636257576572,
+                                    "text": "给一个已经分配了地址的指针重新分配空间,\n参数ptr为原有的空间地址,newsize是重新申请的地址长度."
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj8xbbxxmo0",
+                                    "created": 1636257641448,
+                                    "text": "realloc可以对给定的指针所指的空间进行扩大或者缩小，\n无论是扩张或是缩小，原有内存的中内容将保持不变."
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj8xlrfh400",
+                                    "created": 1636257664152,
+                                    "text": "realloc返回的指针很可能指向一个新的地址."
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfj8xvjjogo0",
+                                    "created": 1636257685443,
+                                    "text": "realloc()试图直接从堆上现存的数据后面的那些字节中获得附加的字节"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfj8uzjgtfk0",
+                            "created": 1636257459053,
+                            "text": "问题"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfj8v1d2gds0",
+                                    "created": 1636257463020,
+                                    "text": "需要的线性地址空间不够分配时，操作系统如何管理策略？"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

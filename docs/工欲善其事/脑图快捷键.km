@@ -1,0 +1,360 @@
+{
+    "root": {
+        "data": {
+            "id": "cfgj9z7e1000",
+            "created": 1635982165014,
+            "text": "脑图常用快捷键"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfgja32fbvc0",
+                    "created": 1635982173421,
+                    "text": "视野控制",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfgjfhczyhs0",
+                            "created": 1635982596356,
+                            "text": "居中根节点",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjfljc35c0",
+                                    "created": 1635982605447,
+                                    "text": "双击空白处\nCtrl + Enter",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgjg667o5k0",
+                            "created": 1635982650366,
+                            "text": "放大/缩小",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjgb5n1kw0",
+                                    "created": 1635982661215,
+                                    "text": "Ctrl + +/-",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgjgigayqg0",
+                            "created": 1635982677097,
+                            "text": "视野移动",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjgkbca0g0",
+                                    "created": 1635982681151,
+                                    "text": "触摸板",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfgjad6kdyg0",
+                    "created": 1635982195439,
+                    "text": "布局",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfgjh2n85qg0",
+                            "created": 1635982721051,
+                            "text": "Ctrl + shift + L",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfgjagozkiw0",
+                    "created": 1635982203084,
+                    "text": "节点操作",
+                    "layout": null,
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfgjakrwfds0",
+                            "created": 1635982211967,
+                            "text": "插入兄弟节点",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjaoltsao0",
+                                    "created": 1635982220307,
+                                    "text": "Enter",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgjayh20uw0",
+                            "created": 1635982241786,
+                            "text": "插入子节点",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjb124dhk0",
+                                    "created": 1635982247413,
+                                    "text": "Tab",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgjb9617dc0",
+                            "created": 1635982265064,
+                            "text": "插入父节点",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjbc3vhw00",
+                                    "created": 1635982271464,
+                                    "text": "Shft + Tab",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgjbk8binc0",
+                            "created": 1635982289147,
+                            "text": "删除节点",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjbmwz0gw0",
+                                    "created": 1635982294991,
+                                    "text": "Delete/Backspace",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgjbvgiqww0",
+                            "created": 1635982313588,
+                            "text": "节点导航",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjbxzuo8o0",
+                                    "created": 1635982319110,
+                                    "text": "up/down/left/right",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgjc59p9000",
+                            "created": 1635982334943,
+                            "text": "向上向下调整顺序",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjcbw1o0g0",
+                                    "created": 1635982349355,
+                                    "text": "Alt + up/down",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgjcksjpvc0",
+                            "created": 1635982368734,
+                            "text": "展开/收起节点",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjcq4cc080",
+                                    "created": 1635982380331,
+                                    "text": "/",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgjcu992000",
+                            "created": 1635982389335,
+                            "text": "编辑节点",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjcxixxsg0",
+                                    "created": 1635982396452,
+                                    "text": "F2",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgjd4wjvw00",
+                            "created": 1635982412512,
+                            "text": "文本换行",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjd6zeu940",
+                                    "created": 1635982417039,
+                                    "text": "Shift + Enter",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgjddn8ozk0",
+                            "created": 1635982431540,
+                            "text": "全选",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjdfbc2ig0",
+                                    "created": 1635982435174,
+                                    "text": "Ctrl + A",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgjdo8u5ao0",
+                            "created": 1635982454614,
+                            "text": "加粗",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjdq1ctwg0",
+                                    "created": 1635982458515,
+                                    "text": "Ctrl + B",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgjdtfi5ew0",
+                            "created": 1635982465901,
+                            "text": "斜体",
+                            "expandState": "expand",
+                            "font-style": "italic",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjduzeb4g0",
+                                    "created": 1635982469281,
+                                    "text": "Ctrl + I",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgjehsvt2o0",
+                            "created": 1635982518953,
+                            "text": "查找节点",
+                            "layout": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgjeknugfk0",
+                                    "created": 1635982525178,
+                                    "text": "Ctrl + F",
+                                    "layout": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

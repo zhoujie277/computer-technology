@@ -1,0 +1,301 @@
+{
+    "root": {
+        "data": {
+            "id": "cfr03omap400",
+            "created": 1637045230221,
+            "text": "Java 新版本特性"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfr0g6p0rnk0",
+                    "created": 1637046209938,
+                    "text": "Java 来源"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfr0gc8p2uo0",
+                            "created": 1637046222012,
+                            "text": "Java 由 Sun 公司发明，Open JDK 是 Sun 在 2006 年末把 Java 开源而形成的项目。"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfr0gv01two0",
+                            "created": 1637046262848,
+                            "text": "http://openjdk.java.net"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfr0h655lpk0",
+                            "created": 1637046287101,
+                            "text": "JEP: jDK Enhancement Proposals. JDK 增强建议。一般来说，JEP 代表了 JDK 的新特性"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfr0cbq5akw0",
+                    "created": 1637045907433,
+                    "text": "J2SE 6"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfr0cst6djk0",
+                            "created": 1637045944622,
+                            "text": "2006 年12月"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfr0d1yao6w0",
+                    "created": 1637045964522,
+                    "text": "J2SE 7"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfr0d5xrq480",
+                            "created": 1637045973199,
+                            "text": "2011 年 7 月"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfr03tclruo0",
+                    "created": 1637045240519,
+                    "text": "Java 8 (LTS)"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfr03vjdhx40",
+                            "created": 1637045245282,
+                            "text": "2014 年 3 月发布"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfr03z4evco0",
+                            "created": 1637045253084,
+                            "text": "支持 lambda 表达式"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfr047xms0w0",
+                            "created": 1637045272265,
+                            "text": "支持函数式编程"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfr04axpdfc0",
+                            "created": 1637045278800,
+                            "text": "interface 新增默认方法、静态方法"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfr04noloig0",
+                                    "created": 1637045306548,
+                                    "text": "默认方法 default"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfr061kjg340",
+                                            "created": 1637045415141,
+                                            "text": "默认实现，子类可重现"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfr06o6l7ig0",
+                                    "created": 1637045464364,
+                                    "text": "静态方法"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfr07yb82co0",
+                                            "created": 1637045564776,
+                                            "text": "只能通过静态方法调用"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfr054qe6vk0",
+                            "created": 1637045343662,
+                            "text": "日期、函数"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfr0dqnoqn40",
+                    "created": 1637046018300,
+                    "text": "Java 9"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfr0dwb2jcw0",
+                            "created": 1637046030598,
+                            "text": "2017 年 9 月"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfr0eaeolr40",
+                    "created": 1637046061292,
+                    "text": "Java 10"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfr0ecec0zc0",
+                            "created": 1637046065624,
+                            "text": "2018 年 3 月"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfr056bhg2w0",
+                    "created": 1637045347114,
+                    "text": "Java 11 (LTS)"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfr0emhhd740",
+                            "created": 1637046087582,
+                            "text": "2018 年 9 月"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfr0epfx3680",
+                    "created": 1637046094018,
+                    "text": "Java 12"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfr0es9ma7c0",
+                            "created": 1637046100168,
+                            "text": "2019.03"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfr0exljeiw0",
+                    "created": 1637046111772,
+                    "text": "Java 13"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfr0ez1f7c80",
+                            "created": 1637046114909,
+                            "text": "2019.09"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfr0f4ng5i00",
+                    "created": 1637046127125,
+                    "text": "Java 14"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfr0f603qsg0",
+                            "created": 1637046130067,
+                            "text": "2020.03"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfr0fbaxj140",
+                    "created": 1637046141606,
+                    "text": "Java 15"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfr0fcxr70w0",
+                            "created": 1637046145163,
+                            "text": "2020.09"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfr0fg36nx40",
+                    "created": 1637046152021,
+                    "text": "Java 16"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfr0fht0aao0",
+                            "created": 1637046155759,
+                            "text": "2021.03"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

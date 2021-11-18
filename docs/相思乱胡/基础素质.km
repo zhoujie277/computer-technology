@@ -1,0 +1,213 @@
+{
+    "root": {
+        "data": {
+            "id": "cfi1w37reo00",
+            "created": 1636136237690,
+            "text": "基本素质方面"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfi1x90hy0w0",
+                    "created": 1636136328676,
+                    "text": "一句话介绍自己"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfi1xak14w80",
+                            "created": 1636136332034,
+                            "text": "终身学习者"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfi1xlql5ts0",
+                            "created": 1636136356375,
+                            "text": "打不死的小强"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfi1wkmuu600",
+                    "created": 1636136275609,
+                    "text": "优势"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfi1wvyexzc0",
+                            "created": 1636136300252,
+                            "text": "目标感强烈"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfi1wydbhwg0",
+                            "created": 1636136305507,
+                            "text": "持续扩展认知"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfi1x2ko2uw0",
+                            "created": 1636136314658,
+                            "text": "实事求是"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfi1yfr2w480",
+                            "created": 1636136421708,
+                            "text": "善于反思，喜欢总结"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfi1zakk40o0",
+                            "created": 1636136488794,
+                            "text": "逻辑分析能力极强"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfi1zmczzc00",
+                                    "created": 1636136514459,
+                                    "text": "见微知著"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfi1zq7mc480",
+                                    "created": 1636136522840,
+                                    "text": "根据周边环境信息能快速找到问题的蛛丝马迹"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfi1zfwzpug0",
+                            "created": 1636136500430,
+                            "text": "喜欢探究事物原理"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfi20arnkpc0",
+                            "created": 1636136567588,
+                            "text": "学习力方面"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfi20cmn40g0",
+                                    "created": 1636136571638,
+                                    "text": "好奇心极强"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfi20irlzc00",
+                                    "created": 1636136584999,
+                                    "text": "自驱力较高"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfi20sgd77s0",
+                            "created": 1636136606087,
+                            "text": "专注力？xxx 力量？需要把上面的总结归纳为几点"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfi24mn4xrc0",
+                            "created": 1636136906892,
+                            "text": "知识涉猎广泛"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfi24r196vc0",
+                                    "created": 1636136916453,
+                                    "text": "经济学、历史学、综合素质"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfi25drivqo0",
+                            "created": 1636136965931,
+                            "text": "言出必行，努力说到做到"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfi1wpzgm4g0",
+                    "created": 1636136287255,
+                    "text": "劣势"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfi1xqp1s6g0",
+                            "created": 1636136367166,
+                            "text": "起点低，野心大，认知范围相对较窄小"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfoj9rmmpg80",
+                    "created": 1636794628175,
+                    "text": "下一阶段成长目标"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfoj9ttbfz40",
+                            "created": 1636794632933,
+                            "text": "有担当的大型项目技术负责人"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfojb6aila00",
+                            "created": 1636794738458,
+                            "text": "时间不限，只至达成目标为止"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

@@ -1,0 +1,753 @@
+{
+    "root": {
+        "data": {
+            "id": "cfido2cj52g0",
+            "created": 1636169462208,
+            "text": "汇编技术结构"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfido6joiuo0",
+                    "created": 1636169471347,
+                    "text": "寄存器"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfidr0fyneo0",
+                            "created": 1636169693154,
+                            "text": "通用寄存器"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfidr2iz7w00",
+                                    "created": 1636169697690,
+                                    "text": "RAX/EAX/AX/AH/AL"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidr62cpaw0",
+                                    "created": 1636169705392,
+                                    "text": "RBX/EBX/BX/BH/BL"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidr72n5xc0",
+                                    "created": 1636169707586,
+                                    "text": "RCX/ECX/CX/CH/CL"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidt7g27ts0",
+                                    "created": 1636169865126,
+                                    "text": "RDX/EDX/DX/DH/DL"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidtefh71k0",
+                                    "created": 1636169880328,
+                                    "text": "RSI/ESI/SI"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidtnj3ppc0",
+                                    "created": 1636169900138,
+                                    "text": "RDI/EDI/DI"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidu0ozk940",
+                                    "created": 1636169928792,
+                                    "text": "RBP/EBP/BP"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidu4nm9340",
+                                    "created": 1636169937417,
+                                    "text": "RSP/ESP/SP"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfidu8t59i00",
+                            "created": 1636169946458,
+                            "text": "特殊寄存器"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfidubxu8f40",
+                                    "created": 1636169953272,
+                                    "text": "IP 指令寄存器"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfidvabvysw0",
+                                            "created": 1636170028132,
+                                            "text": "RIP/EIP/IP"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidx8mivkg0",
+                                    "created": 1636170181150,
+                                    "text": "EFLAGS 标志寄存器"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidv4vjq3k0",
+                                    "created": 1636170016260,
+                                    "text": "段寄存器"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfiduh2v9w80",
+                                            "created": 1636169964460,
+                                            "text": "CS 代码段寄存器"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfidujmo1zc0",
+                                            "created": 1636169970011,
+                                            "text": "DS 数据段寄存器"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfidumsfezc0",
+                                            "created": 1636169976890,
+                                            "text": "ES 附加段寄存器"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfidydk6o0o0",
+                                            "created": 1636170270257,
+                                            "text": "SS 栈段寄存器"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfidur45yu80",
+                                            "created": 1636169986306,
+                                            "text": "FS"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfidutpnacg0",
+                                            "created": 1636169991959,
+                                            "text": "GS"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidv75ateg0",
+                                    "created": 1636170021204,
+                                    "text": "控制寄存器"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfie56fb3e80",
+                                            "created": 1636170803274,
+                                            "text": "CR0"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfie584ljco0",
+                                                    "created": 1636170806980,
+                                                    "text": "开启保护模式"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfie5gijc340",
+                                                    "created": 1636170825237,
+                                                    "text": "开启分页功能"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfie5lm7xsw0",
+                                            "created": 1636170836343,
+                                            "text": "CR3"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfie5mvmc5k0",
+                                                    "created": 1636170839088,
+                                                    "text": "页目录寄存器"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfie6597op40",
+                                    "created": 1636170879092,
+                                    "text": "其他寄存器"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfie6aues800",
+                                            "created": 1636170891258,
+                                            "text": "GDTR"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfie6ntfh2g0",
+                                                    "created": 1636170919497,
+                                                    "text": "全局描述符表寄存器，6字节"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfie6cszkd40",
+                                            "created": 1636170895526,
+                                            "text": "LDTR"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfie73wvf9s0",
+                                                    "created": 1636170954534,
+                                                    "text": "局部描述符表寄存器"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfie76ptjzs0",
+                                                            "created": 1636170960638,
+                                                            "text": "存储的是选择子\n指向GDT中的LDT段描述符"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfie6e3mwd40",
+                                            "created": 1636170898346,
+                                            "text": "TR"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfie6gidgrs0",
+                                                    "created": 1636170903591,
+                                                    "text": "任务寄存器"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfie6ixs90g0",
+                                                            "created": 1636170908876,
+                                                            "text": "TSS 任务状态段"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfido9jodlc0",
+                    "created": 1636169477877,
+                    "text": "伪指令"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfidoh6zz3s0",
+                            "created": 1636169494525,
+                            "text": "变量"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfidonex08g0",
+                            "created": 1636169508064,
+                            "text": "标号"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfidotk8rkw0",
+                            "created": 1636169521447,
+                            "text": "过程"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfidoxmexg00",
+                    "created": 1636169530286,
+                    "text": "指令"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfidspjhezs0",
+                            "created": 1636169826151,
+                            "text": "立即数"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfidp391ys80",
+                            "created": 1636169542538,
+                            "text": "运算指令"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfidpzstq3k0",
+                                    "created": 1636169613391,
+                                    "text": "add"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidq1nvpz40",
+                                    "created": 1636169617446,
+                                    "text": "sub"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidq2gdbvs0",
+                                    "created": 1636169619168,
+                                    "text": "mul"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidq36uklk0",
+                                    "created": 1636169620769,
+                                    "text": "div"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfidp4y9li80",
+                            "created": 1636169546240,
+                            "text": "条件指令"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfidqd57ki80",
+                                    "created": 1636169642438,
+                                    "text": "flags寄存器"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidqjmty800",
+                                    "created": 1636169656564,
+                                    "text": "cmp"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidqn8mtmo0",
+                                    "created": 1636169664413,
+                                    "text": "条件转移指令"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidqpizqyw0",
+                                    "created": 1636169669393,
+                                    "text": "条件传送指令"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfidp6m409s0",
+                            "created": 1636169549858,
+                            "text": "逻辑指令"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfidwnpv2w00",
+                                    "created": 1636170135640,
+                                    "text": "add"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidwopm6ns0",
+                                    "created": 1636170137801,
+                                    "text": "or"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidwrho0j40",
+                                    "created": 1636170143851,
+                                    "text": "test"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfidpdlpxt40",
+                            "created": 1636169565072,
+                            "text": "转移指令"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfidpr7p2ls0",
+                                    "created": 1636169594699,
+                                    "text": "call"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidpt7d18g0",
+                                    "created": 1636169599032,
+                                    "text": "jmp"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidpwewk940",
+                                    "created": 1636169606019,
+                                    "text": "loop"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfidpfggm740",
+                            "created": 1636169569108,
+                            "text": "传送指令"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfidwd47rnc0",
+                                    "created": 1636170112563,
+                                    "text": "mov"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidweapvds0",
+                                    "created": 1636170115133,
+                                    "text": "rep movs"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfidplqoomw0",
+                            "created": 1636169582787,
+                            "text": "控制指令"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfidwwb7s5s0",
+                                    "created": 1636170154345,
+                                    "text": "cti"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfidwxh06kw0",
+                                    "created": 1636170156872,
+                                    "text": "stl"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfidry3bcfc0",
+                    "created": 1636169766400,
+                    "text": "CLIb/系统调用"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfidvebbl140",
+                            "created": 1636170036805,
+                            "text": "32-bits"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfidvgzro8o0",
+                            "created": 1636170042637,
+                            "text": "64-bits"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfidzputcqo0",
+                    "created": 1636170375385,
+                    "text": "内存寻址"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfie30oovkw0",
+                            "created": 1636170634052,
+                            "text": "立即数寻址"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfie32vjrrs0",
+                            "created": 1636170638820,
+                            "text": "基址寻址"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfie35f6svs0",
+                            "created": 1636170644361,
+                            "text": "变址寻址"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfie37gbga00",
+                            "created": 1636170648783,
+                            "text": "基址变址寻址"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfidztv5n7c0",
+                    "created": 1636170384113,
+                    "text": "过程调用"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfie03oymeg0",
+                            "created": 1636170405506,
+                            "text": "参数入栈"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfie06ikj1c0",
+                            "created": 1636170411650,
+                            "text": "call 转移"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfie0a6b37k0",
+                            "created": 1636170419616,
+                            "text": "push ebp;\nmov ebp, esp\nsub esp, ...（局部变量长度）"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfie0l9uusg0",
+                            "created": 1636170443775,
+                            "text": "mov esp, ebp\npop ebp\nret"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfie1suif340",
+                            "created": 1636170538625,
+                            "text": "add esp .... (回到参数入栈前的位置)"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfie2q648qo0",
+                    "created": 1636170611161,
+                    "text": "中断"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfie3pn4ew00",
+                            "created": 1636170688377,
+                            "text": "硬中断"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfie3rf37vs0",
+                            "created": 1636170692244,
+                            "text": "软中断"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfie3smygyo0",
+                            "created": 1636170694897,
+                            "text": "内部中断"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfie3v7xg140",
+                            "created": 1636170700519,
+                            "text": "中断处理"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfie42kkn400",
+                                    "created": 1636170716521,
+                                    "text": "中断号"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfie44033c80",
+                                    "created": 1636170719635,
+                                    "text": "CS、IP、EFLAGS 寄存器入栈"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfie4cvn01s0",
+                                    "created": 1636170738958,
+                                    "text": "中断处理过程"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfie4gd2r7c0",
+                                    "created": 1636170746542,
+                                    "text": "iret 返回，CS、IP、EFLAGS恢复"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

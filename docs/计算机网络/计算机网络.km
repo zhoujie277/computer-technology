@@ -1,0 +1,89 @@
+{
+    "root": {
+        "data": {
+            "id": "cfgm6u5hyo00",
+            "created": 1635990382253,
+            "text": "计算机网络"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfgm7aq4fkw0",
+                    "created": 1635990418329,
+                    "text": "网络结构模型"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfgm7glch1c0",
+                            "created": 1635990431101,
+                            "text": "C/S 模型"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgm7zytqrk0",
+                                    "created": 1635990473275,
+                                    "text": "协议选择灵活"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfgm83rw92o0",
+                                    "created": 1635990481563,
+                                    "text": "不安全"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfgm84xcd6o0",
+                                    "created": 1635990484069,
+                                    "text": "适用于数据量大，需要缓存数据"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfgm7k991eo0",
+                            "created": 1635990439076,
+                            "text": "B/S 模型"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfgm7t0p0b40",
+                                    "created": 1635990458150,
+                                    "text": "限制用HTTP"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfgm8c8itzc0",
+                                    "created": 1635990499982,
+                                    "text": "安全性高"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfgm8fmxra80",
+                    "created": 1635990507384,
+                    "text": "TCP"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
