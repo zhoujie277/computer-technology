@@ -1,0 +1,114 @@
+{
+    "root": {
+        "data": {
+            "id": "cftk5com6mw0",
+            "created": 1637304903081,
+            "text": "相关问题"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cftk5focsi80",
+                    "created": 1637304909594,
+                    "text": "用户主线程相关问题"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cftk60s25b40",
+                            "created": 1637304955531,
+                            "text": "收到屏幕硬件输入，内核选择前台进程，以及回调前台进程相关 UI 事件的处理"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cftk775xs3s0",
+                            "created": 1637305047795,
+                            "text": "单线程模型"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cftk7idkkf40",
+                                    "created": 1637305072201,
+                                    "text": "如何保证用户响应时间的指标"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cftk7cfck4g0",
+                                    "created": 1637305059248,
+                                    "text": "与其他线程的交互"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cftk6prin0o0",
+                                    "created": 1637305009918,
+                                    "text": "Looper、Thread、MessageQueue、Handler 关系"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cftk8079oag0",
+                    "created": 1637305111002,
+                    "text": "进程间通信"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cftk8254p0g0",
+                            "created": 1637305115226,
+                            "text": "Binder 机制"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cftk83xzazk0",
+                            "created": 1637305119148,
+                            "text": "Looper 能实现多进程通信么，以及实现原理"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cftk95dwrz40",
+                    "created": 1637305200652,
+                    "text": "核心指标"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cftk97yfpns0",
+                            "created": 1637305206246,
+                            "text": "客户端：用户响应时间"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cftk9bqmbmg0",
+                            "created": 1637305214481,
+                            "text": "服务器：系统吞吐量"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

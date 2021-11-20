@@ -9,3 +9,4 @@ source/java/target/
 source/linux/libevent/**/*
 source/java/.**
 source/java/.**/*
+source/proto/*/**
