@@ -1,0 +1,66 @@
+syntax = "proto3";
+option java_package = "com.future.netty.chat.proto";
+
+enum HeadType {
+    PING = 0;      
+    PANG = 1;      
+    LOGIN_REQUEST = 2;
+    LOGIN_RESPONSE = 3;
+    LOGOUT_REQUEST = 4;
+    LOGOUT_RESPONSE = 5;
+    MESSAGE_REQUEST = 6;
+    MESSAGE_RESPONSE = 7;
+    MESSAGE_NOTIFICATION = 8;
+}
+
+message LoginRequest {
+    string uid = 1;
+    string deviceId = 2;
+    string token = 3;
+    uint32 platform = 4;
+    string app_version = 5;
+}
+
+message LoginResponse {
+    bool result = 1;
+    uint32 code = 2;
+    string info = 3;
+    uint32 expose = 4;
+}
+
+message MessageRequest {
+    uint64 msg_id = 1;
+    string from = 2;
+    string to = 3;
+    uint64 time = 4;
+    uint32 msg_type = 5;
+    string content = 6;
+    string url = 7;
+    string property = 8;
+    string from_nick = 9;
+    string json = 10;
+}
+
+message MessageResponse {
+    bool result = 1;
+    uint32 code = 2;
+    string info = 3;
+    uint32 expose = 4;
+}
+
+message MessageNotification {
+    uint64 no_id = 1;
+    string json = 2;
+    string timestamp = 3;
+}
+
+message Message {
+    HeadType type = 1;
+    uint64 sequence = 2;
+    string session_id = 3;
+    LoginRequest loginRequest = 4;
+    LoginResponse loginResponse = 5;
+    MessageRequest msgRequest = 6;
+    MessageResponse msgResponse = 7;
+    MessageNotification notification = 8;
+}

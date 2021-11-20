@@ -1,0 +1,7 @@
+syntax = "proto3";
+option java_package = "com.future.netty.protobuf";
+
+message Msg {
+    int32 id = 1;
+    string content = 2;
+}
