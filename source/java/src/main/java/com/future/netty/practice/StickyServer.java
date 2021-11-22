@@ -1,4 +1,4 @@
-package com.future.netty.stickybag;
+package com.future.netty.practice;
 
 import com.future.io.nio.NIOConfig;
 import com.future.netty.utils.ByteBufPrint;

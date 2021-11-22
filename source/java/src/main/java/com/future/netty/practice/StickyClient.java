@@ -1,5 +1,5 @@
 
-package com.future.netty.stickybag;
+package com.future.netty.practice;
 
 import java.net.InetSocketAddress;
 import java.util.Random;

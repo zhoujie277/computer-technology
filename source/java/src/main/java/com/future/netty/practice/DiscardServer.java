@@ -1,4 +1,4 @@
-package com.future.netty;
+package com.future.netty.practice;
 
 import com.future.io.nio.NIOConfig;
 
