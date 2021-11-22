@@ -38,20 +38,9 @@ public abstract class Message implements Serializable {
      * 消息类型
      */
     public enum MsgType {
-        PING(0), PONG(1), LOGIN_REQ(2), LOGOUT_REQ(3), CHAT_REQ(4), GROUP_CREATE_REQ(5), GROUP_CHAT_REQ(6),
-        GROUP_JOIN_REQ(7), GROUP_QUIT_REQ(8), LOGIN_ACK(1002), LOGOUT_ACK(1003), CHAT_ACK(1004), GROUP_CREATE_ACK(1005),
-        GROUP_CHAT_ACK(1006), GROUP_JOIN_ACK(1007), GROUP_QUIT_ACK(1008), MESSAGE_NOTIFICATION(100), RPC_REQ(300),
-        RPC_ACK(301);
-
-        private int value;
-
-        private MsgType(int value) {
-            this.value = value;
-        }
-
-        public int getValue() {
-            return value;
-        }
+        PING, PONG, LOGIN_REQ, LOGOUT_REQ, CHAT_REQ, GROUP_CREATE_REQ, GROUP_CHAT_REQ, GROUP_JOIN_REQ, GROUP_QUIT_REQ,
+        LOGIN_ACK, LOGOUT_ACK, CHAT_ACK, GROUP_CREATE_ACK, GROUP_CHAT_ACK, GROUP_JOIN_ACK, GROUP_QUIT_ACK,
+        MESSAGE_NOTIFICATION, RPC_REQ, RPC_ACK;
     }
 
     // 消息类型 1：纯文本 2：音频 3：视频 4：地理位置 5：其他

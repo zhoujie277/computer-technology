@@ -38,6 +38,9 @@ public class ServerActionDispatcher extends ChannelInboundHandlerAdapter {
                 return;
             }
             Session session = SessionManager.getInstance().getSession(ctx.channel());
+            if (session == null)
+                // 说明客户端没有登录，任何消息都不予处理
+                return;
             action.execute(session, pkg);
         }
     }

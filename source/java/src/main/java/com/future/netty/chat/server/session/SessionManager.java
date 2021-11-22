@@ -30,7 +30,8 @@ public class SessionManager {
 
     public void unbind(Channel channel) {
         Session session = mSessions.remove(channel);
-        session.close();
+        if (session != null)
+            session.close();
     }
 
     public Object getAttibute(Channel channel, String key) {

@@ -25,7 +25,7 @@ public class User implements Serializable {
         return PLATTYPE.values()[platform];
     }
 
-    public void plaform(PLATTYPE type) {
+    public void setPlaform(PLATTYPE type) {
         this.platform = type.ordinal();
     }
 }

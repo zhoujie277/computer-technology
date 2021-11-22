@@ -14,9 +14,6 @@ import com.google.protobuf.Descriptors.Descriptor;
 import com.google.protobuf.Descriptors.FieldDescriptor;
 import com.google.protobuf.Descriptors.FieldDescriptor.JavaType;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 public class ProtobufSerializer implements Serializer<Message> {
 
     private Class<?> getProtoClass(int msgType) throws ClassNotFoundException {
@@ -33,7 +30,6 @@ public class ProtobufSerializer implements Serializer<Message> {
             Class<?> msgClass = mapMessageClass(protoObj.getClass());
             Object msgObject = msgClass.newInstance();
             convertMsgObject(protoObj, msgObject);
-            log.info("{}", msgObject);
             return (Message) msgObject;
         } catch (Exception e) {
             e.printStackTrace();
@@ -49,7 +45,6 @@ public class ProtobufSerializer implements Serializer<Message> {
             Class<?> pbClass = mapProtoClass(message.getClass());
             Object pbBuilder = newBuilder(pbClass);
             convertPbObject(pbBuilder, message);
-            log.info("{}", pbBuilder);
             Object result = pbBuilder.getClass().getDeclaredMethod("build").invoke(pbBuilder);
             return (byte[]) result.getClass().getMethod("toByteArray").invoke(result);
         } catch (Exception e) {

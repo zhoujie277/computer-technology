@@ -42,7 +42,8 @@ public class NettyServer {
         int lengthFieldLength = ChatConfiguration.getIntProperty("lengthFieldLength");
         int lengthAdjustment = ChatConfiguration.getIntProperty("lengthAdjustment");
         int initialBytesToStrip = ChatConfiguration.getIntProperty("initialBytesToStrip");
-
+        int pingTimeout = ChatConfiguration.getIntProperty("ping.timeout");
+        
         final LoggingHandler loggingHandler = new LoggingHandler();
         MessageCodec mCodec = new MessageCodec();
         ServerActionDispatcher mDispatcher = new ServerActionDispatcher();
@@ -59,7 +60,7 @@ public class NettyServer {
             @Override
             protected void initChannel(Channel ch) throws Exception {
                 ChannelPipeline pipeline = ch.pipeline();
-                pipeline.addLast(new IdleStateHandler(5, 0, 0));
+                pipeline.addLast(new IdleStateHandler(pingTimeout, 0, 0));
                 pipeline.addLast(new ReadTimeoutHandler());
                 pipeline.addLast(new CodecFrameDecoder(maxFrameLength, lengthFieldOffset, lengthFieldLength,
                         lengthAdjustment, initialBytesToStrip));
@@ -90,7 +91,7 @@ public class NettyServer {
         public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
             IdleStateEvent event = (IdleStateEvent) evt;
             if (event.state() == IdleState.READER_IDLE) {
-                log.debug("已经5s没有读到数据了");
+                log.debug("客户端已经很久没有写数据了，请确认是否仍然在线. {}", ctx.channel().remoteAddress());
             }
         }
     }

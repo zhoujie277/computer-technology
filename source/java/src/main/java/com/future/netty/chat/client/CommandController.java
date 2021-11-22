@@ -60,7 +60,8 @@ public class CommandController {
             }
             command.exec(scanner);
             Message message = command.buildMessage(cookie);
-            cookie.writeMessage(message);
+            if (message != null)
+                cookie.writeMessage(message);
         }
     }
 

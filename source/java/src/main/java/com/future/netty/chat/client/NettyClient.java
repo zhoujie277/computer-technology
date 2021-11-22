@@ -66,6 +66,7 @@ public class NettyClient {
         int lengthFieldLength = ChatConfiguration.getIntProperty("lengthFieldLength");
         int lengthAdjustment = ChatConfiguration.getIntProperty("lengthAdjustment");
         int initialBytesToStrip = ChatConfiguration.getIntProperty("initialBytesToStrip");
+        int pingInterval = ChatConfiguration.getIntProperty("ping.interval");
 
         final LoggingHandler loggingHandler = new LoggingHandler();
         CodecFrameDecoder mFrameDecoder = new CodecFrameDecoder(maxFrameLength, lengthFieldOffset, lengthFieldLength,
@@ -82,7 +83,7 @@ public class NettyClient {
         b.handler(new ChannelInitializer<Channel>() {
             @Override
             protected void initChannel(Channel ch) throws Exception {
-                ch.pipeline().addLast(new IdleStateHandler(0, 3, 0)).addLast(new HeartBeatHandler());
+                ch.pipeline().addLast(new IdleStateHandler(0, pingInterval, 0)).addLast(new HeartBeatHandler());
                 ch.pipeline()
                         .addLast(new CodecFrameDecoder(maxFrameLength, lengthFieldOffset, lengthFieldLength,
                                 lengthAdjustment, initialBytesToStrip))
@@ -155,9 +156,7 @@ public class NettyClient {
     private class WrittenListener implements GenericFutureListener<ChannelFuture> {
         @Override
         public void operationComplete(ChannelFuture future) throws Exception {
-            if (future.isSuccess()) {
-                log.debug("write success");
-            } else {
+            if (!future.isSuccess()) {
                 // log or resend strategy
                 log.error("failed", future.cause());
             }

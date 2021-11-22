@@ -20,7 +20,7 @@ public class MessageCodec extends MessageToMessageCodec<ByteBuf, Message> {
         // 2 字节的版本
         out.writeShort(Message.VERSION_CODE);
         // 2 字节的消息类型
-        out.writeShort(msg.getMessageType().getValue());
+        out.writeShort(msg.getMessageType().ordinal());
         // 序列化
         byte[] bytes = Serializer.getSerializer().serialize(msg);
         // 4 字节的长度
