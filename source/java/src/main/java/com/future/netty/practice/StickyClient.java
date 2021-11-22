@@ -17,11 +17,14 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 采用定长消息报解决粘包半包问题
  */
+@Slf4j
 public class StickyClient implements Runnable {
+    private Random random = new Random();
 
     private static byte[] fill10Bytes(char c, int len) {
         byte[] bytes = new byte[10];
@@ -31,7 +34,6 @@ public class StickyClient implements Runnable {
         for (int i = len; i < bytes.length; i++) {
             bytes[i] = '_';
         }
-        // System.out.println(Arrays.toString(bytes));
         return bytes;
     }
 
@@ -48,12 +50,11 @@ public class StickyClient implements Runnable {
                     ch.pipeline().addLast(new ChannelInboundHandlerAdapter() {
                         @Override
                         public void channelActive(ChannelHandlerContext ctx) throws Exception {
-                            System.out.println("---ChannelInboundHandlerAdapter----");
+                            log.debug("---ChannelInboundHandlerAdapter----");
                             ByteBuf buffer = ctx.alloc().buffer();
                             char c = '0';
-                            Random r = new Random();
                             for (int i = 0; i < 10; i++) {
-                                byte[] bytes = fill10Bytes(c, r.nextInt(10) + 1);
+                                byte[] bytes = fill10Bytes(c, random.nextInt(10) + 1);
                                 c++;
                                 buffer.writeBytes(bytes);
                             }
@@ -66,6 +67,7 @@ public class StickyClient implements Runnable {
                     .connect(new InetSocketAddress(NIOConfig.getServerIP(), NIOConfig.getServerPort())).sync();
             channelFuture.channel().closeFuture().sync();
         } catch (Exception e) {
+            Thread.currentThread().interrupt();
             e.printStackTrace();
         } finally {
             worker.shutdownGracefully();

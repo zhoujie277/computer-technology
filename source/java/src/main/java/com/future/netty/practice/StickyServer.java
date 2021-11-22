@@ -40,7 +40,6 @@ public class StickyServer implements Runnable {
                     ch.pipeline().addLast(new ChannelInboundHandlerAdapter() {
                         @Override
                         public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-                            // System.out.println("msg:" + msg);
                             ByteBufPrint.log((ByteBuf) msg);
                             super.channelRead(ctx, msg);
                         }
@@ -52,6 +51,7 @@ public class StickyServer implements Runnable {
             ChannelFuture future = bootstrap.bind(NIOConfig.getServerPort()).sync();
             future.channel().closeFuture().sync();
         } catch (Exception e) {
+            Thread.currentThread().interrupt();
             e.printStackTrace();
         } finally {
             boss.shutdownGracefully();

@@ -30,7 +30,9 @@ import io.netty.handler.ssl.SslContext;
 import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.SslHandler;
 import io.netty.util.AsciiString;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class HttpServer {
 
     // Handler需要声明泛型为<FullHttpRequest>，声明之后，只有msg为FullHttpRequest的消息才能进来。
@@ -41,7 +43,7 @@ public class HttpServer {
 
         @Override
         protected void channelRead0(ChannelHandlerContext ctx, FullHttpRequest msg) throws Exception {
-            System.out.println("class:" + msg.getClass().getName() + ", currentThread=" + Thread.currentThread());
+            log.debug("class:" + msg.getClass().getName() + ", currentThread=" + Thread.currentThread());
             DefaultFullHttpResponse resp = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK,
                     Unpooled.wrappedBuffer("test".getBytes()));
             HttpHeaders headers = resp.headers();
@@ -55,14 +57,14 @@ public class HttpServer {
 
         @Override
         public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
-            System.out.println("channelReadComplete");
+            log.debug("channelReadComplete");
             super.channelReadComplete(ctx);
             ctx.flush();
         }
 
         @Override
         public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-            System.out.println("exceptionCaught");
+            log.debug("exceptionCaught");
             if (null != cause)
                 cause.printStackTrace();
             if (null != ctx)
@@ -85,7 +87,7 @@ public class HttpServer {
                 keyManagerFactory.init(keyStore, keyStorePassword.toCharArray());
                 sslContext = SslContextBuilder.forServer(keyManagerFactory).build();
             } catch (Exception e) {
-                throw new RuntimeException(e);
+                throw new IllegalArgumentException(e);
             }
         }
 
@@ -114,7 +116,7 @@ public class HttpServer {
 
             @Override
             protected void initChannel(Channel ch) throws Exception {
-                System.out.println("initChannel ch:" + ch);
+                log.debug("initChannel ch:" + ch);
                 // HttpRequestDecoder，用于解码request
                 // HttpResponseEncoder，用于编码response
                 // aggregator，消息聚合器。为什么能有FullHttpRequest这个东西，就是因为有他，
@@ -130,6 +132,7 @@ public class HttpServer {
         try {
             bootstrap.bind(port).sync();
         } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
             e.printStackTrace();
         }
     }

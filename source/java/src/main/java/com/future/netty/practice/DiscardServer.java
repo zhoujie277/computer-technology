@@ -15,12 +15,15 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.util.ReferenceCountUtil;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Netty 回显服务器示例
  */
+@Slf4j
 public class DiscardServer {
 
+    @SuppressWarnings("all")
     private static class DiscardHandler extends ChannelInboundHandlerAdapter {
         @Override
         public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
@@ -30,7 +33,7 @@ public class DiscardServer {
                 while (buf.isReadable()) {
                     System.out.print((char) buf.readByte());
                 }
-                System.out.println();
+                log.info("");
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
@@ -77,7 +80,7 @@ public class DiscardServer {
             // 6 开始绑定 server
             // 通过调用 sync 同步方法阻塞直到绑定成功
             ChannelFuture channelFuture = bootstrap.bind().sync();
-            System.out.println(" 服务器启动成功，监听端口：" + channelFuture.channel().localAddress());
+            log.info(" 服务器启动成功，监听端口：" + channelFuture.channel().localAddress());
 
             // 7 等待通道关闭的异步任务结束
             // 服务监听通道会一直等待通道关闭的异步任务结束
@@ -85,6 +88,7 @@ public class DiscardServer {
             closeFuture.sync();
 
         } catch (Exception e) {
+            Thread.currentThread().interrupt();
             e.printStackTrace();
         } finally {
             // 8 优雅关闭 EventLoopGroup
