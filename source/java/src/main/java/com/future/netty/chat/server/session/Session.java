@@ -1,17 +1,48 @@
 package com.future.netty.chat.server.session;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import com.future.netty.chat.common.message.User;
+import com.future.util.Utility;
+
 import io.netty.channel.Channel;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-public interface Session {
+@Data
+@EqualsAndHashCode(of = { "sessionID" })
+public class Session {
 
-    void bind(Channel channel, String username);
+    private String sessionID;
+    private User user;
+    private Channel channel;
+    private Map<String, Object> attrs = new HashMap<>();
 
-    void unbind(Channel channel);
+    public Session(Channel channel, User user) {
+        sessionID = Utility.UUID();
+        this.channel = channel;
+        this.user = user;
+    }
 
-    Object getAttibute(Channel channel, String name);
+    public void addAttribute(String key, Object object) {
+        this.attrs.put(key, object);
+    }
 
-    void setAttribute(Channel channel, String name, Object value);
+    public Object getAttibute(String key) {
+        return this.attrs.get(key);
+    }
 
-    Channel getChannel(String name);
+    public <T> void writeMessage(T message) {
+        channel.writeAndFlush(message);
+    }
 
+    public void release() {
+        // 释放资源
+        attrs.clear();
+    }
+
+    public void close() {
+        channel.close();
+    }
 }

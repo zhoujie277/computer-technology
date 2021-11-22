@@ -14,9 +14,4 @@ public class ExceptionHandler extends ChannelInboundHandlerAdapter {
         log.error(cause.getMessage());
         ctx.close();
     }
-
-    @Override
-    public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
-        // ctx.flush();
-    }
 }

@@ -1,8 +1,8 @@
 package com.future.netty.chat.rpc;
 
 import com.future.io.nio.NIOConfig;
-import com.future.netty.chat.protocol.MessageCodecSharable;
-import com.future.netty.chat.protocol.ProtocolFrameDecoder;
+import com.future.netty.chat.common.codec.CodecFrameDecoder;
+import com.future.netty.chat.common.codec.MessageCodec;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
@@ -21,8 +21,7 @@ public class RpcServer {
         NioEventLoopGroup boss = new NioEventLoopGroup();
         NioEventLoopGroup worker = new NioEventLoopGroup();
         LoggingHandler loggingHandler = new LoggingHandler(LogLevel.DEBUG);
-        MessageCodecSharable msgCodec = new MessageCodecSharable();
-
+        MessageCodec codec = new MessageCodec();
         RpcMessageHandler rpcHandler = new RpcMessageHandler();
 
         try {
@@ -30,13 +29,14 @@ public class RpcServer {
             bootstrap.group(worker, worker).channel(NioServerSocketChannel.class)
                     .childHandler(new ChannelInitializer<Channel>() {
                         protected void initChannel(Channel ch) throws Exception {
-                            ch.pipeline().addLast(new ProtocolFrameDecoder()).addLast(loggingHandler).addLast(msgCodec);
+                            ch.pipeline().addLast(new CodecFrameDecoder()).addLast(loggingHandler).addLast(codec);
                             ch.pipeline().addLast(rpcHandler);
                         };
                     });
             ChannelFuture future = bootstrap.bind(NIOConfig.getServerPort()).sync();
             future.channel().closeFuture().sync();
-        } catch (Exception e) {
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
             log.error("server error", e);
         } finally {
             boss.shutdownGracefully();

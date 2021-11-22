@@ -2,12 +2,12 @@ package com.future.netty.chat.client;
 
 import java.util.concurrent.TimeUnit;
 
-import com.future.io.nio.NIOConfig;
-import com.future.netty.chat.client.handler.DispatchReponseHandler;
+import com.future.netty.chat.client.handler.ClientActionDispatcher;
 import com.future.netty.chat.client.handler.ExceptionHandler;
 import com.future.netty.chat.client.handler.HeartBeatHandler;
-import com.future.netty.chat.common.codec.SimpleProtobufDecoder;
-import com.future.netty.chat.common.codec.SimpleProtobufEncoder;
+import com.future.netty.chat.common.codec.CodecFrameDecoder;
+import com.future.netty.chat.common.codec.MessageCodec;
+import com.future.netty.chat.common.util.ChatConfiguration;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
@@ -15,10 +15,10 @@ import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
-import io.netty.channel.ChannelPipeline;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.logging.LoggingHandler;
 import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.AttributeKey;
 import io.netty.util.concurrent.GenericFutureListener;
@@ -36,6 +36,7 @@ public class NettyClient {
     private Channel mChannel;
     private NetworkListener mNetworkListener;
     private int retryCount = 3;
+    private boolean isConnected = false;
 
     public NettyClient(NetworkListener listener) {
         this.mWorkder = new NioEventLoopGroup();
@@ -53,27 +54,43 @@ public class NettyClient {
             ChannelFuture future = doConnect().sync();
             onConnectComplete(future);
         } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
             e.printStackTrace();
         }
     }
 
     private ChannelFuture doConnect() {
+        isConnected = false;
+        int maxFrameLength = ChatConfiguration.getIntProperty("maxFrameLength");
+        int lengthFieldOffset = ChatConfiguration.getIntProperty("lengthFieldOffset");
+        int lengthFieldLength = ChatConfiguration.getIntProperty("lengthFieldLength");
+        int lengthAdjustment = ChatConfiguration.getIntProperty("lengthAdjustment");
+        int initialBytesToStrip = ChatConfiguration.getIntProperty("initialBytesToStrip");
+
+        final LoggingHandler loggingHandler = new LoggingHandler();
+        CodecFrameDecoder mFrameDecoder = new CodecFrameDecoder(maxFrameLength, lengthFieldOffset, lengthFieldLength,
+                lengthAdjustment, initialBytesToStrip);
+        MessageCodec mCodec = new MessageCodec();
+        ClientActionDispatcher mDispatcher = new ClientActionDispatcher();
+        ExceptionHandler mExceptionHandler = new ExceptionHandler();
         Bootstrap b = new Bootstrap();
         b.group(mWorkder);
         b.channel(NioSocketChannel.class);
         b.option(ChannelOption.SO_KEEPALIVE, true);
         b.option(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT);
-        b.remoteAddress(NIOConfig.getServerIP(), NIOConfig.getServerPort());
+        b.remoteAddress(ChatConfiguration.getServerHost(), ChatConfiguration.getPort());
         b.handler(new ChannelInitializer<Channel>() {
             @Override
             protected void initChannel(Channel ch) throws Exception {
-                ch.pipeline().addLast("decoder", new SimpleProtobufDecoder())
-                        .addLast("encoder", new SimpleProtobufEncoder()).addLast(new DispatchReponseHandler())
-                        .addLast(new ExceptionHandler());
+                ch.pipeline().addLast(new IdleStateHandler(0, 3, 0)).addLast(new HeartBeatHandler());
+                ch.pipeline()
+                        .addLast(new CodecFrameDecoder(maxFrameLength, lengthFieldOffset, lengthFieldLength,
+                                lengthAdjustment, initialBytesToStrip))
+                        .addLast(mFrameDecoder).addLast(mCodec).addLast(loggingHandler).addLast(mDispatcher)
+                        .addLast(mExceptionHandler);
             }
         });
-        ChannelFuture future = b.connect();
-        return future;
+        return b.connect();
     }
 
     public <T> void addChannelAttr(String key, T value) {
@@ -92,6 +109,10 @@ public class NettyClient {
         return future;
     }
 
+    public boolean isConnected() {
+        return this.isConnected;
+    }
+
     public void close() {
         mChannel.closeFuture().addListener(new ClosedListener());
         mChannel.close();
@@ -108,20 +129,17 @@ public class NettyClient {
         if (!future.isSuccess()) {
             log.info("连接失败!在10s之后准备尝试重连!");
             if (retryCount > 0)
-                mWorkder.schedule(() -> doConnect(), 10, TimeUnit.SECONDS);
+                mWorkder.schedule(this::doConnect, 10, TimeUnit.SECONDS);
             else
                 faildConnect();
         } else {
             log.info("To Connected Server is Successful!");
+            isConnected = true;
             Channel channel = future.channel();
             mChannel = channel;
             if (mNetworkListener != null) {
                 mNetworkListener.onConnectSuccess();
             }
-            ChannelPipeline p = channel.pipeline();
-            // 在编码器后面，动态插入心跳处理器
-            p.addLast(new IdleStateHandler(0, 3, 0));
-            p.addLast(new HeartBeatHandler());
         }
     }
 

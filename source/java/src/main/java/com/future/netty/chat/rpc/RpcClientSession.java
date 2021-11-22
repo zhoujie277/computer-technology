@@ -7,10 +7,10 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.future.io.nio.NIOConfig;
-import com.future.netty.chat.message.RpcRequestMessage;
-import com.future.netty.chat.protocol.MessageCodecSharable;
-import com.future.netty.chat.protocol.ProtocolFrameDecoder;
-import com.future.netty.chat.protocol.SequenceIdGenerator;
+import com.future.netty.chat.common.codec.CodecFrameDecoder;
+import com.future.netty.chat.common.codec.MessageCodec;
+import com.future.netty.chat.common.message.RpcRequest;
+import com.future.netty.chat.common.util.SequenceIdGenerator;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
@@ -28,9 +28,9 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class RpcClientSession {
 
-    private static final Map<Integer, Promise<Object>> sInvokePromises = new ConcurrentHashMap<>();
+    private static final Map<Long, Promise<Object>> sInvokePromises = new ConcurrentHashMap<>();
 
-    public static Promise<Object> getPromise(int sequenceId) {
+    public static Promise<Object> getPromise(long sequenceId) {
         return sInvokePromises.get(sequenceId);
     }
 
@@ -38,15 +38,15 @@ public class RpcClientSession {
 
     public void run() {
         final NioEventLoopGroup worker = new NioEventLoopGroup();
+        MessageCodec codec = new MessageCodec();
         LoggingHandler loggingHandler = new LoggingHandler();
-        MessageCodecSharable codecSharable = new MessageCodecSharable();
         RpcMessageResponseHandler handler = new RpcMessageResponseHandler();
         try {
             Bootstrap bootstrap = new Bootstrap();
             bootstrap.group(worker);
             bootstrap.channel(NioSocketChannel.class).handler(new ChannelInitializer<Channel>() {
                 protected void initChannel(Channel ch) throws Exception {
-                    ch.pipeline().addLast(new ProtocolFrameDecoder()).addLast(loggingHandler).addLast(codecSharable)
+                    ch.pipeline().addLast(new CodecFrameDecoder()).addLast(loggingHandler).addLast(codec)
                             .addLast(handler);
                 };
             });
@@ -60,22 +60,23 @@ public class RpcClientSession {
                 }
             });
 
-        } catch (Exception exception) {
+        } catch (InterruptedException exception) {
+            Thread.currentThread().interrupt();
             log.error("client error", exception);
         }
     }
 
     @SuppressWarnings("unchecked")
     public <T> T getService(Class<T> clazz) {
-        final int nextId = SequenceIdGenerator.nextId();
+        final long nextId = SequenceIdGenerator.nextId();
         Class<?>[] interfaces = { clazz };
         ClassLoader loader = getClass().getClassLoader();
         Object proxy = Proxy.newProxyInstance(loader, interfaces, new InvocationHandler() {
 
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                RpcRequestMessage message = new RpcRequestMessage(nextId, clazz.getName(), method.getName(),
-                        method.getReturnType(), method.getParameterTypes(), args);
+                RpcRequest message = new RpcRequest(nextId, clazz.getName(), method.getName(), method.getReturnType(),
+                        method.getParameterTypes(), args);
                 ChannelFuture writeFuture = channel.writeAndFlush(message);
                 writeFuture.addListener(new GenericFutureListener<Future<? super Object>>() {
 

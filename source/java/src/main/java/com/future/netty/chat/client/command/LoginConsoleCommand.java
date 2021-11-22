@@ -2,13 +2,14 @@ package com.future.netty.chat.client.command;
 
 import java.util.Scanner;
 
-import com.future.netty.chat.common.bean.ChatUser;
-import com.future.netty.chat.proto.ProtoMsg;
-import com.future.netty.chat.proto.ProtoMsg.HeadType;
+import com.future.netty.chat.client.Cookie;
+import com.future.netty.chat.common.message.LoginRequest;
 
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 
 @Data
+@Slf4j
 public class LoginConsoleCommand implements BaseCommand {
 
     public static final String KEY = "1";
@@ -18,13 +19,13 @@ public class LoginConsoleCommand implements BaseCommand {
 
     @Override
     public void exec(Scanner scanner) {
-        System.out.println("请输入用户信息(id:password)  ");
+        log.info("请输入用户信息(id:password)  ");
         String[] info = null;
         while (true) {
             String input = scanner.next();
             info = input.split(":");
             if (info.length != 2) {
-                System.out.println("请按照格式输入(id:password):");
+                log.info("请按照格式输入(id:password):");
             } else {
                 break;
             }
@@ -43,11 +44,12 @@ public class LoginConsoleCommand implements BaseCommand {
         return "登录";
     }
 
-    public ProtoMsg.Message buildMessage(ProtoMsg.Message.Builder builder) {
-        ProtoMsg.LoginRequest.Builder lb = ProtoMsg.LoginRequest.newBuilder().setDeviceId("deviceId")
-                .setPlatform(ChatUser.PLATTYPE.MAC.ordinal()).setToken(password).setUid(userName);
-        builder.setType(HeadType.LOGIN_REQUEST).setLoginRequest(lb);
-        return builder.build();
+    @Override
+    public LoginRequest buildMessage(Cookie cookie) {
+        LoginRequest request = new LoginRequest();
+        request.setUsername(userName);
+        request.setPassword(password);
+        return request;
     }
 
 }

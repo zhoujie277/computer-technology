@@ -7,6 +7,10 @@ import java.net.URLDecoder;
 
 public class IOUtil {
 
+    private IOUtil() {
+
+    }
+
     /**
      * 取得当前类路径下的 resName资源的完整路径 url.getPath()获取到的路径被utf-8编码了
      * 需要用URLDecoder.decode(path, "UTF-8")解码

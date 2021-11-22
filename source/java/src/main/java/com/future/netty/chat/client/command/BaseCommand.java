@@ -2,7 +2,8 @@ package com.future.netty.chat.client.command;
 
 import java.util.Scanner;
 
-import com.future.netty.chat.proto.ProtoMsg;
+import com.future.netty.chat.client.Cookie;
+import com.future.netty.chat.common.message.Message;
 
 public interface BaseCommand {
 
@@ -12,7 +13,7 @@ public interface BaseCommand {
 
     String getTip();
 
-    default ProtoMsg.Message buildMessage(ProtoMsg.Message.Builder builder) {
+    default Message buildMessage(Cookie cookie) {
         return null;
     }
 

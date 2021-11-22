@@ -4,6 +4,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class NumberUtil {
 
+    private NumberUtil() {
+    }
+
     /**
      * Generated [1, end]
      */

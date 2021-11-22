@@ -1,66 +1,125 @@
 syntax = "proto3";
-option java_package = "com.future.netty.chat.proto";
+option java_package = "com.future.netty.chat.common.codec";
 
-enum HeadType {
-    PING = 0;      
-    PANG = 1;      
-    LOGIN_REQUEST = 2;
-    LOGIN_RESPONSE = 3;
-    LOGOUT_REQUEST = 4;
-    LOGOUT_RESPONSE = 5;
-    MESSAGE_REQUEST = 6;
-    MESSAGE_RESPONSE = 7;
-    MESSAGE_NOTIFICATION = 8;
+message User {
+    string uid = 1;
+    string name = 2;
+    string token = 3;
+    string deviceID = 4;
+    uint32 platform = 5;
+    string appVersion = 6;
+}
+
+message Group {
+    string groupID = 1;
+    string sessionID = 2;
+    string name = 3;
+    User leader = 4;
+    repeated User members = 5;
+}
+
+message Request {
+    uint64 sequence = 1;
+    string sessionId = 2;
+}
+
+message Response {
+    uint64 sequence = 1;
+    string sessionId = 2;
+    uint32 code = 3;
+    string msg = 4;
 }
 
 message LoginRequest {
-    string uid = 1;
-    string deviceId = 2;
-    string token = 3;
-    uint32 platform = 4;
-    string app_version = 5;
+    Request request = 1;
+    string username = 2;
+    string password = 3;
 }
 
 message LoginResponse {
-    bool result = 1;
-    uint32 code = 2;
-    string info = 3;
-    uint32 expose = 4;
+    Response response = 1;
+    User user = 2;
+    repeated User onlines = 3;
 }
 
-message MessageRequest {
-    uint64 msg_id = 1;
-    string from = 2;
-    string to = 3;
-    uint64 time = 4;
-    uint32 msg_type = 5;
+message LogoutRequest {
+    Request request = 1;
+    User user = 2;
+}
+
+message LogoutResponse {
+    Response response = 1;
+}
+
+message ChatRequest {
+    Request request = 1;
+    uint64 msgId = 2;
+    User from = 3;
+    string toUser = 4;
+    uint32 contentType = 5;
     string content = 6;
-    string url = 7;
-    string property = 8;
-    string from_nick = 9;
-    string json = 10;
+    string property = 7;
+    uint64 time = 8;
 }
 
-message MessageResponse {
-    bool result = 1;
-    uint32 code = 2;
-    string info = 3;
-    uint32 expose = 4;
+message ChatResponse {
+    Response response = 1;
+}
+
+message GroupCreateRequest {
+    Request request = 1;
+    Group group = 2;
+}
+
+message GroupCreateResponse {
+    Response response = 1;
+    Group group = 2;
+}
+
+message GroupJoinRequest {
+    Request request = 1;
+    string groupID = 2;
+    User fromUser = 3;
+}
+
+message GroupJoinResponse {
+    Response response = 1;
+    Group group = 2;
+}
+
+message GroupChatRequest {
+    Request request = 1;
+    string groupID = 2;
+    User fromUser = 3;
+    uint32 contentType = 4;
+    string content = 5;
+    uint64 time = 6;
+}
+
+message GroupChatResponse {
+    Response response = 1;
+}
+
+message GroupQuitRequest {
+    Request request = 1;
+    string groupID = 2;
+    User fromUser = 3;
+}
+
+message GroupQuitResponse {
+    Response response = 1;
 }
 
 message MessageNotification {
-    uint64 no_id = 1;
+    uint64 msgID = 1;
     string json = 2;
     string timestamp = 3;
 }
 
-message Message {
-    HeadType type = 1;
-    uint64 sequence = 2;
-    string session_id = 3;
-    LoginRequest loginRequest = 4;
-    LoginResponse loginResponse = 5;
-    MessageRequest msgRequest = 6;
-    MessageResponse msgResponse = 7;
-    MessageNotification notification = 8;
+message Ping {
+    Request request = 1;
+}
+
+message Pong {
+    Response response = 1;
 }

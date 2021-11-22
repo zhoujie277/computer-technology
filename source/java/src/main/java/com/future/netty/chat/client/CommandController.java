@@ -11,7 +11,7 @@ import com.future.netty.chat.client.command.ChatConsoleCommand;
 import com.future.netty.chat.client.command.ClientCommandMenu;
 import com.future.netty.chat.client.command.LoginConsoleCommand;
 import com.future.netty.chat.client.command.LogoutConsoleCommand;
-import com.future.netty.chat.proto.ProtoMsg.Message;
+import com.future.netty.chat.common.message.Message;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -47,20 +47,20 @@ public class CommandController {
     }
 
     public void run() {
-        while (true) {
+        Cookie cookie = Cookie.getCookie();
+        BaseCommand command = null;
+        while (!(command instanceof LogoutConsoleCommand)) {
             Scanner scanner = new Scanner(System.in);
             clientCommandMenu.exec(scanner);
             String key = clientCommandMenu.getCommandInput();
-            BaseCommand command = commandMap.get(key);
+            command = commandMap.get(key);
             if (null == command) {
-                System.err.println("无法识别[" + command + "]指令，请重新输入!");
+                log.info("无法识别[" + command + "]指令，请重新输入!");
                 continue;
             }
             command.exec(scanner);
-            ClientSession session = ClientSession.getSession();
-            Message message = command.buildMessage(session.buildCommon());
-            session.writeMessage(message);
-            log.debug("write message", message);
+            Message message = command.buildMessage(cookie);
+            cookie.writeMessage(message);
         }
     }
 

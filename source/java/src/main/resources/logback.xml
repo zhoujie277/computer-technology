@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <!-- 日志集中管理属性-->
-    <property name="pattern" value="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %c %M %L [%thread] %m%n"></property>
+    <property name="pattern" value="[%-5level] %yellow(%d{yyyy-MM-dd HH:mm:ss.SSS}) %red(%c) %magenta(%M) %yellow(%L) %blue([%thread]) %green(%m) %n"></property>
     <!-- 日志输出格式
         [%-5level]
         %d{yyyy-MM-dd HH:mm:ss.SSS} 日期

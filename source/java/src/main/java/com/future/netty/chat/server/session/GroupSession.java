@@ -1,23 +1,29 @@
 
 package com.future.netty.chat.server.session;
 
-import java.util.List;
+import java.util.Collections;
 import java.util.Set;
 
-import io.netty.channel.Channel;
+import com.future.util.Utility;
 
-public interface GroupSession {
+import lombok.Getter;
 
-    Group createGroup(String name, Set<String> members);
+@Getter
+public class GroupSession {
 
-    Group joinGroup(String name, String member);
+    public static final GroupSession EMPTY_GROUP = new GroupSession("", Collections.emptySet());
 
-    Group removeMember(String name, String member);
+    private String sessionID;
+    private String groupID;
+    private String groupName;
+    private Set<Session> members;
+    private Session leader;
 
-    Group removeGroup(String name);
-
-    Set<String> getMembers(String name);
-
-    List<Channel> getMemberChannels(String name);
+    public GroupSession(String groupName, Set<Session> sessions) {
+        this.groupName = groupName;
+        this.members = sessions;
+        this.groupID = Utility.UUID();
+        this.sessionID = Utility.UUID();
+    }
 
 }

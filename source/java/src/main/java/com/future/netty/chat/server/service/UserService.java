@@ -1,6 +1,8 @@
 package com.future.netty.chat.server.service;
 
+import com.future.netty.chat.common.message.User;
+
 public interface UserService {
 
-    boolean login(String username, String password);
+    User login(String username, String password);
 }

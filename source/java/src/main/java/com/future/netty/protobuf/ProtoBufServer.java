@@ -16,19 +16,21 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.protobuf.ProtobufDecoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
 import io.netty.handler.logging.LoggingHandler;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * ProtoBuf 演示
  */
+@Slf4j
 class ProtoBufServer {
 
     static class ProtobufBussinessDecoder extends ChannelInboundHandlerAdapter {
         @Override
         public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
             ProtoBufMsgSample.Msg protoMsg = (ProtoBufMsgSample.Msg) msg;
-            System.out.println("Received one protobuf message.");
-            System.out.println("protoMsg.getId() = " + protoMsg.getId());
-            System.out.println("protoMsg.getContent() = " + protoMsg.getContent());
+            log.info("Received one protobuf message.");
+            log.info("protoMsg.getId() = " + protoMsg.getId());
+            log.info("protoMsg.getContent() = " + protoMsg.getContent());
         }
     }
 
@@ -56,9 +58,10 @@ class ProtoBufServer {
                         }
 
                     }).bind().sync();
-            System.out.println("server has started...");
+            log.info("server has started...");
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
             e.printStackTrace();
         } finally {
             boss.shutdownGracefully();

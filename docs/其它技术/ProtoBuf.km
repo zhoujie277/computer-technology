@@ -149,6 +149,14 @@
                                             "text": "允许字段重复"
                                         },
                                         "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfur0g10b6o0",
+                                            "created": 1637425826265,
+                                            "text": "可看做动态数组"
+                                        },
+                                        "children": []
                                     }
                                 ]
                             },

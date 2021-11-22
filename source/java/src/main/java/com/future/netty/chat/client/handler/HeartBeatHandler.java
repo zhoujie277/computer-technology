@@ -1,8 +1,7 @@
 package com.future.netty.chat.client.handler;
 
-import com.future.netty.chat.client.ClientSession;
-import com.future.netty.chat.proto.ProtoMsg;
-import com.future.netty.chat.proto.ProtoMsg.HeadType;
+import com.future.netty.chat.client.Cookie;
+import com.future.netty.chat.common.message.Ping;
 
 import io.netty.channel.ChannelDuplexHandler;
 import io.netty.channel.ChannelHandlerContext;
@@ -17,8 +16,8 @@ public class HeartBeatHandler extends ChannelDuplexHandler {
         IdleStateEvent event = (IdleStateEvent) evt;
         if (event.state() == IdleState.WRITER_IDLE) {
             log.debug("3s arrived, send ping msg");
-            ClientSession clientSession = ClientSession.getSession();
-            ProtoMsg.Message message = clientSession.buildCommon().setType(HeadType.PING).build();
+            Cookie clientSession = Cookie.getCookie();
+            Ping message = new Ping();
             clientSession.writeMessage(message);
         }
     }
