@@ -75,11 +75,2155 @@
             },
             {
                 "data": {
-                    "id": "cfgm8fmxra80",
-                    "created": 1635990507384,
-                    "text": "TCP"
+                    "id": "cfwlnoz7dyw0",
+                    "created": 1637613841376,
+                    "text": "集线器/交换机/网桥"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfwzr8icmlc0",
+                            "created": 1637653614524,
+                            "text": "集线器"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfwzrey1d8w0",
+                                    "created": 1637653628533,
+                                    "text": "多台机器组网"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfwzrp3agf40",
+                                    "created": 1637653650619,
+                                    "text": "半双工通信"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfwzrudpu600",
+                                    "created": 1637653662133,
+                                    "text": "仅仅负责简单的包转发"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfwzsqdnhp40",
+                                    "created": 1637653731786,
+                                    "text": "存在很大冲突域的问题"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfwzr29eaow0",
+                            "created": 1637653600922,
+                            "text": "网桥"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfwzsf40e5k0",
+                                    "created": 1637653707259,
+                                    "text": "记录 接口-MAC 地址的映射表"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfwzrbaamls0",
+                                    "created": 1637653620567,
+                                    "text": "隔绝冲突域"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfx016rb1mo0",
+                            "created": 1637654394354,
+                            "text": "交换机"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfx018un16o0",
+                                    "created": 1637654398909,
+                                    "text": "全双工通信"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfx01bsyn3k0",
+                                    "created": 1637654405338,
+                                    "text": "相当于接口更多的网桥"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfx09t5xk4g0",
+                                    "created": 1637655070041,
+                                    "text": "多个交换机组成的互联网会存在 ARP 风暴的问题"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfx0v1vw1wg0",
+                                    "created": 1637656734672,
+                                    "text": "设备需要在同一网段才能连接"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfx0w99762w0",
+                    "created": 1637656829078,
+                    "text": "路由器"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfx1ta6dink0",
+                            "created": 1637659417102,
+                            "text": "两块网卡"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfx0wacel340",
+                            "created": 1637656831449,
+                            "text": "可以在不同网段之间转发数据"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfx0whip0dc0",
+                            "created": 1637656847067,
+                            "text": "隔绝广播域"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfx2pwnhbkg0",
+                    "created": 1637661973678,
+                    "text": "MAC 地址"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfx2pzzemko0",
+                            "created": 1637661980930,
+                            "text": "每一个网卡都有一个 6 字节 （48bit）的地址 （Media Access Contro Address）"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfx2qk87eao0",
+                            "created": 1637662024998,
+                            "text": "全球唯一，固化在网卡的 ROM 中，由 IEEE802 标准规定"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfx2qyvifk80",
+                            "created": 1637662056882,
+                            "text": "前 3 字节，OUI ( Organizationally Unique Identififier),组织唯一标识符，由 IEEE 的注册管理机构分配给厂商"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfx2rg2exf40",
+                            "created": 1637662094304,
+                            "text": "后 3 字节，网络接口标识符，由厂商自行分配"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfx2swoajg80",
+                            "created": 1637662208820,
+                            "text": "当 48 位全为 1 时，为广播地址"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfx3901wsvk0",
+                    "created": 1637663470000,
+                    "text": "ARP"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfx39qel9gg0",
+                            "created": 1637663527363,
+                            "text": "当不知道对方主机的 MAC 地址时，可以通过发送 ARP 广播获取对方的 MAC 地址"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfx3a5zkup40",
+                            "created": 1637663561284,
+                            "text": "获取成功后，会缓存 IP 地址，MAC 地址的映射信息，俗称：ARP 缓存"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfx3aql9seo0",
+                                    "created": 1637663606132,
+                                    "text": "通过 ARP 官博获取的 MAC 地址，属于动态(dynamic)缓存"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfx391bdo600",
+                            "created": 1637663472750,
+                            "text": "arp -a"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfx39329yjs0",
+                                    "created": 1637663476553,
+                                    "text": "查看本机 arp 缓存"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfx39a9es800",
+                            "created": 1637663492222,
+                            "text": "arp -d"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfx39bo9yq00",
+                                    "created": 1637663495297,
+                                    "text": "清空本机 arp 缓存"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfx3bls2hls0",
+                            "created": 1637663674023,
+                            "text": "arp -s ip mac"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfx3bpiclu80",
+                                    "created": 1637663682142,
+                                    "text": "增加静态 ARP 缓存"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfx3cb9abuw0",
+                    "created": 1637663729484,
+                    "text": "IP 地址"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfx3cdp84uw0",
+                            "created": 1637663734801,
+                            "text": "互联网上每一个主机都有一个 IP 地址"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfx3cukgx7k0",
+                            "created": 1637663771519,
+                            "text": "IPV4，4个字节，32bit",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfx3clqi0o00",
+                                    "created": 1637663752292,
+                                    "text": "2019 年 11 月 25 日，全球 IP 地址已经用完"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfx3e79wdyo0",
+                                    "created": 1637663877542,
+                                    "text": "IP 地址由 2 部分组成，网络标识（网络ID），主机标识（主机 ID）"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfx3ek89z6w0",
+                                    "created": 1637663905742,
+                                    "text": "同一网段的计算机，网络标识相同"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfx3k6bv89s0",
+                                    "created": 1637664345669,
+                                    "text": "通过子网掩码可以计算出网络 ID。 子网掩码 & IP 地址"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfxar39g6rs0",
+                                            "created": 1637684635311,
+                                            "text": "子网划分"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfxar6tx7ps0",
+                                                    "created": 1637684643079,
+                                                    "text": "等长子网划分"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfxarb5zyjc0",
+                                                    "created": 1637684652517,
+                                                    "text": "变长子网划分"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfxarfh0qx40",
+                                            "created": 1637684661890,
+                                            "text": "构造超网"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfx3d9mtqf40",
+                            "created": 1637663804313,
+                            "text": "IPV6，16个字节，128 位"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfxbi6lesyg0",
+                    "created": 1637686758397,
+                    "text": "路由"
                 },
                 "children": []
+            },
+            {
+                "data": {
+                    "id": "cfx1t6qirko0",
+                    "created": 1637659409613,
+                    "text": "ping 命令过程",
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfx2202r1m00",
+                            "created": 1637660100392,
+                            "text": "环境：在一个具有多个子网的大局域网环境下",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfx1tzg09200",
+                                    "created": 1637659472104,
+                                    "text": "判断目标 IP 和原 IP 是否在同一网段"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfx1ubwi74w0",
+                                            "created": 1637659499223,
+                                            "text": "同一网段",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfx1tfgcg140",
+                                                    "created": 1637659428588,
+                                                    "text": "查看本机 ARP 缓存",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfx1ydhgjjk0",
+                                                            "created": 1637659816123,
+                                                            "text": "本机如果不存在 目标 ip 的 mac 地址",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfx1ukxtd140",
+                                                                    "created": 1637659518893,
+                                                                    "text": "携带目标 ip 数据的 ARP 数据包"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cfx1xhjons00",
+                                                                            "created": 1637659746601,
+                                                                            "text": "等待返回目标 ip 的mac地址"
+                                                                        },
+                                                                        "children": [
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "cfx1xo7buzk0",
+                                                                                    "created": 1637659761091,
+                                                                                    "text": "封装 icmp 数据包"
+                                                                                },
+                                                                                "children": [
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cfx1y1bju6g0",
+                                                                                            "created": 1637659789644,
+                                                                                            "text": "发送给交换机"
+                                                                                        },
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "cfx1zqi84uo0",
+                                                                                                    "created": 1637659922832,
+                                                                                                    "text": "转发icmp 数据包给目标 ip 地址"
+                                                                                                },
+                                                                                                "children": []
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfx1ys98rd40",
+                                                            "created": 1637659848278,
+                                                            "text": "如果存在目标 ip 的mac 地址"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfx1xo7buzk0",
+                                                                    "created": 1637659761091,
+                                                                    "text": "封装 icmp 数据包"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cfx1y1bju6g0",
+                                                                            "created": 1637659789644,
+                                                                            "text": "发送给交换机"
+                                                                        },
+                                                                        "children": [
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "cfx1zqi84uo0",
+                                                                                    "created": 1637659922832,
+                                                                                    "text": "转发icmp 数据包给目标 ip 地址"
+                                                                                },
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfx1uhk8ppc0",
+                                            "created": 1637659511542,
+                                            "text": "不同网段"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfx1v8naz0o0",
+                                                    "created": 1637659570500,
+                                                    "text": "携带 网关 IP 的ARP 数据包"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfx20chkfog0",
+                                                            "created": 1637659970681,
+                                                            "text": "依旧上述步骤，将 icmp 包发送给网关"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfx212ex2m00",
+                                                                    "created": 1637660027117,
+                                                                    "text": "网关将数据转发到另一个网卡"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfwi6oxta8w0",
+                    "created": 1637604045772,
+                    "text": "网络协议"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfwi8o1r4hs0",
+                            "created": 1637604200561,
+                            "text": "TCP 和 UDP 的区别？ 说一下它们的报文格式"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfwisymagvc0",
+                                    "created": 1637605790854,
+                                    "text": "TCP"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfwit07fy4o0",
+                                            "created": 1637605794310,
+                                            "text": "面向连接"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfwit24yf2g0",
+                                            "created": 1637605798513,
+                                            "text": "每一个连接只能是一对一通信"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfwit6yue340",
+                                            "created": 1637605809028,
+                                            "text": "可靠性：可靠传输，不丢包"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfwit97q0aw0",
+                                            "created": 1637605813918,
+                                            "text": "首部占用空间：大"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfwitivoy080",
+                                            "created": 1637605834959,
+                                            "text": "传输速率：慢"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfwitl9lwc80",
+                                            "created": 1637605840154,
+                                            "text": "资源消耗：大"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfwito5gviw0",
+                                            "created": 1637605846434,
+                                            "text": "应用场景：浏览器、文件传输、邮件发送"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfztc6alxe80",
+                                            "created": 1637940187451,
+                                            "text": "头部阻塞问题"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cg32d85ls3s0",
+                                            "created": 1638270339725,
+                                            "text": "有限状态机"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cg32dcydatk0",
+                                                    "created": 1638270350171,
+                                                    "text": "引起状态变迁的事件"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cg32dj3r0600",
+                                                    "created": 1638270363557,
+                                                    "text": "状态变迁时采取的动作"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cg374ejwaaw0",
+                                            "created": 1638283753922,
+                                            "text": "缓冲区"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cg374haqbc00",
+                                                    "created": 1638283759898,
+                                                    "text": "为什么要有缓冲区"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cg374ocptew0",
+                                                            "created": 1638283775255,
+                                                            "text": "发送缓冲区是为了可靠传输，等待重发"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cg3750ubirs0",
+                                                            "created": 1638283802441,
+                                                            "text": "接收缓冲区是为了解决网络接收的速度和用户提取数据的速度的不一致性。"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfwiu8240uw0",
+                                    "created": 1637605889766,
+                                    "text": "UDP"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfwiuagrni00",
+                                            "created": 1637605895006,
+                                            "text": "无连接"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfwiubq5ayg0",
+                                            "created": 1637605897750,
+                                            "text": "支持一对一、多对一"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfwiufg25e80",
+                                            "created": 1637605905847,
+                                            "text": "不可靠，容易丢包"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfwiungjrc00",
+                                            "created": 1637605923291,
+                                            "text": "首部占用空间：小"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfwiurnc5v40",
+                                            "created": 1637605932409,
+                                            "text": "传输速率：快"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfwiv89m04g0",
+                                            "created": 1637605968584,
+                                            "text": "资源消耗：小"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfwivsou1gg0",
+                                            "created": 1637606013040,
+                                            "text": "应用场景：视频、直播、游戏"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfwi8ywamv40",
+                            "created": 1637604224176,
+                            "text": "TCP 的流量控制和拥塞控制？TCP 如何实现可靠性传输"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfwi9983nh40",
+                            "created": 1637604246658,
+                            "text": "为什么连接是 3 次握手，关闭是 4 次挥手?"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfwi9nh3wso0",
+                            "created": 1637604277677,
+                            "text": "交换机和路由器的区别"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfxvgdj3hk00",
+                            "created": 1637743038964,
+                            "text": "物理层"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfxvghlhgco0",
+                                    "created": 1637743047816,
+                                    "text": "模拟信号"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfxvgiz0pbk0",
+                                            "created": 1637743050811,
+                                            "text": "连续的信号，适合长距离传输"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfxvgpfvyd40",
+                                            "created": 1637743064892,
+                                            "text": "抗干扰能力差，收到干扰时波形变形很难纠正"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfxvgf44bi00",
+                                    "created": 1637743042412,
+                                    "text": "数字信号"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfxvgxbkf6g0",
+                                            "created": 1637743082045,
+                                            "text": "离散的信号，不适合长距离传输"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfxvh1kvf4w0",
+                                            "created": 1637743091315,
+                                            "text": "抗干扰能力强，收到干扰时波形变形可以修复"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfxw1k6h6480",
+                            "created": 1637744699086,
+                            "text": "数据链路层"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfxyyel34rk0",
+                                    "created": 1637752915146,
+                                    "text": "封装成帧"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfxzkbhbvjk0",
+                                            "created": 1637754632400,
+                                            "text": "帧"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfxzkdtd59c0",
+                                                    "created": 1637754637482,
+                                                    "text": "网络层传递下来的数据包"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfxzkjx5rw00",
+                                            "created": 1637754650772,
+                                            "text": "最大传输单元  MTU"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfxzkmq5lw80",
+                                                    "created": 1637754656879,
+                                                    "text": "每一种数据链路层协议都规定了所能够传送的帧的数据长度上限"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfxzkw7aflc0",
+                                                    "created": 1637754677506,
+                                                    "text": "以太网的 MTU 为 1500 个字节"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfxw1mexbgg0",
+                                    "created": 1637744703951,
+                                    "text": "透明传输"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfxw1o9ihgg0",
+                                    "created": 1637744707977,
+                                    "text": "差错检验"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfxzlpymw2g0",
+                                    "created": 1637754742286,
+                                    "text": "为了能够检测正在发送的帧是否产生了冲突，以太网的帧至少要 64 个字节"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfxzj0tshlc0",
+                                    "created": 1637754530845,
+                                    "text": "Ethernet V2 标准"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfxznlbjqv40",
+                                            "created": 1637754888911,
+                                            "text": "首部：目标 MAC + 源 MAC + 网络类型"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfxznrxdt9s0",
+                                            "created": 1637754903292,
+                                            "text": "以太网帧：首部 + 数据 + FCS"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfxzj67jwyg0",
+                                            "created": 1637754542561,
+                                            "text": "小结"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfxzj8mdsxc0",
+                                                    "created": 1637754547811,
+                                                    "text": "以太网的数据长度：46 - 1500 字节"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfxzmxjnre80",
+                                                    "created": 1637754837159,
+                                                    "text": "以太网帧的长度至少是 64  -  6  -  6  - 2 -  4 = 46 字节"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfyw0uhucps0",
+                            "created": 1637846203134,
+                            "text": "HTTP"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfyw0vy4x0w0",
+                                    "created": 1637846206296,
+                                    "text": "ABNF"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfz0p57k7r40",
+                                    "created": 1637859391636,
+                                    "text": "start_line"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfz0p7fob7s0",
+                                            "created": 1637859396480,
+                                            "text": "request_line / status_line"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfz0djiz6f40",
+                                    "created": 1637858482432,
+                                    "text": "方法"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfz0dklt3p40",
+                                            "created": 1637858484779,
+                                            "text": "Get"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfz0dufuqaw0",
+                                                    "created": 1637858506187,
+                                                    "text": "常用语读取的操作，请求参数拼接在URL的后面"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfz0dmtdfag0",
+                                            "created": 1637858489590,
+                                            "text": "post"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfz0fie8lpk0",
+                                                    "created": 1637858636697,
+                                                    "text": "常用于添加、删除、修改等，请求参数可以放到请求体中"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfz0dpzp2ps0",
+                                            "created": 1637858496503,
+                                            "text": "head"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfz0j9jdd140",
+                                                    "created": 1637858930873,
+                                                    "text": "请求得到与 GET 请求相同的响应，但没有响应体"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfz0jjkv6680",
+                                                            "created": 1637858952731,
+                                                            "text": "使用场景：下载一个大文件前，先获取其大小，\n再决定是否要下载，以此可以节约带宽资源"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfz0lcztp000",
+                                            "created": 1637859095126,
+                                            "text": "options"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfz0lfx4uxc0",
+                                                    "created": 1637859101494,
+                                                    "text": "用于获取目的资源所支持的通信选项，比如服务器支持的请求方法"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfz0mcp44x40",
+                                                            "created": 1637859172843,
+                                                            "text": "OPTIONS * HTTP/1.1"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfz0nqrr6rc0",
+                                            "created": 1637859281841,
+                                            "text": "CONNECT"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfz0nt72ggg0",
+                                                    "created": 1637859287121,
+                                                    "text": "可以开启一个客户端与所请求资源之间的双向沟通的通道，\n它可以用来创建隧道（tunnel）"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfz0oavntmg0",
+                                                            "created": 1637859325613,
+                                                            "text": "可以用来访问采用了 SSL(HTTPS)协议的站点"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfz0nfil9940",
+                                            "created": 1637859257343,
+                                            "text": "TRACE"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfz0nhdzb0g0",
+                                                    "created": 1637859261418,
+                                                    "text": "请求服务器回显其收到的请求信息，主要用于 HTTP 请求的测试或诊断"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfz0drr0xps0",
+                                            "created": 1637858500332,
+                                            "text": "delete"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfz0mysx5fk0",
+                                                    "created": 1637859220962,
+                                                    "text": "用于删除指定的资源"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfz0dsotcog0",
+                                            "created": 1637858502376,
+                                            "text": "put"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfz0muklohc0",
+                                                    "created": 1637859211752,
+                                                    "text": "用于对已存在的资源进行整体覆盖"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfz0mj0vty80",
+                                            "created": 1637859186615,
+                                            "text": "PATCH"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfz0mkbjko00",
+                                                    "created": 1637859189436,
+                                                    "text": "用于对资源进行部分修改"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfz0mp3wrug0",
+                                                            "created": 1637859199859,
+                                                            "text": "资源不存在，会创建新的资源"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfz0p12t7xc0",
+                                    "created": 1637859382642,
+                                    "text": "头部字段"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfz0qhcw5540",
+                                            "created": 1637859496444,
+                                            "text": "请求头字段",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfz0pkrqvyw0",
+                                                    "created": 1637859425509,
+                                                    "text": "Host"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfz0pmcpyxs0",
+                                                            "created": 1637859428954,
+                                                            "text": "服务器地址端口"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfz0rnicis80",
+                                                    "created": 1637859588199,
+                                                    "text": "User-Agent"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfz0rq14uc00",
+                                                            "created": 1637859593688,
+                                                            "text": "浏览器身份"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfz0v0m8drs0",
+                                                    "created": 1637859851824,
+                                                    "text": "Referer"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfz0w4mz8xs0",
+                                                            "created": 1637859938941,
+                                                            "text": "从其他网站跳转过来的"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfz0wphrbeg0",
+                                                                    "created": 1637859984338,
+                                                                    "text": "应用场景：防盗链"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfz0v3mezps0",
+                                                    "created": 1637859858366,
+                                                    "text": "Content-Type"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfz0v9s4rrs0",
+                                                            "created": 1637859871772,
+                                                            "text": "请求体类型"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfz0v539kzk0",
+                                                    "created": 1637859861562,
+                                                    "text": "Content-Length"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfz0vd4oyps0",
+                                                            "created": 1637859879062,
+                                                            "text": "请求体字段"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfz10v17u7s0",
+                                                    "created": 1637860309855,
+                                                    "text": "Accept"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfz10wqjzd40",
+                                                            "created": 1637860313564,
+                                                            "text": "能够接收的响应内容类型"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfz1162xjhk0",
+                                                    "created": 1637860333903,
+                                                    "text": "Accept_language"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfz162t2lx40",
+                                                    "created": 1637860718597,
+                                                    "text": "Range"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfz16485v4w0",
+                                                            "created": 1637860721687,
+                                                            "text": "仅请求某个实体的一部分，字节偏移以0开始"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfz0qj5ocvk0",
+                                            "created": 1637859500361,
+                                            "text": "响应头字段"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfz559tsn200",
+                                                    "created": 1637871939954,
+                                                    "text": " "
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfz55d0gtrk0",
+                                            "created": 1637871946888,
+                                            "text": "跨域"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfz55ehefcw0",
+                                                    "created": 1637871950089,
+                                                    "text": "Origin"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfz55hr6gm80",
+                                                    "created": 1637871957210,
+                                                    "text": "Access-Control-Allow-Origin"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfz5ogspiv40",
+                                                    "created": 1637873444045,
+                                                    "text": "浏览器有个同源策略（Same-Origin Policy)"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfz5ory0uq00",
+                                                            "created": 1637873468311,
+                                                            "text": "同源是指 3 个相同"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfz5ox7suug0",
+                                                                    "created": 1637873479786,
+                                                                    "text": "协议"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfz5oy1lxww0",
+                                                                    "created": 1637873481588,
+                                                                    "text": "端口"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfz5oyxz4bk0",
+                                                                    "created": 1637873483545,
+                                                                    "text": "域名(IP)"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfz5p765i140",
+                                                            "created": 1637873501454,
+                                                            "text": "默认情况下，AJAX 异步请求只能发送给同源的 URL"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfzigzr33k80",
+                                            "created": 1637909532821,
+                                            "text": "通信安全",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfzih1dawo80",
+                                                    "created": 1637909536341,
+                                                    "text": "对称加密"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfzihxpux2g0",
+                                                            "created": 1637909606758,
+                                                            "text": "DES、3DES、AES 加密"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfzii5sgisg0",
+                                                    "created": 1637909624329,
+                                                    "text": "非对称加密"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfzii8nxma80",
+                                                            "created": 1637909630586,
+                                                            "text": "公私钥对"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfziij3g2eo0",
+                                                    "created": 1637909653292,
+                                                    "text": "通信安全级别"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfziil8jc2w0",
+                                                            "created": 1637909657953,
+                                                            "text": "零级通信安全"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfziis5a2ds0",
+                                                                    "created": 1637909672993,
+                                                                    "text": "明文传输"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfziix7gqxs0",
+                                                            "created": 1637909684010,
+                                                            "text": "初级通信安全"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfzij097mn40",
+                                                                    "created": 1637909690646,
+                                                                    "text": "约定一个对称加密密钥，通信双方使用一个密钥加解密"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfzisvifunk0",
+                                                            "created": 1637910463961,
+                                                            "text": "中级通信安全"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfzisz5v9800",
+                                                                    "created": 1637910471908,
+                                                                    "text": "服务端随机生成对称密钥，发给客户端"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfzijsfgtrs0",
+                                                            "created": 1637909751974,
+                                                            "text": "高级通信安全"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfzijwp4t1c0",
+                                                                    "created": 1637909761265,
+                                                                    "text": "一人一密，具备某种\"用户特性\"的属性，约定一个规则，\n每个人使用不同的密钥，对消息进行加解密。"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cfzitg3d9e00",
+                                                                            "created": 1637910508762,
+                                                                            "text": "弱安全原因：该用户特性的规则可能被泄露"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfzil3vgirc0",
+                                                            "created": 1637909855249,
+                                                            "text": "终极通信安全"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfzil6eu8ig0",
+                                                                    "created": 1637909860775,
+                                                                    "text": "每次建立临时会话前，建立安全信道的三次握手"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cfzilc88l5s0",
+                                                                            "created": 1637909873436,
+                                                                            "text": "服务端生成公私钥对，并将公钥发给客户端"
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cfziln4zpbs0",
+                                                                            "created": 1637909897185,
+                                                                            "text": "客户端生成自己的公私钥对，并将公钥发给服务端，\n也可用之前服务端传过来的公钥进行加密，进一步加强安全。"
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cfzim4vl36o0",
+                                                                            "created": 1637909935798,
+                                                                            "text": "服务端随机生成对称加密密钥，并用客户端的公钥将用于对称加密的密钥进行加密，发送给客户端。"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfzipb58o3k0",
+                                                                    "created": 1637910184535,
+                                                                    "text": "为什么不直接用公私钥对对消息进行加解密"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cfziphhp4xs0",
+                                                                            "created": 1637910198349,
+                                                                            "text": "对称加密算法块"
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cfzj7cslt8g0",
+                                                                            "created": 1637911598681,
+                                                                            "text": "消息内容一般比较复杂，体积比较大"
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cfzipkeg8a00",
+                                                                            "created": 1637910204683,
+                                                                            "text": "对称加密密钥一般是一个简短的key值，使用非对称加解密一般不会太慢"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfziqb4mhw00",
+                                                                    "created": 1637910262862,
+                                                                    "text": "安全意识"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cfziqfcxcz40",
+                                                                            "created": 1637910272071,
+                                                                            "text": "明文传输不安全"
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cfziqcjvit40",
+                                                                            "created": 1637910265961,
+                                                                            "text": "客户端代码不安全"
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cfziqptsrtc0",
+                                                                            "created": 1637910294859,
+                                                                            "text": "用户客户端内存相对安全，属于黑客远端范畴，比较难被破解"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfzixmifwi80",
+                                                    "created": 1637910836191,
+                                                    "text": "数字签名"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfzj62o8wzc0",
+                                                            "created": 1637911498284,
+                                                            "text": "私钥加密，公钥解密"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfzj665mde80",
+                                                            "created": 1637911505865,
+                                                            "text": "一般先将消息进行散列(md5或者sha1），然后对md5进行数字签名"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfzj89oely80",
+                                                            "created": 1637911670259,
+                                                            "text": "最后发送出去的内容有：消息本体，消息md5明文，对消息md5数字签名后的加密密文"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfzss2p5sk80",
+                                    "created": 1637938612340,
+                                    "text": "版本之间的差异"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfzss5ytlj40",
+                                            "created": 1637938619455,
+                                            "text": "1.1"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfzss7c2f400",
+                                                    "created": 1637938622432,
+                                                    "text": "为了减少请求次数而引起的性能开销"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cfzssg6aers0",
+                                                            "created": 1637938641674,
+                                                            "text": "合图 sprite"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfzssrq54nk0",
+                                                            "created": 1637938666819,
+                                                            "text": "合并 css/js"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfzst2twom80",
+                                                            "created": 1637938690991,
+                                                            "text": "内嵌 js、图片 base64"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cfzsw439eu80",
+                                                            "created": 1637938928826,
+                                                            "text": "域名分片"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cfzsw9l0kyo0",
+                                                                    "created": 1637938940784,
+                                                                    "text": "为了让浏览器有跟多的连接"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cfzswfx8j8g0",
+                                                    "created": 1637938954583,
+                                                    "text": "浏览器最多给与6个连接"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cfzstdi8whc0",
+                                            "created": 1637938714231,
+                                            "text": "2.0"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cfzstepievk0",
+                                                    "created": 1637938716847,
+                                                    "text": "多个请求可复用一个连接"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfwlmpg5bh40",
+                    "created": 1637613764037,
+                    "text": "网络工具"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfwlms0vnc00",
+                            "created": 1637613769644,
+                            "text": "Wireshark"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfwlmtwnkhs0",
+                            "created": 1637613773742,
+                            "text": "tcpdump"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfwlmvpodxk0",
+                            "created": 1637613777674,
+                            "text": "Cisco Packet track"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfysxckyux40",
+                    "created": 1637837465718,
+                    "text": "常见问题"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfysxftdv8g0",
+                            "created": 1637837472758,
+                            "text": "TCP"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfysxiraye80",
+                                    "created": 1637837479162,
+                                    "text": "什么是连接?",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfysxuzx1280",
+                                            "created": 1637837505804,
+                                            "text": "连接相关资源具体是什么？"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfysxm7nbpk0",
+                                    "created": 1637837486681,
+                                    "text": "为什么要连接？"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfytdskbyxc0",
+                                    "created": 1637838754335,
+                                    "text": "什么是关闭？"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfyte81xuu00",
+                                    "created": 1637838788052,
+                                    "text": "为什么要关闭"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfyte8aav4w0",
+                                            "created": 1637838788557,
+                                            "text": "关闭了什么资源"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfysyhez5ns0",
+                                    "created": 1637837554604,
+                                    "text": "push标志位什么意义"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfysylhc9so0",
+                                    "created": 1637837563454,
+                                    "text": "reset标志位如何触发"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cfytdpkdjfs0",
+                                            "created": 1637838747807,
+                                            "text": "和close的区别"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cfysyu4f04w0",
+                                    "created": 1637837582264,
+                                    "text": "何为连接假死，如何影响"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfyszpey8rs0",
+                            "created": 1637837650381,
+                            "text": "网卡"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfyszrf12xs0",
+                                    "created": 1637837654739,
+                                    "text": "I/O "
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cfyszw8rcgo0",
+                                    "created": 1637837665244,
+                                    "text": "带宽具体是什么"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cg0u1dchd5s0",
+                    "created": 1638043721862,
+                    "text": "性能指标"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cg0u1fdp15s0",
+                            "created": 1638043726289,
+                            "text": "速率"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cg0u1gjvxs80",
+                                    "created": 1638043728840,
+                                    "text": "每秒钟传输的比特数量"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cg0u8ckyib40",
+                            "created": 1638044268747,
+                            "text": "带宽"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cg0u8ek237k0",
+                                    "created": 1638044273046,
+                                    "text": "表示网络的通信线路传输数据的能力，即最高速率"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cg0uf9zdfxs0",
+                                    "created": 1638044811637,
+                                    "text": "控制带宽"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cg0ufjl83i00",
+                                    "created": 1638044832550,
+                                    "text": "协商带宽"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cg0ujsx8krk0",
+                            "created": 1638045166324,
+                            "text": "吞吐量"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cg0ujvmfsug0",
+                                    "created": 1638045172202,
+                                    "text": "吞吐量表示在单位时间内通过某个网络或接口的数据量\n包括全部上传和下载的流量"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cg0uoqqm6u80",
+                            "created": 1638045553391,
+                            "text": "时延"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cg0uoxkfhh40",
+                                    "created": 1638045568254,
+                                    "text": "指数据从网络的一端传送到另一端所需要的时间"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cg1py8o874g0",
+                    "created": 1638133752113,
+                    "text": "网络排错"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cg1pyfez1dc0",
+                            "created": 1638133766791,
+                            "text": "网络层"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cg1pyhyu7rs0",
+                                    "created": 1638133772346,
+                                    "text": "TIme to live exceeded in transit"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cg1pyofswk80",
+                                    "created": 1638133786432,
+                                    "text": "destination host unreachable"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cg1sqn05iog0",
+                    "created": 1638141619725,
+                    "text": "网络安全"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cg1sqtpitio0",
+                            "created": 1638141634320,
+                            "text": "ARP"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cg1sqvggzmo0",
+                            "created": 1638141638126,
+                            "text": "防火墙-端口"
+                        },
+                        "children": []
+                    }
+                ]
             }
         ]
     },
