@@ -30,7 +30,12 @@ class HttpHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
         // 添加header描述length。这一步是很重要的一步，如果没有这一步，你会发现用postman发出请求之后就一直在刷新，因为http请求方不知道返回的数据到底有多长。
         // channel读取完成之后需要输出缓冲流。如果没有这一步，你会发现postman同样会一直在刷新。
         headers.add(HttpHeaderNames.CONTENT_LENGTH, resp.content().readableBytes());
-        headers.add(HttpHeaderNames.CONNECTION, HttpHeaderValues.KEEP_ALIVE);
+        if (msg.headers().get(HttpHeaderNames.AUTHORIZATION) == null) {
+            resp.setStatus(HttpResponseStatus.UNAUTHORIZED);
+            headers.add(HttpHeaderNames.WWW_AUTHENTICATE, "Basic realm=\"Username\"");
+        } else {
+            headers.add(HttpHeaderNames.SET_COOKIE, "id=1234");
+        }
         ctx.writeAndFlush(resp);
     }
 

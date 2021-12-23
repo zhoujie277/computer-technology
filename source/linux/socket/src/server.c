@@ -32,12 +32,12 @@ void *doWork(void *arg)
     struct ClientInfo *cInfo = (struct ClientInfo *)arg;
     int clientFd = cInfo->clientFd;
     struct sockaddr_in *client_addr = &cInfo->client_addr;
-    free(cInfo);
     // 网络地址结构转本地IP，端口网络字节序转本地字符显示
     char ipbuf[BUFSIZ];
     const char *clientIP = inet_ntop(AF_INET, &client_addr->sin_addr.s_addr, ipbuf, sizeof(ipbuf));
     int clientPort = ntohs(client_addr->sin_port);
     printf("client connecting: ip = %s, port = %d\n", clientIP, clientPort);
+    free(cInfo);
 
     int ret;
     char buf[BUFSIZ];
