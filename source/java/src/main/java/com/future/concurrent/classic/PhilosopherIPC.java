@@ -1,4 +1,4 @@
-package com.future.thread;
+package com.future.concurrent.classic;
 
 import java.security.Policy;
 import java.util.concurrent.Semaphore;
@@ -12,7 +12,7 @@ import java.util.concurrent.Semaphore;
  */
 
 @SuppressWarnings("unused")
-public class PhilosopherIPC {
+class PhilosopherIPC {
 
     private static class Philosopher extends Thread {
         private int index = 0;

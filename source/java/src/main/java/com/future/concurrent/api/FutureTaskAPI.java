@@ -4,7 +4,10 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
-public class FutureTaskAPI {
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+class FutureTaskAPI {
 
     private class FutureCallbck implements Callable<String> {
 
@@ -20,9 +23,10 @@ public class FutureTaskAPI {
             FutureTask<String> task = new FutureTask<>(new FutureCallbck());
             new Thread(task).start();
             String result = task.get();
-            System.out.println("result=" + result);
+            log.debug("result=" + result);
         } catch (InterruptedException e) {
             e.printStackTrace();
+            Thread.currentThread().interrupt();
         } catch (ExecutionException e) {
             e.printStackTrace();
         }

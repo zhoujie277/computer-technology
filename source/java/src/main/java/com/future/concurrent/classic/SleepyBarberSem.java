@@ -1,4 +1,4 @@
-package com.future.thread;
+package com.future.concurrent.classic;
 
 import java.util.concurrent.Semaphore;
 
@@ -12,7 +12,7 @@ import java.util.concurrent.Semaphore;
  * 
  * @author zhoujie
  */
-public class SleepyBarberSem {
+class SleepyBarberSem {
 
     private static class BarberShop extends Thread {
 

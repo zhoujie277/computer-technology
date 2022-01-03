@@ -1,6 +1,6 @@
-package com.future.thread;
+package com.future.concurrent.classic;
 
-public class Test {
+class Test {
 
     private volatile int loop = 1;
 

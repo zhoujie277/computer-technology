@@ -1,4 +1,4 @@
-package com.future.thread;
+package com.future.concurrent.classic;
 
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.ReadWriteLock;
@@ -14,7 +14,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock;
  * @author zhoujie
  */
 @SuppressWarnings("unused")
-public class ReaderWriter {
+class ReaderWriter {
 
     /**
      * 读者优先 <br/>

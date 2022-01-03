@@ -1,8 +1,8 @@
-package com.future.thread;
+package com.future.concurrent.classic;
 
 import java.util.concurrent.Semaphore;
 
-public class TurnPrintABC {
+class TurnPrintABC {
 
     private static final int COUNT = 20;
     private static Semaphore aSemaphore = new Semaphore(1);

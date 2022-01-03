@@ -1,4 +1,4 @@
-package com.future.thread;
+package com.future.concurrent.classic;
 
 import java.util.concurrent.Semaphore;
 
@@ -9,7 +9,7 @@ import java.util.concurrent.Semaphore;
  * 
  * @author zhoujie
  */
-public class PhilosopherSem {
+class PhilosopherSem {
 
     private static final int STATE_THINK = 1;
     private static final int STATE_HUNGRY = 2;

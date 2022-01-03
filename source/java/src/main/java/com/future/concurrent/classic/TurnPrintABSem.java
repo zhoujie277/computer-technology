@@ -1,4 +1,4 @@
-package com.future.thread;
+package com.future.concurrent.classic;
 
 import java.util.concurrent.Semaphore;
 
@@ -9,7 +9,7 @@ import java.util.concurrent.Semaphore;
  * 
  * @author zhoujie
  */
-public class TurnPrintABSem {
+class TurnPrintABSem {
 
     private static final int COUNT = 50;
 

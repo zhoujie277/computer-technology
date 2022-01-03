@@ -1,4 +1,4 @@
-package com.future.thread;
+package com.future.concurrent.classic;
 
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Condition;
@@ -10,7 +10,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 
  * @author zhoujie
  */
-public class ProducerConsumer {
+class ProducerConsumer {
 
     private static class Product {
         int a = 0;

@@ -1,4 +1,4 @@
-package com.future.thread;
+package com.future.concurrent.classic;
 
 /**
  * 两个线程轮流输出A和B。
@@ -11,7 +11,7 @@ package com.future.thread;
  * @author zhoujie
  * 2021-10-20
  */
-public class TurnPrintAB {
+class TurnPrintAB {
 
     private static class PrintA extends Thread {
         private int count = 0;

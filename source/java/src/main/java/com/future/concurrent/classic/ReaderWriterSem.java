@@ -1,4 +1,4 @@
-package com.future.thread;
+package com.future.concurrent.classic;
 
 import java.util.concurrent.Semaphore;
 
@@ -8,7 +8,7 @@ import java.util.concurrent.Semaphore;
  * @author zhoujie
  */
 @SuppressWarnings("unused")
-public class ReaderWriterSem {
+class ReaderWriterSem {
 
     /**
      * 读者优先 <br/>
