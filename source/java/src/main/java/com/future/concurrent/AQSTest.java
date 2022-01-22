@@ -2,9 +2,11 @@ package com.future.concurrent;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.AbstractQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 import java.util.concurrent.locks.ReentrantLock;
 
 @Slf4j
@@ -85,15 +87,35 @@ class Test {
         }
 
         Thread t2 = new Thread(() -> {
-            lock.lock();
             try {
-                Thread.sleep(1000);
+                if (lock.tryLock(2, TimeUnit.SECONDS)) {
+                    lock.unlock();
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+                log.debug("t2 was interrupted...");
+            }
+        }, "t2");
+        t2.start();
+
+        Thread t3 = new Thread(() -> {
+            try {
+                if (lock.tryLock(2, TimeUnit.MINUTES)) {
+                    lock.unlock();
+                }
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            lock.unlock();
-        }, "t2");
-        t2.start();
+        }, "t3");
+        t3.start();
+    }
+
+    private void printlnAQS(AbstractQueuedSynchronizer synchronizer) {
+        try {
+            synchronizer.getClass().getDeclaredField("head");
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {

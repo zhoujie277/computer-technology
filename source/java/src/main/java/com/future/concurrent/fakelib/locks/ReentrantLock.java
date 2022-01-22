@@ -1,4 +1,4 @@
-package com.future.concurrent.fakelib;
+package com.future.concurrent.fakelib.locks;
 
 import lombok.extern.slf4j.Slf4j;
 
