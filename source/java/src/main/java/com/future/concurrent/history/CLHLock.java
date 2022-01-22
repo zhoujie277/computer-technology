@@ -1,7 +1,9 @@
-package com.future.concurrent.lock;
+package com.future.concurrent.history;
 
 import lombok.extern.slf4j.Slf4j;
+import org.checkerframework.checker.units.qual.A;
 
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 
 /**
@@ -26,6 +28,7 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
  * <p>
  * 此处的 CLH 的实现是不可重入的独占公平锁。
  */
+@SuppressWarnings("StatementWithEmptyBody")
 @Slf4j
 public class CLHLock {
     /**
@@ -40,50 +43,41 @@ public class CLHLock {
      * 每个节点只了解它直接前驱节点的状态，不需要显式地去维护一个完整的链表结构。
      */
     static class Node {
-        volatile boolean active = true;
+        volatile boolean locked;
     }
 
-    private final ThreadLocal<Node> threadLocalNode = new ThreadLocal<>();
-
-    private static final AtomicReferenceFieldUpdater<CLHLock, Node> clhNodeUpdater = AtomicReferenceFieldUpdater.newUpdater(CLHLock.class, Node.class, "clhNode");
+    private final ThreadLocal<Node> threadLocalNode = ThreadLocal.withInitial(Node::new);
 
     /**
      * 隐式链表的 tail 结点
      */
-    private volatile Node clhNode;
+    private AtomicReference<Node> tail = new AtomicReference<>(null);
 
     private void lock(Node cNode) {
+        // 表示想要获取锁
+        cNode.locked = true;
         // 获取前驱结点
-        Node predecessor = clhNodeUpdater.getAndSet(this, cNode);
+        Node predecessor = tail.getAndSet(cNode);
         // 若前驱结点不为空，则说明前面已经有线程在占用锁，该线程需要在忙等待。
         if (predecessor != null) {
             // 等待条件为前驱结点的本地变量。
-            //noinspection StatementWithEmptyBody
-            while (predecessor.active) ;
+            while (predecessor.locked) ;
         }
-        // 若前驱结点为空，则说明可以获得锁，进入临界区。
+        // 若前驱结点为空，或者 predecessor.locked = false; 则说明可以获得锁，进入临界区。
     }
 
     private void unlock(Node cNode) {
-        // 尝试原子更新 clhNode。此处必须要尝试更新为 null。以防某个线程出去了，后来的线程都在无限等待。
-        if (!clhNodeUpdater.compareAndSet(this, cNode, null)) {
-            // 如果没有更新成功，说明有争用，唤醒下一个线程
-            cNode.active = false;
-        }
+        // 唤醒下一个线程。
+        cNode.locked = false;
     }
 
     public void lock() {
         Node node = threadLocalNode.get();
-        if (node == null) {
-            node = new Node();
-            threadLocalNode.set(node);
-        }
         lock(node);
     }
 
     public void unlock() {
         Node node = threadLocalNode.get();
-        if (node == null) return;
         unlock(node);
         // 此处 remove 必不可少，否则 localMode 如果重用，将会出现资源同时占用的情况，或者可能产生死锁。
         // 比如，两个线程 T1，T2。T1 先获取锁，T2 等待 T1 释放锁。
@@ -96,6 +90,9 @@ public class CLHLock {
         // 而此时 T1 等待 T2 的 active，T2 也在等待 T1 的 active。产生了死锁。
         //
         threadLocalNode.remove();
+        // 也可以重用 prevNode. 参见 artOfMultiProcessorProgramming
+        // 一开始使用 predNode (ThreadLocal) 保存
+        // 然后在此处使用 threadLocalNode.set(preNode);
     }
 
     static class Tester {

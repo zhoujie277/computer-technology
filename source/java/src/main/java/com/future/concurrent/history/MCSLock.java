@@ -1,4 +1,4 @@
-package com.future.concurrent.lock;
+package com.future.concurrent.history;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,7 +19,7 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
  *
  * @author future
  */
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "StatementWithEmptyBody"})
 @Slf4j
 public class MCSLock {
 
@@ -35,7 +35,7 @@ public class MCSLock {
      */
     static class Node {
         volatile Node next;
-        volatile boolean blocked = true;
+        volatile boolean locked;
     }
 
     private final ThreadLocal<Node> currentThreadNode = new ThreadLocal<>();
@@ -52,33 +52,31 @@ public class MCSLock {
      * 即 mcsNode 总是指向单链表的尾端。
      * 如果院子更新 mcsNode 的前驱节点不为空，则将前一个 Node 的 next 域指向新进来的线程持有的结点，形成一个单链表。
      */
-    private void lock(Node currentThread) {
+    private void lock(Node qNode) {
         // 原子更新 mcsNode，并返回更新之前的值。
-        Node predecessor = mcsNodeUpdater.getAndSet(this, currentThread);
+        Node predecessor = mcsNodeUpdater.getAndSet(this, qNode);
         if (predecessor != null) {
+            qNode.locked = true;
             // 形成单链表结构
-            predecessor.next = currentThread;
+            predecessor.next = qNode;
             // 等待前驱结点主动通知，结束自旋等待。即将 blocked 设为 false。则该线程可获得锁。
             //noinspection StatementWithEmptyBody
-            while (currentThread.blocked) ;
-        } else {
-            // 只有一个线程在使用它，没有出现争用。把自己标记为非阻塞。
-            currentThread.blocked = false;
+            while (qNode.locked) ;
         }
+        // 只有一个线程在使用它，没有出现争用。
     }
 
-    private void unlock(Node currentThread) {
+    private void unlock(Node qNode) {
         // 无争用
-        if (currentThread.next == null && !mcsNodeUpdater.compareAndSet(this, currentThread, null)) {
+        if (qNode.next == null) {
+            if (mcsNodeUpdater.compareAndSet(this, qNode, null))
+                return;
             // 如果此处更新失败，说明有多个线程在 unlock 在第一个 next == null 条件通过了，之后，在第二个条件出现了竞争。
             // 此处仍需要旋转等待，因为 predecessor.next 的更新和 mcsNodeUpdater.compareAndSet 的更新同属于一个原子操作。
-            // noinspection StatementWithEmptyBody
-            while (currentThread.next == null) ;
+            while (qNode.next == null) ;
         }
-        if (currentThread.next != null) {
-            currentThread.next.blocked = false;
-            currentThread.next = null; // for GC
-        }
+        qNode.next.locked = false;
+        qNode.next = null;
     }
 
     /**

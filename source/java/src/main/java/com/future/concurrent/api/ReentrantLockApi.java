@@ -14,6 +14,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 5. 多个条件队列
  */
 @Slf4j
+@SuppressWarnings("unused")
 class ReentrantLockApi {
     ReentrantLock lock = new ReentrantLock();
 
