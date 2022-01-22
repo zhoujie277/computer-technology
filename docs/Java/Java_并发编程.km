@@ -10,142 +10,128 @@
                 "data": {
                     "id": "cgqp4ege89c0",
                     "created": 1640670412692,
-                    "text": "共享模型"
+                    "text": "多处理器内存共享模型",
+                    "expandState": "expand"
                 },
                 "children": [
                     {
                         "data": {
-                            "id": "cgqp4gg03xc0",
-                            "created": 1640670417022,
-                            "text": "管程"
+                            "id": "cgr7kp27x480",
+                            "created": 1640722469584,
+                            "text": "synchronized"
                         },
                         "children": [
                             {
                                 "data": {
-                                    "id": "cgr7kp27x480",
-                                    "created": 1640722469584,
-                                    "text": "synchronized"
+                                    "id": "cgr7mq9pqw00",
+                                    "created": 1640722628943,
+                                    "text": "无锁"
                                 },
                                 "children": [
                                     {
                                         "data": {
-                                            "id": "cgr7mq9pqw00",
-                                            "created": 1640722628943,
-                                            "text": "无锁"
+                                            "id": "cgzyfvienvc0",
+                                            "created": 1641610741424,
+                                            "text": "markword 001"
                                         },
                                         "children": []
-                                    },
-                                    {
-                                        "data": {
-                                            "id": "cgr7mwtfsow0",
-                                            "created": 1640722643196,
-                                            "text": "偏向锁 "
-                                        },
-                                        "children": [
-                                            {
-                                                "data": {
-                                                    "id": "cgr7nq9u1ps0",
-                                                    "created": 1640722707314,
-                                                    "text": "无竞争，纳秒级开销"
-                                                },
-                                                "children": []
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "data": {
-                                            "id": "cgr7myhrhuw0",
-                                            "created": 1640722646843,
-                                            "text": "轻量级锁"
-                                        },
-                                        "children": [
-                                            {
-                                                "data": {
-                                                    "id": "cgr7nitj2600",
-                                                    "created": 1640722691091,
-                                                    "text": "LockRecord 对象"
-                                                },
-                                                "children": []
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "data": {
-                                            "id": "cgr7n1d2qt40",
-                                            "created": 1640722653090,
-                                            "text": "重量级锁",
-                                            "expandState": "expand"
-                                        },
-                                        "children": [
-                                            {
-                                                "data": {
-                                                    "id": "cgr7nelfk140",
-                                                    "created": 1640722681894,
-                                                    "text": "ObjectMonitor 对象"
-                                                },
-                                                "children": []
-                                            },
-                                            {
-                                                "data": {
-                                                    "id": "cgr7o4nq9so0",
-                                                    "created": 1640722738629,
-                                                    "text": "wait/notify"
-                                                },
-                                                "children": []
-                                            }
-                                        ]
                                     }
                                 ]
                             },
                             {
                                 "data": {
-                                    "id": "cgr7kuwt4800",
-                                    "created": 1640722482318,
-                                    "text": "ReentrantLock"
+                                    "id": "cgr7mwtfsow0",
+                                    "created": 1640722643196,
+                                    "text": "偏向锁 "
                                 },
                                 "children": [
                                     {
                                         "data": {
-                                            "id": "cgr7m51ngvs0",
-                                            "created": 1640722582743,
-                                            "text": "可重入"
+                                            "id": "cgzyg4zm8rc0",
+                                            "created": 1641610762055,
+                                            "text": "markword 101"
                                         },
                                         "children": []
                                     },
                                     {
                                         "data": {
-                                            "id": "cgr7l4lmk8w0",
-                                            "created": 1640722503409,
-                                            "text": "可打断"
-                                        },
-                                        "children": []
-                                    },
-                                    {
-                                        "data": {
-                                            "id": "cgr7l7so9480",
-                                            "created": 1640722510366,
-                                            "text": "可超时"
-                                        },
-                                        "children": []
-                                    },
-                                    {
-                                        "data": {
-                                            "id": "cgr7lfgoykg0",
-                                            "created": 1640722527056,
-                                            "text": "可公平"
-                                        },
-                                        "children": []
-                                    },
-                                    {
-                                        "data": {
-                                            "id": "cgr7l9sqtso0",
-                                            "created": 1640722514724,
-                                            "text": "多个条件队列"
+                                            "id": "cgr7nq9u1ps0",
+                                            "created": 1640722707314,
+                                            "text": "无竞争，纳秒级开销"
                                         },
                                         "children": []
                                     }
                                 ]
                             },
+                            {
+                                "data": {
+                                    "id": "cgr7myhrhuw0",
+                                    "created": 1640722646843,
+                                    "text": "轻量级锁"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cgzyge032bk0",
+                                            "created": 1641610781675,
+                                            "text": "markword 000"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cgr7nitj2600",
+                                            "created": 1640722691091,
+                                            "text": "LockRecord 对象"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cgr7n1d2qt40",
+                                    "created": 1640722653090,
+                                    "text": "重量级锁",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cgzygmlzli80",
+                                            "created": 1641610800413,
+                                            "text": "markword 010"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cgr7nelfk140",
+                                            "created": 1640722681894,
+                                            "text": "ObjectMonitor 对象"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cgr7o4nq9so0",
+                                            "created": 1640722738629,
+                                            "text": "wait/notify"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cgqp4gg03xc0",
+                            "created": 1640670417022,
+                            "text": "AbstractQueueSynchronizer",
+                            "expandState": "expand"
+                        },
+                        "children": [
                             {
                                 "data": {
                                     "id": "cgr7mia4yt40",
@@ -153,47 +139,512 @@
                                     "text": "LockSupport.park/unpark"
                                 },
                                 "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cgvz0qboqds0",
+                                    "created": 1641206135954,
+                                    "text": "同步队列"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cgvz0rnl3c80",
+                                    "created": 1641206138850,
+                                    "text": "条件队列"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cgvz0loip3c0",
+                                    "created": 1641206125846,
+                                    "text": "独占锁"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cgvz0nh483k0",
+                                    "created": 1641206129752,
+                                    "text": "共享锁"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cgvz7n76k0g0",
+                                    "created": 1641206677701,
+                                    "text": "公平/非公平"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cgvz7pix0g00",
+                                    "created": 1641206682764,
+                                    "text": "可中断"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cgvz7y4zobk0",
+                                    "created": 1641206701513,
+                                    "text": "可超时"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cgzy9infp2g0",
+                                    "created": 1641610243245,
+                                    "text": "具体同步器实现",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cgr7kuwt4800",
+                                            "created": 1640722482318,
+                                            "text": "ReentrantLock"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cgr7m51ngvs0",
+                                                    "created": 1640722582743,
+                                                    "text": "可重入"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cgzyhzwl9o80",
+                                            "created": 1641610907717,
+                                            "text": "ReentrantReadWriteLock"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cgzy7m5jx680",
+                                            "created": 1641610094142,
+                                            "text": "Semaphore"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cgzy7o3lwdc0",
+                                            "created": 1641610098378,
+                                            "text": "CountDownLatch"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cgzykte3wls0",
+                                    "created": 1641611128631,
+                                    "text": "数据结构"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cgzyky6nri80",
+                                            "created": 1641611139065,
+                                            "text": "Node"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cgzyl5bh1so0",
+                                                    "created": 1641611154593,
+                                                    "text": "CLH 变体"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     },
                     {
                         "data": {
-                            "id": "cgr7k5exfog0",
-                            "created": 1640722426817,
-                            "text": "内存"
+                            "id": "cgzy9hdqxo00",
+                            "created": 1641610240482,
+                            "text": "ThreadPoolExecutor"
                         },
                         "children": [
                             {
                                 "data": {
-                                    "id": "cgr7orb2v0g0",
-                                    "created": 1640722787930,
-                                    "text": "java 内存模型"
+                                    "id": "cgzya7wh3v40",
+                                    "created": 1641610298211,
+                                    "text": "BlockingQueue"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "ch03y5lk38g0",
+                                            "created": 1641626279487,
+                                            "text": "设计"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "ch03z6l34ps0",
+                                                    "created": 1641626359999,
+                                                    "text": "生产者/消费者模型"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ch03zd2tzgo0",
+                                                            "created": 1641626374133,
+                                                            "text": "poll/offer"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ch03y7j7jig0",
+                                                    "created": 1641626283698,
+                                                    "text": "可尝试 (无阻塞)"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ch041ilv2340",
+                                                            "created": 1641626542896,
+                                                            "text": "poll/offer 无参，立即返回"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ch03yf75yq00",
+                                                    "created": 1641626300384,
+                                                    "text": "可打断"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ch03zqbc38g0",
+                                                            "created": 1641626402945,
+                                                            "text": "take/put"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "ch041r4g3kw0",
+                                                                    "created": 1641626561434,
+                                                                    "text": "InterruptException"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ch03ym20k8w0",
+                                                    "created": 1641626315310,
+                                                    "text": "可超时"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ch03zyczaeg0",
+                                                            "created": 1641626420459,
+                                                            "text": "offer/poll "
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "ch0421qtkww0",
+                                                                    "created": 1641626584554,
+                                                                    "text": "(timeout, TimeUnit unit)"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ch0610wrfds0",
+                                                    "created": 1641632146592,
+                                                    "text": "公平性"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ch061z7tuxs0",
+                                                            "created": 1641632221272,
+                                                            "text": "由具体实现类决定如何实现"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "ch0626p84ow0",
+                                                                    "created": 1641632237562,
+                                                                    "text": "ArrayBlockingQueue"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "ch062bfulvc0",
+                                                                            "created": 1641632247879,
+                                                                            "text": "ReentrantLock 实现公平性"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "ch064zbereg0",
+                                                            "created": 1641632456581,
+                                                            "text": "针对生产者线程和消费者线程的公平性"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ch03z33nkf40",
+                                                    "created": 1641626352415,
+                                                    "text": "批量获取"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ch03zb5vnh40",
+                                                            "created": 1641626369963,
+                                                            "text": "drainTo"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cgzyaa3ejb40",
+                                            "created": 1641610302983,
+                                            "text": "ArrayBlockingQueue"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cgzyclqboio0",
+                                                    "created": 1641610485042,
+                                                    "text": "有界阻塞队列"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cgzyb51qlr40",
+                                                    "created": 1641610370363,
+                                                    "text": "提前分配内存"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cgzyb8tupnk0",
+                                                    "created": 1641610378593,
+                                                    "text": "单锁双条件队列"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cgzyaczehf40",
+                                            "created": 1641610309272,
+                                            "text": "LinkedBlockingQueue"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cgzycpfrb6w0",
+                                                    "created": 1641610493110,
+                                                    "text": "有界阻塞队列"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cgzybcrzjsg0",
+                                                    "created": 1641610387187,
+                                                    "text": "按需分配内存"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cgzybahahb40",
+                                                    "created": 1641610382187,
+                                                    "text": "双锁"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cgzycuq3hio0",
+                                                            "created": 1641610504619,
+                                                            "text": "源自 MichaelScott 双锁算法"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cgzybm6uysg0",
+                                                            "created": 1641610407678,
+                                                            "text": "更高的吞吐量"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cgzybp34k9s0",
+                                                            "created": 1641610413982,
+                                                            "text": "原子变量 count 辅助实现 put/take 并发"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cgzyafuac0o0",
+                                            "created": 1641610315493,
+                                            "text": "PriorityBlockingQueue"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cgzyc726iy00",
+                                                    "created": 1641610453107,
+                                                    "text": "无界队列"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cgzycd0qmrk0",
+                                                            "created": 1641610466081,
+                                                            "text": "通常情况不会阻塞"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cgzyaknajwg0",
+                                            "created": 1641610325954,
+                                            "text": "DelayQueue"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cgzydb5hzg00",
+                                                    "created": 1641610540379,
+                                                    "text": "无界队列"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cgzydhm9qaw0",
+                                                    "created": 1641610554454,
+                                                    "text": "PriorityQueue 为其数据结构"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cgzydqn2vc80",
+                                                    "created": 1641610574094,
+                                                    "text": "Leader/Follow 模式"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cgzydvbhhag0",
+                                                            "created": 1641610584277,
+                                                            "text": "减小多余的超时唤醒/阻塞"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cgzyanltf1c0",
+                                            "created": 1641610332395,
+                                            "text": "SynchronoursQueue"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cgzyawmvb080",
+                                            "created": 1641610352049,
+                                            "text": "LinkedTransferQueue"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cgzyb0ajp1c0",
+                                            "created": 1641610360012,
+                                            "text": "LinkedBlockingDeque"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "data": {
-                                    "id": "cgr7kbq9bv40",
-                                    "created": 1640722440563,
-                                    "text": "可见性"
+                                    "id": "cgzyet4theo0",
+                                    "created": 1641610657884,
+                                    "text": "RejectExecutionHandler"
                                 },
-                                "children": []
-                            },
-                            {
-                                "data": {
-                                    "id": "cgr7k6ljj8w0",
-                                    "created": 1640722429394,
-                                    "text": "有序性"
-                                },
-                                "children": []
-                            },
-                            {
-                                "data": {
-                                    "id": "cgr7k7r5fjc0",
-                                    "created": 1640722431910,
-                                    "text": "原子性"
-                                },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cgzyeyd937s0",
+                                            "created": 1641610669278,
+                                            "text": "DiscardHandler"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -201,17 +652,9 @@
                         "data": {
                             "id": "cgqp4k07y940",
                             "created": 1640670424774,
-                            "text": "无锁"
+                            "text": "原子更新工具"
                         },
                         "children": [
-                            {
-                                "data": {
-                                    "id": "cgqpzm4v7s80",
-                                    "created": 1640672858698,
-                                    "text": "CAS"
-                                },
-                                "children": []
-                            },
                             {
                                 "data": {
                                     "id": "cgqpzq5ydvs0",
@@ -232,77 +675,227 @@
                     },
                     {
                         "data": {
-                            "id": "cgvyzyqxkbk0",
-                            "created": 1641206075926,
-                            "text": "同步器（临界区）"
+                            "id": "cgr7k5exfog0",
+                            "created": 1640722426817,
+                            "text": "Java 内存模型"
                         },
                         "children": [
                             {
                                 "data": {
-                                    "id": "cgvz0irie5k0",
-                                    "created": 1641206119497,
-                                    "text": "AQS"
+                                    "id": "cgr7k7r5fjc0",
+                                    "created": 1640722431910,
+                                    "text": "原子性"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cgr7kbq9bv40",
+                                    "created": 1640722440563,
+                                    "text": "可见性"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cgr7k6ljj8w0",
+                                    "created": 1640722429394,
+                                    "text": "有序性"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cgzylp9n9g80",
+                            "created": 1641611198018,
+                            "text": "并发安全底层机制实现"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cgzylvvu07k0",
+                                    "created": 1641611212421,
+                                    "text": "unsafe"
                                 },
                                 "children": [
                                     {
                                         "data": {
-                                            "id": "cgvz0loip3c0",
-                                            "created": 1641206125846,
-                                            "text": "独占锁"
+                                            "id": "cgzymc83wpk0",
+                                            "created": 1641611247991,
+                                            "text": "park/unpark"
                                         },
                                         "children": []
                                     },
                                     {
                                         "data": {
-                                            "id": "cgvz0qboqds0",
-                                            "created": 1641206135954,
-                                            "text": "同步队列"
+                                            "id": "cgzymemrnhc0",
+                                            "created": 1641611253231,
+                                            "text": "CAS"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cgzymhw7wgo0",
+                                    "created": 1641611260333,
+                                    "text": "blocking"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cgzymucze3c0",
+                                            "created": 1641611287468,
+                                            "text": "park/unpark"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cgzympxh1wg0",
+                                    "created": 1641611277823,
+                                    "text": "non-blocking"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cgzymwkns800",
+                                            "created": 1641611292286,
+                                            "text": "cas"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cgzyn34hw9s0",
+                                    "created": 1641611306546,
+                                    "text": "数据结构"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cgzyn5yq1w00",
+                                            "created": 1641611312727,
+                                            "text": "treiber stack"
                                         },
                                         "children": []
                                     },
                                     {
                                         "data": {
-                                            "id": "cgvz0rnl3c80",
-                                            "created": 1641206138850,
-                                            "text": "条件队列"
+                                            "id": "cgzynbfhur40",
+                                            "created": 1641611324625,
+                                            "text": "michael scott queue"
                                         },
                                         "children": []
                                     },
                                     {
                                         "data": {
-                                            "id": "cgvz0nh483k0",
-                                            "created": 1641206129752,
-                                            "text": "共享锁"
+                                            "id": "cgzyokvosg80",
+                                            "created": 1641611423560,
+                                            "text": "non-blocking queue with condition synchronization"
                                         },
                                         "children": []
                                     },
                                     {
                                         "data": {
-                                            "id": "cgvz7n76k0g0",
-                                            "created": 1641206677701,
-                                            "text": "公平/非公平"
+                                            "id": "cgzynz7wr0w0",
+                                            "created": 1641611376409,
+                                            "text": "CLH 队列"
                                         },
                                         "children": []
                                     },
                                     {
                                         "data": {
-                                            "id": "cgvz7pix0g00",
-                                            "created": 1641206682764,
-                                            "text": "可中断"
-                                        },
-                                        "children": []
-                                    },
-                                    {
-                                        "data": {
-                                            "id": "cgvz7y4zobk0",
-                                            "created": 1641206701513,
-                                            "text": "可超时"
+                                            "id": "cgzyo2knmv40",
+                                            "created": 1641611383710,
+                                            "text": "MCS 队列"
                                         },
                                         "children": []
                                     }
                                 ]
                             }
                         ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cgwmgbsui5c0",
+                    "created": 1641272243695,
+                    "text": "研究路线"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cgwmggftd000",
+                            "created": 1641272253791,
+                            "text": "JUC"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cgwmgifj8v40",
+                            "created": 1641272258127,
+                            "text": "JVM"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cgwmgwszcg00",
+                            "created": 1641272289415,
+                            "text": "JNI"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cgwmgka9vd40",
+                            "created": 1641272262163,
+                            "text": "Thread 的底层实现"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cgwmgog8oyo0",
+                                    "created": 1641272271231,
+                                    "text": "sleep 的实现"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cgwmgr0lxe00",
+                                    "created": 1641272276816,
+                                    "text": "interrupt 的实现"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cgwmh9x6s8o0",
+                            "created": 1641272317968,
+                            "text": "Synchronized 的实现"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cgwmhcynmns0",
+                            "created": 1641272324587,
+                            "text": "volatile 语义的实现"
+                        },
+                        "children": []
                     }
                 ]
             }
