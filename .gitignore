@@ -1,7 +1,7 @@
 .history
 .vscode/
 .pdf
-.books/
+.books
 tmp/
 docs/**/booktool/**
 source/java/target/
