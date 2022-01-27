@@ -8,8 +8,9 @@ import java.util.concurrent.locks.ReentrantLock;
  * 生产者-消费者问题
  * 
  * 
- * @author zhoujie
+ * @author future
  */
+@SuppressWarnings("all")
 class ProducerConsumer {
 
     private static class Product {
