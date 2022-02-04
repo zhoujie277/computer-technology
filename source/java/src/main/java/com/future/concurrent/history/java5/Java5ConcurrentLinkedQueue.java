@@ -1,4 +1,4 @@
-package com.future.concurrent.history;
+package com.future.concurrent.history.java5;
 
 import java.util.AbstractQueue;
 import java.util.Collection;
