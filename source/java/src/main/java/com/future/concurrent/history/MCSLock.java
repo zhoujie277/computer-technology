@@ -41,9 +41,9 @@ public class MCSLock {
     private final ThreadLocal<Node> currentThreadNode = new ThreadLocal<>();
 
     // 永远指向队列的尾部。
-    private volatile Node mcsNode;
+    private volatile Node tail;
 
-    private static final AtomicReferenceFieldUpdater<MCSLock, Node> mcsNodeUpdater = AtomicReferenceFieldUpdater.newUpdater(MCSLock.class, Node.class, "mcsNode");
+    private static final AtomicReferenceFieldUpdater<MCSLock, Node> tailUpdater = AtomicReferenceFieldUpdater.newUpdater(MCSLock.class, Node.class, "tail");
 
     /**
      * 每个线程都需要携带一个 Node 结构体。
@@ -54,7 +54,7 @@ public class MCSLock {
      */
     private void lock(Node qNode) {
         // 原子更新 mcsNode，并返回更新之前的值。
-        Node predecessor = mcsNodeUpdater.getAndSet(this, qNode);
+        Node predecessor = tailUpdater.getAndSet(this, qNode);
         if (predecessor != null) {
             qNode.locked = true;
             // 形成单链表结构
@@ -69,7 +69,7 @@ public class MCSLock {
     private void unlock(Node qNode) {
         // 无争用
         if (qNode.next == null) {
-            if (mcsNodeUpdater.compareAndSet(this, qNode, null))
+            if (tailUpdater.compareAndSet(this, qNode, null))
                 return;
             // 如果此处更新失败，说明有多个线程在 unlock 在第一个 next == null 条件通过了，之后，在第二个条件出现了竞争。
             // 此处仍需要旋转等待，因为 predecessor.next 的更新和 mcsNodeUpdater.compareAndSet 的更新同属于一个原子操作。

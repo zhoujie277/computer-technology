@@ -23,7 +23,7 @@ import java.lang.reflect.Field;
  *
  * @author future
  */
-@SuppressWarnings("unused")
+@SuppressWarnings("all")
 public class SimpleSynchronousQueue {
 
     /**
@@ -278,7 +278,7 @@ public class SimpleSynchronousQueue {
                             while (q.item == item) ;
                             h = head;
                             if (q == h.next) {
-                                // 帮忙推进 head
+                                // 推进 head
                                 casHead(h, q);
                             }
                             return;

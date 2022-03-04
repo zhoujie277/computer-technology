@@ -1,10 +1,9 @@
 package com.future.concurrent.api;
 
-import com.future.concurrent.fakelib.LinkedBlockingQueue;
+import com.future.concurrent.java8.LinkedBlockingQueue;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.atomic.AtomicInteger;

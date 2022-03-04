@@ -1,7 +1,5 @@
 package com.future.concurrent.history;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 /**
  * 经典的互斥算法
  */
@@ -92,20 +90,4 @@ class ClassicMutualExclusion {
             interest[current] = false;
         }
     }
-
-    static class ThreadID {
-        private static final AtomicInteger sequencer = new AtomicInteger();
-        private static final ThreadLocal<Integer> threadId = new ThreadLocal<Integer>() {
-            @Override
-            protected Integer initialValue() {
-                return sequencer.getAndIncrement();
-            }
-        };
-
-        public static int get() {
-            Thread currentThread = Thread.currentThread();
-            return threadId.get();
-        }
-    }
-
 }

@@ -72,7 +72,7 @@ Even though this class is based on an internal FIFO queue, it does not automatic
 
 Because checks in acquire are invoked before enqueuing, a newly acquiring thread may barge ahead of others that are blocked and queued. However, you can, if desired, define tryAcquire and/or tryAcquireShared to disable barging by internally invoking one or more of the inspection methods, thereby providing a fair FIFO acquisition order. In particular, most fair synchronizers can define tryAcquire to return false if hasQueuedPredecessors (a method specifically designed to be used by fair synchronizers) returns true. Other variations are possible.
 
-由于 acquire 中的检查是在入队之前调用的，因此新的 acquiring 线程可能会抢先阻塞并排队的其他线程。但是，如果需要，您可以通过内部调用一种或多种检查方法来定义 tryAcquire 和/或tryAcquireShared 以禁用闯入，从而提供公平的 FIFO 获取命令。特别是，如果hasQueuedPredecessors（一种专门为公平同步器设计的方法）返回 true，大多数公平同步器可以定义tryAcquire 以返回 false。其他变化也是可能的。
+由于 acquire 中的检查是在入队之前调用的，因此新的 acquiring 线程可能会抢先阻塞并排队的其他线程。但是，如果需要，您可以通过内部调用一种或多种检查方法来定义 tryAcquire 和/或tryAcquireShared 以禁用闯入，从而提供公平的 FIFO 获取命令。特别是，如果hasQueuedPredecessors（一种专门为公平同步器设计的方法）返回 true，大多数公平同步器可以定义 tryAcquire 以返回 false。其他变化也是可能的。
 
 Throughput and scalability are generally highest for the default barging (also known as greedy, renouncement, and convoy-avoidance) strategy. While this is not guaranteed to be fair or starvation-free, earlier queued threads are allowed to recontend before later queued threads, and each recontention has an unbiased chance to succeed against incoming threads. Also, while acquires do not "spin" in the usual sense, they may perform multiple invocations of tryAcquire interspersed with other computations before blocking. This gives most of the benefits of spins when exclusive synchronization is only briefly held, without most of the liabilities when it isn't. If so desired, you can augment this by preceding calls to acquire methods with "fast-path" checks, possibly prechecking hasContended and/or hasQueuedThreads to only do so if the synchronizer is likely not to be contended.
 
@@ -179,7 +179,7 @@ Wait queue node class.
 
 The wait queue is a variant of a "CLH" (Craig, Landin, and Hagersten) lock queue. CLH locks are normally used for spinlocks. We instead use them for blocking synchronizers, but use the same basic tactic of holding some of the control information about a thread in the predecessor of its node. A "status" field in each node keeps track of whether a thread should block. A node is signalled when its predecessor releases. Each node of the queue otherwise serves as a specific-notification-style monitor holding a single waiting thread. The status field does NOT control whether threads are granted locks etc though. A thread may try to acquire if it is first in the queue. But being first does not guarantee success; it only gives the right to contend. So the currently released contender thread may need to rewait.
 
-等待队列是“CLH”（Craig、Landin和Hagersten）锁队列的变体。CLH 锁通常用于旋转锁。相反，我们使用它们来阻止同步器，但使用相同的基本策略，即在其节点的前一个线程中保存一些关于该线程的控制信息。每个节点中的“状态”字段跟踪线程是否应该阻塞。节点在其前一个节点释放时发出信号。队列的每个节点都充当一个特定的通知样式监视器，其中包含一个等待线程。但是 status 字段不控制线程是否被授予锁等。如果线程是队列中的第一个线程，它可能会尝试获取。但第一并不能保证成功；它只给了我们竞争的权利。因此，当前发布的竞争者线程可能需要重新等待。
+等待队列是“CLH”（Craig、Landin和Hagersten）锁队列的变体。CLH 锁通常用于旋转锁。相反，我们使用它们来实现阻塞的同步器，但使用相同的基本策略，即在其节点的前一个线程中保存一些关于该线程的控制信息。每个节点中的“状态”字段跟踪线程是否应该阻塞。节点在其前一个节点释放时发出信号。队列的每个节点都充当一个特定的通知样式监视器，其中包含一个等待线程。但是 status 字段不控制线程是否被授予锁等。如果线程是队列中的第一个线程，它可能会尝试获取。但第一并不能保证成功；它只给了我们竞争的权利。因此，当前发布的竞争者线程可能需要重新等待。
 
 To enqueue into a CLH lock, you atomically splice it in as new tail. To dequeue, you just set the head field.
 

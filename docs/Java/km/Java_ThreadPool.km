@@ -1,0 +1,97 @@
+{
+    "root": {
+        "data": {
+            "id": "chuu7vsezcg0",
+            "created": 1644747189333,
+            "text": "Java_ThreadPool"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "chuu80rpoao0",
+                    "created": 1644747200174,
+                    "text": "ForkJoinPool"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "chuub2xt5xc0",
+                            "created": 1644747439989,
+                            "text": "思想"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "chuucrv938g0",
+                                    "created": 1644747572618,
+                                    "text": "Amdahl 定律原理，将任务的串行部分转化成可并行部分，\n充分利用多个物理处理器提供的并行性，以此提高任务完成效率"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "chuub566c0o0",
+                                    "created": 1644747444848,
+                                    "text": "分而治之，归并结果"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "chuubl2rr740",
+                                    "created": 1644747479471,
+                                    "text": "将一个大任务拆解成多个子任务，将子任务又拆分成多个子任务。以此类推。最后逐级向上归并"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "chuu86cgt3k0",
+                            "created": 1644747212313,
+                            "text": "问题"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "chuu89wscm00",
+                                    "created": 1644747220072,
+                                    "text": "1. 任务状态的划分情况"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "chuu8jrzjbc0",
+                                    "created": 1644747241550,
+                                    "text": "2. 窃取队列的设计"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "chuu8ouuwgw0",
+                                    "created": 1644747252607,
+                                    "text": "3.  任务完成之后的终止状态的检测"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "chuuetevvq80",
+                    "created": 1644747732710,
+                    "text": "ThreadPoolExecutor"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

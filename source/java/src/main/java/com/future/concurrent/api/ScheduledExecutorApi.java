@@ -17,6 +17,7 @@ import java.util.concurrent.TimeUnit;
  * @author future
  */
 @Slf4j
+@SuppressWarnings("unused")
 public class ScheduledExecutorApi {
 
     /**
@@ -71,9 +72,7 @@ public class ScheduledExecutorApi {
                     e.printStackTrace();
                 }
             }, 1, TimeUnit.SECONDS);
-            service.schedule(()->{
-                log.debug("timer2 run...");
-            }, 1, TimeUnit.SECONDS);
+            service.schedule(() -> log.debug("timer2 run..."), 1, TimeUnit.SECONDS);
 
             service.scheduleAtFixedRate(()->{
                 log.debug("at run...");
@@ -113,9 +112,7 @@ public class ScheduledExecutorApi {
             long initialDelay = Duration.between(now, thursday).toMillis();
             long period = 7 * 24 * 3600;
             ScheduledExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(1);
-            scheduledThreadPool.scheduleAtFixedRate(()->{
-                log.debug("task running...");
-            }, initialDelay, period, TimeUnit.SECONDS);
+            scheduledThreadPool.scheduleAtFixedRate(() -> log.debug("task running..."), initialDelay, period, TimeUnit.SECONDS);
         }
     }
 

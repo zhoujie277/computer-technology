@@ -1,10 +1,8 @@
 package com.future.concurrent.history;
 
 import lombok.extern.slf4j.Slf4j;
-import org.checkerframework.checker.units.qual.A;
 
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 
 /**
  * CLH锁是一种自旋锁，能确保无饥饿性，提供先来先服务的公平性。
@@ -51,7 +49,7 @@ public class CLHLock {
     /**
      * 隐式链表的 tail 结点
      */
-    private AtomicReference<Node> tail = new AtomicReference<>(null);
+    private final AtomicReference<Node> tail = new AtomicReference<>(null);
 
     private void lock(Node cNode) {
         // 表示想要获取锁

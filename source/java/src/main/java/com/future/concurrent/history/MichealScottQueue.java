@@ -110,7 +110,7 @@ class MichealScottQueue<E> {
                     E result = headNext.item;
                     if (compareAndSetHead(curHead, headNext)) {
                         // java 中由于 GC，无需手动释放结点。如果非 GC 的语言，则需要 free(curHead)
-                        curHead.next = null;// help GC
+                        curHead.next = curHead;// help GC
                         curHead.item = null; // help GC
                         return result;
                     }
