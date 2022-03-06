@@ -90,7 +90,7 @@ public class Java7ConcurrentLinkedQueue<E> extends AbstractQueue<E> implements Q
     }
 
 
-    final void updateHead(Node<E> h, Node<E> p) {
+    final void  updateHead(Node<E> h, Node<E> p) {
         if (h != p && casHead(h, p)) {
             h.lazySetNext(h);
         }
