@@ -1,4 +1,4 @@
-package com.future.concurrent.history.javaold;
+package com.future.concurrent.javaold;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;

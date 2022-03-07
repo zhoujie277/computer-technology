@@ -1,6 +1,6 @@
 package com.future.concurrent.benchmark;
 
-import com.future.concurrent.history.javaold.Java7ConcurrentLinkedQueue;
+import com.future.concurrent.javaold.Java7ConcurrentLinkedQueue;
 import com.google.common.base.Stopwatch;
 import lombok.extern.slf4j.Slf4j;
 

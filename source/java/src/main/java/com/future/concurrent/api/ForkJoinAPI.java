@@ -1,8 +1,8 @@
 package com.future.concurrent.api;
 
 
-import com.future.concurrent.history.javaold.Java7ForkJoinPool;
-import com.future.concurrent.history.javaold.Java7RecursiveTask;
+import com.future.concurrent.javaold.Java7ForkJoinPool;
+import com.future.concurrent.javaold.Java7RecursiveTask;
 
 import java.util.Arrays;
 import java.util.concurrent.ForkJoinPool;

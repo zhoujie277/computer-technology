@@ -1,4 +1,4 @@
-package com.future.concurrent.history.javaold;
+package com.future.concurrent.javaold;
 
 /**
  * Java 7 RecursiveTask

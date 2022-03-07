@@ -1,4 +1,4 @@
-package com.future.concurrent.history.javaold;
+package com.future.concurrent.javaold;
 
 public abstract class Java7RecursiveAction extends Java7ForkJoinTask<Void> {
 

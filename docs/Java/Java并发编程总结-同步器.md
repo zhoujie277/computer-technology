@@ -1,4 +1,4 @@
-# Java并发编程总结 2
+# Java 并发编程总结-同步器
 
 >统观并发算法的历史和 Java 并发库的版本演进，几乎所有的并发算法都是在解决一个问题：减少总线争用。术语中描述的“总线”又可细分为软件级别的总线（或称语言级别的总线）和硬件级别的总线。软件级别的总线指的是在 Java 中如 Synchronized 关键字或者 Reentrantlock。而硬件级别的总线在 Java 中的体现是 Volatile 变量的读写和 CAS 操作。
 
@@ -540,7 +540,78 @@ AQS 提供了公平性原理的支持，可以通过 ReentrantLock 看到公平�
     }
 ```
 
+## ReentrantLock
+
+### ReentrantLock 是如何实现重入的？
+ReentranLock 首先是一个独占锁，某一个时间段，只能由一个线程获取，其他线程无法获取。其可重入特性主要从两个方面来实现的。
++ 获取释放锁的方面。ReentrantLock 在尝试获取锁的时候会判断当前线程是否已经获取到了锁，如果已经获取到了锁，则增加 state 的计数，以表明获取锁的次数，当释放锁时，递减 state 的计数，直到 state == 0 以表明没有任何线程获取了锁。
+  ```
+    final boolean nonfairTryAcquire(int acquires) {
+        final Thread current = Thread.currentThread();
+        int c = getState();
+        if (c == 0) {
+            if (compareAndSetState(0, acquires)) {
+                setExclusiveOwnerThread(current);
+                return true;
+            }
+        }
+        else if (current == getExclusiveOwnerThread()) {
+            int nextc = c + acquires;
+            if (nextc < 0) // overflow
+                throw new Error("Maximum lock count exceeded");
+            setState(nextc);
+            return true;
+        }
+        return false;
+    }
+
+    protected final boolean tryRelease(int releases) {
+        int c = getState() - releases;
+        if (Thread.currentThread() != getExclusiveOwnerThread())
+            throw new IllegalMonitorStateException();
+        boolean free = false;
+        if (c == 0) {
+            free = true;
+            setExclusiveOwnerThread(null);
+        }
+        setState(c);
+        return free;
+    }
+  ```
++ 条件等待/条件通知层面。当某个条件谓词不满足时，线程会释放已经获取的锁，并将已获取锁的次数临时保存起来，等到条件通知唤醒之后，重新获取锁时，又将临时保存的之前获取锁的次数设置到 state 中。这样便完成了可重入的计数。
+  ```
+    public final void awaitUninterruptibly() {
+        Node node = addConditionWaiter();
+        int savedState = fullyRelease(node);
+        boolean interrupted = false;
+        while (!isOnSyncQueue(node)) {
+            LockSupport.park(this);
+            if (Thread.interrupted())
+                interrupted = true;
+        }
+        if (acquireQueued(node, savedState) || interrupted)
+            selfInterrupt();
+    }
+  ```
+
+## ReentrantReadWriteLock
+
+### ReentrantReadWriteLock 的读线程和写线程是怎么保证线程安全的？
++ 其虽然用了两个锁，ReadLock，WriteLock。以实现读读共享，读写互斥、写写互斥。然而其 ReadLock 和 WriteLock 都公用了一个 Sync 同步器，其共同操作一个 volatile 的 state 变量。高 16 位为共享锁（读锁计数），低 16 位 为独占锁。利用 volatile 语义，可以实现基本的读写互斥。
+
+### ReentrantReadWriteLock 是读者优先还是写者优先还是完全公平策略？
+
+### ReentrantReadWriteLock 如何实现写锁降级？
+
+
+## 其它同步器
+
+### 试举出 Semaphore 的一个试用场景
++ Semaphore 可实现控制资源的发放许可。比如用来实现一个有界的资源池计数。或者用二值信号量实现一个简单的互斥锁。
+
+### CountDownLatch 和 CyclicBarrier 的区别是什么？
++ 最主要的区别是 CountDownLatch 是事件计数器，CountDownLatch.countdown 可以在任何时间、任何地点调用。而 CyclicBarrier 是线程计数器，其调用一次 await(), 如果计数没到达同步点，则会挂起这个线程。
++ 从形式上的区别是 CountDownLatch 只能用一次，用完就不能再用了。而 CyclicBarrier 可以循环计数。
+
 ## FutureTask
 FutureTask 异步任务的设计主要是从执行任务、等待任务、取消任务、异常处理以及查询任务状态等几个方面来展开实现的，在 Java 中其典型实现有 Java5 版本和 Java8 的版本。Java5 中采用的是 AbstractQueuedSynchronizer 的同步队列来实现等待队列。而 Java8 中采用 TreiberStack 来实现的可取消等待队列。
-
-## ThreadPoolExecutor
