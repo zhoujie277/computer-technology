@@ -599,10 +599,41 @@ ReentranLock 首先是一个独占锁，某一个时间段，只能由一个线�
 ### ReentrantReadWriteLock 的读线程和写线程是怎么保证线程安全的？
 + 其虽然用了两个锁，ReadLock，WriteLock。以实现读读共享，读写互斥、写写互斥。然而其 ReadLock 和 WriteLock 都公用了一个 Sync 同步器，其共同操作一个 volatile 的 state 变量。高 16 位为共享锁（读锁计数），低 16 位 为独占锁。利用 volatile 语义，可以实现基本的读写互斥。
 
-### ReentrantReadWriteLock 是读者优先还是写者优先还是完全公平策略？
+### ReentrantReadWriteLock 是公平模式和非公平模式有什么区别？
++ 在非公平模式下，是读者优先的策略。即如果当前共享资源有读线程在访问，不管有没有写线程在等待，其他后进来的读线程也能获取到锁。使用此模式，写线程可能会被无限延期导致饥饿。
++ 在公平模式下，是完全公平策略。即如果当前共享资源有读线程在访问，此时只要队列有写线程在等待，那么后进来的读者线程就需要排队。
++ 如果当前共享资源是写线程在访问，那么大家都得排队。
 
 ### ReentrantReadWriteLock 如何实现写锁降级？
++ 在某个已经获取到了写锁的线程释放写锁之前，先获取读锁，然后再进行释放写锁。便可实现写锁降级。该操作能保证这个线程立即能读取到新数据，并在读取期间防止其他写线程进入更新。其能实现的原因是，在获取读锁的时候会判断获取读锁的线程是不是独占锁线程，如果是，则允许获取读锁，并给读锁计数加 1。
 
+```
+    protected final int tryAcquireShared(int unused) {
+        Thread current = Thread.currentThread();
+        int c = getState();
+        if (exclusiveCount(c) != 0 && getExclusiveOwnerThread != current)
+            return -1;
+        int r = sharedCount(c);
+        if (!readerShouldBlock() && r < MAX_COUNT &&
+            compareAndSetState(c, c + SHARED_UNIT)) {
+            if (r == 0) {
+                firstReader = current;
+                firstReaderHoldCount = 1;
+            } else if (firstReader == current) {
+                firstReaderHoldCount++;
+            } else {
+                HoldCounter rh = cachedHoldCounter;
+                if (rh == null || rh.tid != getThreadId(current))
+                    cachedHoldCounter = rh = readHolds.get();
+                else if (rh.count == 0)
+                    readHolds.set(rh);
+                rh.count++;
+            }
+            return 1;
+        }
+        return fullTryAcquireShared(current);
+    }
+```
 
 ## 其它同步器
 
