@@ -20,6 +20,11 @@
   <dependencies>
 
     <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-core</artifactId>
+      <version>4.0.0</version>
+    </dependency>
+    <dependency>
       <groupId>org.openjdk.jol</groupId>
       <artifactId>jol-core</artifactId>
       <version>0.16</version>
