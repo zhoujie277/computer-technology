@@ -1,5 +1,6 @@
 package com.future.jvm.asm;
 
+import com.future.bean.Person;
 import com.future.util.FileUtils;
 import com.future.util.ResourceUtil;
 import jdk.internal.org.objectweb.asm.*;
@@ -29,7 +30,7 @@ public class AsmLibraryApi {
     }
 
     public static void testAddField() {
-        VisitorParams params = new VisitorParams("com/future/bean", "Person.class", "Person1.class");
+        VisitorParams params = new VisitorParams("com.future.bean.Person");
         params.opcodeAcc = Opcodes.ACC_PUBLIC;
         params.name = "tempField";
         params.signature = "Ljava/lang/String;";
@@ -58,7 +59,7 @@ public class AsmLibraryApi {
     }
 
     public static void testAddMethod() {
-        VisitorParams params = new VisitorParams("com/future/bean", "Person.class", "Person1.class");
+        VisitorParams params = new VisitorParams("com.future.bean.Person");
         params.opcodeAcc = Opcodes.ACC_PUBLIC;
         params.name = "tempMethod";
         params.signature = "(ILjava/lang/String;)V";
@@ -105,7 +106,7 @@ public class AsmLibraryApi {
     public static void testModifiedMethod() {
         // 此处 dstName 需要和 srcName 相同，因为需要保证文件名和类名一致。否则加载不到
         // java.lang.NoClassDefFoundError: com/future/javac/Test (wrong name: com/future/javac/Test1)
-        VisitorParams params = new VisitorParams("com/future/javac", "ModifiableObject.class", "ModifiableObject.class");
+        VisitorParams params = new VisitorParams("com.future.javac.ModifiableObject");
         params.opcodeAcc = Opcodes.ACC_PUBLIC;
         params.name = "foo";
         params.signature = "(I)I";

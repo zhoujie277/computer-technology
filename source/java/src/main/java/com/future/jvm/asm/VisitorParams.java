@@ -1,26 +1,27 @@
 package com.future.jvm.asm;
 
-import java.io.File;
-
-class VisitorParams {
-    String basePath;
+public class VisitorParams {
     String srcName;
     String dstName;
     String name;
     String signature;
     int opcodeAcc;
 
-    public VisitorParams(String basePath, String srcName, String dstName) {
-        this.basePath = basePath;
-        this.srcName = srcName;
-        this.dstName = dstName;
+    public VisitorParams(String className) {
+        this.srcName = className.replace(".", "/") + ".class";
+        this.dstName = srcName;
+    }
+
+    public VisitorParams(String className, String methodName) {
+        this(className);
+        this.name = methodName;
     }
 
     public String getSrcPath() {
-        return basePath + File.separator + srcName;
+        return srcName;
     }
 
     public String getDstPath() {
-        return basePath + File.separator + dstName;
+        return dstName;
     }
 }

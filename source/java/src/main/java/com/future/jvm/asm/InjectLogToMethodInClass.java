@@ -7,6 +7,7 @@ import jdk.internal.org.objectweb.asm.commons.AdviceAdapter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
+import java.util.function.Function;
 
 /**
  * ASM 注入工具类
@@ -101,21 +102,23 @@ public class InjectLogToMethodInClass {
         }
     }
 
-    public void run() {
-        VisitorParams params = new VisitorParams("com/future/jvm/asm", "ModifiableObject.class", "ModifiableObject.class");
-        params.name = "testInject";
-        byte[] bytes = ResourceUtil.loadBytesInClassPath(params.getSrcPath());
-        ClassReader classReader = new ClassReader(bytes);
+    public static byte[] run(VisitorParams params, byte[] classBytes) {
+        System.out.println("run....");
+        ClassReader classReader = new ClassReader(classBytes);
         ClassWriter classWriter = new ClassWriter(ClassWriter.COMPUTE_MAXS | ClassWriter.COMPUTE_FRAMES);
+        System.out.println("run1....");
         InjectClassVisitor visitor = new InjectClassVisitor(params, classWriter);
+        System.out.println("run2....");
         classReader.accept(visitor, 0);
-        byte[] modified = classWriter.toByteArray();
-        String fullPath = ResourceUtil.getClassPath() + File.separator + params.getDstPath();
-        FileUtils.writeFile(fullPath, modified);
+        System.out.println("run3....");
+        return classWriter.toByteArray();
     }
 
     public static void main(String[] args) {
-        InjectLogToMethodInClass aClass = new InjectLogToMethodInClass();
-        aClass.run();
+        VisitorParams params = new VisitorParams("com.future.jvm.instrumentation.InstrumentationMain", "run");
+        byte[] bytes = ResourceUtil.loadBytesInClassPath(params.getSrcPath());
+        byte[] modified = run(params, bytes);
+        String fullPath = ResourceUtil.getClassPath() + File.separator + params.getDstPath();
+        FileUtils.writeFile(fullPath, modified);
     }
 }

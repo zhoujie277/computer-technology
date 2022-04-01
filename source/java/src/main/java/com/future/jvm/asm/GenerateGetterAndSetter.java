@@ -1,5 +1,6 @@
 package com.future.jvm.asm;
 
+import com.future.annotation.JGetterAndSetter;
 import com.future.util.FileUtils;
 import com.future.util.ResourceUtil;
 import jdk.internal.org.objectweb.asm.*;
