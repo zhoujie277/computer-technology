@@ -31,7 +31,7 @@ public class ConstantPool {
         this.constantPoolCount = reader.readUnsignedShort();
         this.constantPoolInfos.add(placeInfo);
         for (int i = 1; i < constantPoolCount; i++) {
-            int tag = reader.readByte();
+            int tag = reader.readUnsignedByte();
             switch (tag) {
                 case Utf8Info.tag:
                     this.constantPoolInfos.add(new Utf8Info(reader));
@@ -217,8 +217,8 @@ public class ConstantPool {
 
         public LongInfo(IReader reader) {
             super(reader);
-            this.highBytes = reader.readInt();
-            this.lowBytes = reader.readInt();
+            this.highBytes = reader.readUnsignedInt();
+            this.lowBytes = reader.readUnsignedInt();
         }
 
         @Override

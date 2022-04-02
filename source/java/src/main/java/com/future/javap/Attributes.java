@@ -23,7 +23,7 @@ public class Attributes {
 
     private static Attribute createAttribute(ClassFile file, IReader reader) {
         int nameIndex = reader.readUnsignedShort();
-        int length = reader.readInt();
+        int length = reader.readUnsignedInt();
         byte[] data = reader.readArray(length);
         return factory.createAttribute(file, nameIndex, data);
     }

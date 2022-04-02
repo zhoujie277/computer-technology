@@ -93,20 +93,22 @@ public class SimpleClassReader implements IReader {
 
     @Override
     public int readUnsignedShort() {
+        // Java Class 字节码采用大端字节序
         int result = Javap.byteArrayToIntInBigIndian(buffer, offset, Javap.U2);
         offset += Javap.U2;
         return result;
     }
 
     @Override
-    public int readInt() {
+    public int readUnsignedInt() {
+        // Java Class 字节码采用大端字节序
         int result = Javap.byteArrayToIntInBigIndian(buffer, offset, Javap.U4);
         offset += Javap.U4;
         return result;
     }
 
     @Override
-    public int readByte() {
+    public int readUnsignedByte() {
         int b = buffer[offset] & 0xFF;
         offset += Javap.U1;
         return b;
@@ -131,10 +133,10 @@ public class SimpleClassReader implements IReader {
         if (buffer.length < 4) {
             return false;
         }
-        if (readByte() != 0xCA) return false;
-        if (readByte() != 0xFE) return false;
-        if (readByte() != 0xBA) return false;
-        return readByte() == 0xBE;
+        if (readUnsignedByte() != 0xCA) return false;
+        if (readUnsignedByte() != 0xFE) return false;
+        if (readUnsignedByte() != 0xBA) return false;
+        return readUnsignedByte() == 0xBE;
     }
 
     public static void main(String[] args) {

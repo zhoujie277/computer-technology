@@ -127,7 +127,7 @@ public abstract class Attribute implements IReader {
     public abstract void parse();
 
     @Override
-    public int readInt() {
+    public int readUnsignedInt() {
         int value = Javap.byteArrayToIntInBigIndian(data, offset, Javap.U4);
         offset += Javap.U4;
         return value;
@@ -149,7 +149,7 @@ public abstract class Attribute implements IReader {
     }
 
     @Override
-    public int readByte() {
+    public int readUnsignedByte() {
         int b = data[offset] & 0xFF;
         offset += Javap.U1;
         return b;

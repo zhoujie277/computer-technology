@@ -20,7 +20,7 @@ public class CodeAttribute extends Attribute {
     public void parse() {
         this.maxStack = readUnsignedShort();
         this.maxLocals = readUnsignedShort();
-        int codeLength = readInt();
+        int codeLength = readUnsignedInt();
         this.codes = readArray(codeLength);
         int exceptionTableLength = readUnsignedShort();
         this.exceptionTable = new ExceptionTable[exceptionTableLength];

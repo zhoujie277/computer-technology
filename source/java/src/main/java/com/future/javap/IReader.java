@@ -4,9 +4,9 @@ public interface IReader {
 
     int readUnsignedShort();
 
-    int readInt();
+    int readUnsignedInt();
 
-    int readByte();
+    int readUnsignedByte();
 
     byte[] readArray(int length);
 

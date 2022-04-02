@@ -16,7 +16,7 @@ public class StackMapTableAttribute extends Attribute {
             entries = new StackMapFrame[numOfEntries];
             for (int i = 0; i < numOfEntries; i++) {
                 StackMapFrame frame;
-                int frame_type = readByte();
+                int frame_type = readUnsignedByte();
                 if (frame_type <= 63)
                     frame = new SameFrame(frame_type);
                 else if (frame_type <= 127)
@@ -240,7 +240,7 @@ public class StackMapTableAttribute extends Attribute {
         public static final int ITEM_Uninitialized = 8;
 
         public static VerificationTypeInfo read(StackMapTableAttribute attribute) throws InvalidStackMap {
-            int tag = attribute.readByte();
+            int tag = attribute.readUnsignedByte();
             switch (tag) {
                 case ITEM_Top:
                 case ITEM_Integer:
