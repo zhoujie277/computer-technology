@@ -69,11 +69,11 @@ Person::Person()
 Person::Person(int age)
 {
     m_age = age;
-    cout << "Person" << endl;
+    cout << "Person: " << age << endl;
 }
 Person::~Person()
 {
-    cout << "~Person" << endl;
+    cout << "~Person: " << m_age << endl;
 }
 void Person::run()
 {
@@ -209,6 +209,12 @@ void cyclicReference()
     }
 }
 
+unique_ptr<Person> getPerson() 
+{
+    unique_ptr<Person> p(new Person(20));
+    return p;
+}
+
 void unique_ptr_demo()
 {
     cout << endl
@@ -216,6 +222,8 @@ void unique_ptr_demo()
     {
         unique_ptr<Person> p(new Person(10));
         unique_ptr<Person> p1 = std::move(p);
+        // 可以通过返回值移交控制权
+        unique_ptr<Person> p2(getPerson());
     }
     cout << "unique_ptr_demo func end" << endl;
 }

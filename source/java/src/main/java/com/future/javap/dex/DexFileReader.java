@@ -2,12 +2,12 @@ package com.future.javap.dex;
 
 import com.future.javap.IReader;
 import com.future.javap.Javap;
-import com.future.util.PrintUtils;
+import com.future.util.BitUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-public class DexReader implements IReader {
+public class DexFileReader implements IReader {
 
     private int offset;
     private byte[] byteArray;
@@ -17,20 +17,16 @@ public class DexReader implements IReader {
         if (inputStream == null) throw new IllegalArgumentException("Dex file not found! path: " + path);
         this.byteArray = new byte[inputStream.available()];
         int dexSize = inputStream.read(byteArray);
-        PrintUtils.printHex(byteArray);
         DexFile dex = new DexFile(this, dexSize);
         dex.parseHeader();
         System.out.println(dex);
     }
 
-    public static void main(String[] args) throws IOException {
-        DexReader reader = new DexReader();
-        reader.loadDexFile("classes3.dex");
-    }
-
     @Override
     public int readUnsignedShort() {
-        return 0;
+        int result = Javap.byteArrayToIntInLittleIndian(byteArray, offset, Javap.U2);
+        offset += Javap.U2;
+        return result;
     }
 
     @Override
@@ -58,5 +54,35 @@ public class DexReader implements IReader {
     @Override
     public String readString(int len) {
         return null;
+    }
+
+    @Override
+    public void seek(int offset) {
+        this.offset = offset;
+    }
+
+    @Override
+    public int mark() {
+        return offset;
+    }
+
+    @Override
+    public int readUnsignedLEB128() {
+        boolean hasNext;
+        int shift = 0;
+        int value = 0;
+        do {
+            int leb128 = readUnsignedByte();
+            value += (BitUtils.lowSevenBit(leb128) << (7 * shift));
+            int highBit = BitUtils.highBit(leb128);
+            shift++;
+            hasNext = highBit == 1;
+        } while (hasNext);
+        return value;
+    }
+
+    public static void main(String[] args) throws IOException {
+        DexFileReader reader = new DexFileReader();
+        reader.loadDexFile("classes3.dex");
     }
 }

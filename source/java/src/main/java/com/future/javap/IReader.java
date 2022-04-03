@@ -11,4 +11,16 @@ public interface IReader {
     byte[] readArray(int length);
 
     String readString(int len);
+
+    default void seek(int offset) {
+
+    }
+
+    default int mark() {
+        return 0;
+    }
+
+    default int readUnsignedLEB128() {
+        return 0;
+    }
 }
