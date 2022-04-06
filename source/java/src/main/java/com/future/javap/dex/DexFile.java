@@ -63,7 +63,7 @@ public class DexFile {
         fileHeader = new DexFileHeader(reader);
     }
 
-    public void parseHeader() {
+    public void parse() {
         fileHeader.parseHeader();
         parseStringIds();
         parseTypeIds();

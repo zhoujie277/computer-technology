@@ -18,7 +18,7 @@ public class DexFileReader implements IReader {
         this.byteArray = new byte[inputStream.available()];
         int dexSize = inputStream.read(byteArray);
         DexFile dex = new DexFile(this, dexSize);
-        dex.parseHeader();
+        dex.parse();
         System.out.println(dex);
     }
 
