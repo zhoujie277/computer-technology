@@ -50,3 +50,4 @@ clean:				# rm 命令前"-" 的作用是删除不存在的文件时，不报错
 
 # a.out:entry.c add.o sub.o
 # 	gcc entry.c add.o sub.o -o a.out
+
